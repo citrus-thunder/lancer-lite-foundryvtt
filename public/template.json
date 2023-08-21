@@ -1,0 +1,8 @@
+{
+	"Actor": {
+		"types": ["mech", "npc", "pilot"]
+	},
+	"Item": {
+		"types": ["system", "weapon"]
+	}
+}

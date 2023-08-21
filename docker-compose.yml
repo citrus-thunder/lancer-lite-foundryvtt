@@ -1,0 +1,15 @@
+services:
+  lancer-lite-vtt:
+    build:
+      dockerfile: ./Dockerfile
+      #args:
+      #  # - Only required if "Option 1" outlined in the Dockerfile is used
+      #  # - URLs have limited lifetimes (5 mins)
+      #  FOUNDRY_URL: url-goes-here
+    ports: 
+      # - local-port:container-port
+      # - Foundry default port is 30000.
+      - 3000:30000
+    volumes:
+      # Dockerfile sets Foundry data directory to /app/data
+      - ./lancer-lite:/app/data/Data/systems/lancer-lite/
