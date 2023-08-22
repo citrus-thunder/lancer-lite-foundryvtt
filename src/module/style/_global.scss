@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Germania+One&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+$font-sans: 'Arimo', sans-serif;
+$font-serif: 'Ubuntu Mono', monospace;
+
+// Colors: Full Palette
+
+// Lancer Lightest Red
+// - License I Header
+// - Some Footers
+$color-red1: #e1484b;
+
+// Lancer Cherry Red
+// - Some Sidebars
+// - Some Footers
+// - Some Table Borders (Sitrep diagrams)
+$color-red2: #d11b20;
+
+// Lancer Red
+$color-red3: #c21f25;  // Header
+$color-red4: #f8e8e9;  // Background
+$color-red: $color-red3; // Alias
+// - Title Headers
+// - Systems
+// - Traits
+// - Mounts
+// - Footers
+// - Sidebars
+// - Table Borders
+// - General (Default Color)
+
+// Lancer Deep Red
+$color-red5: #8f0001;
+// - License II Header
+// - Some Footers
+
+// Lancer Dark Red Text
+$color-red6: #640a0d;
+// - Read Aloud Text
+
+// Lancer Darker Red
+$color-red7: #450304;
+// - License III Header
+// - Some Footers
+
+// Lancer Darkest Red
+$color-red8: #340000;
+// - Some Footers
+
+// Table Greys
+$color-grey1: #929497; // Header
+$color-grey2: #e0e2e5; // Background
+// - Subtle table text
+// - banded table backgrounds
+
+// Gear Brown
+$color-brown1: #4b000d; // Header
+$color-brown2: #ece7e7; // Background
+// - Pilot Gear
+
+// Downtime Tan
+$color-brown3: #8f50e6;
+// - Downtime headers
+
+// Combat Charcoal
+$color-black1: #221e1f;
+// - Combat headers
+
+// Weapon Black
+$color-black2: #000000; // Header
+$color-black3: #f2f2f2; // Background
+// - Weapons
+
+// Protocol Orange
+$color-orange1: #c75900; // Header
+$color-orange2: #f9eee5; // Background
+// - Protocols
+
+// Action Green
+$color-green1: #67bc45; // Header
+$color-green2: #e0f1d9; // Background
+// - Quick Actions
+// - Full Actions
+
+// Reaction Teal
+$color-teal1: #0a7675; // Header
+$color-teal2: #e6f1f1; // Background
+// - Reactions
+// - Example text
+// - Mission blocks
+
+// Talent Blue
+$color-blue1: #3a81c3;
+// - Talents
+
+// Tech Action Plum
+$color-purple1: #7d2477; // Header
+$color-purple2: #f2e9f1; // Background
+// - Tech Actions
+// - Beat headers
+
+// Narrative Purple
+$color-purple3: #87007f; // Header
+$color-purple4: #f2e9f1; // Background
+// - Backgrounds
+// - Mission Hooks

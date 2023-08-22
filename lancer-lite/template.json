@@ -1,8 +1,106 @@
 {
 	"Actor": {
-		"types": ["mech", "npc", "pilot"]
+		"types": ["pilot", "mech", "npc_pilot", "npc_mech"],
+		"templates": {
+			"pilot_common": {
+				"biography": "",
+				"hp": {
+					"value": 10,
+					"max": 10,
+					"min": 0
+				},
+				"armor": {},
+				"weapon": {},
+				"gear": []
+			},
+			"mech_common": {
+				"name": "New Mech",
+				"description": "",
+				"size": 1,
+				"save_target": 0,
+				"armor": 0,
+				"sensors": 0,
+				"hp": {
+					"value": 10,
+					"max": 10,
+					"min": 0
+				},
+				"e_defense": 0,
+				"tech_attack": 0,
+				"evasion": 0,
+				"speed": 0,
+				"heat_cap": 0,
+				"mounts": [],
+				"systems": []
+			}
+		},
+		"pilot": {
+			"templates": ["pilot_common"],
+			"licenses": {}
+		},
+		"mech": {
+			"templates": ["mech_common"],
+			"core_system": [],
+			"traits": [],
+			"sp": 0,
+			"repairs": {
+				"value": 0,
+				"max": 0,
+				"min": 0
+			}
+		},
+		"npc_pilot": {
+			"templates": ["pilot_common"]
+		},
+		"npc_mech": {
+			"templates": ["mech_common"],
+			"optional_systems": [],
+			"role": ""
+		}
 	},
 	"Item": {
-		"types": ["system", "weapon"]
+		"types": ["weapon", "system", "trait", "armor", "gear"],
+		"weapon": {
+			"name": "New Weapon",
+			"description": "",
+			"damage": {
+				"value": 0,
+				"type": ""
+			},
+			"destroyed": false,
+			"range": {
+				"value": 10,
+				"type": ""
+			},
+			"tags": [],
+			"size": "",
+			"type": ""
+		},
+		"system": {
+			"name": "New System",
+			"description": "",
+			"sp_cost": 0,
+			"tags": []
+		},
+		"trait": {
+			"type": "",
+			"name": "New Trait",
+			"description": ""
+		},
+		"armor": {
+			"name": "New Armor",
+			"description": "",
+			"tags": [],
+			"bonuses": [],
+			"armor": 0,
+			"evasion": 0,
+			"e_defense": 0,
+			"speed": 0
+		},
+		"gear": {
+			"name": "New Gear",
+			"description": "",
+			"tags": []
+		}
 	}
 }

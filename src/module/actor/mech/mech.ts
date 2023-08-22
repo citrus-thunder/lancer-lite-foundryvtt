@@ -1,0 +1,1 @@
+export class Mech extends Actor {}
