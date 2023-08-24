@@ -1,6 +1,12 @@
 import styles from './mech.module.scss';
 
 export class MechSheet extends ActorSheet {
+	allowedItemTypes = [
+	'weapon',
+	'trait',
+	'system',
+	'mount'
+	];
 
 	constructor(data, options) {
 		super(data, options);

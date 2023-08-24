@@ -8,13 +8,15 @@ async function h(s) {
   ];
   return loadTemplates(e);
 }
-const m = "_field_1dpt1_14", u = {
-  "sheet-container": "_sheet-container_1dpt1_2",
-  "sheet-header": "_sheet-header_1dpt1_8",
-  "field-group": "_field-group_1dpt1_14",
-  "pilot-bio": "_pilot-bio_1dpt1_14",
+const m = "_field_d1bty_19", u = {
+  "sheet-container": "_sheet-container_d1bty_2",
+  "sheet-header": "_sheet-header_d1bty_8",
+  "section-title": "_section-title_d1bty_14",
+  "field-group": "_field-group_d1bty_19",
+  "pilot-bio": "_pilot-bio_d1bty_19",
   field: m,
-  "pilot-portrait-frame": "_pilot-portrait-frame_1dpt1_25"
+  "stat-table": "_stat-table_d1bty_30",
+  "pilot-portrait-frame": "_pilot-portrait-frame_d1bty_40"
 };
 class c extends ActorSheet {
   constructor(t, a) {
@@ -22,8 +24,11 @@ class c extends ActorSheet {
     n(this, "allowedItemTypes", [
       "weapon",
       "armor",
-      "gear",
-      "trait"
+      "gear"
+      // trigger?
+      // talent?
+      // licenses?
+      // core bonuses?
     ]);
   }
   /** @override */
@@ -52,7 +57,10 @@ class c extends ActorSheet {
     }), t;
   }
   activateListeners(t) {
-    super.activateListeners(t);
+    super.activateListeners(t), t.find(".weapon-card").on("click", (a) => {
+      var l;
+      (l = this.actor.items.get($(a.currentTarget).data("itemId"), { strict: !0 }).sheet) == null || l.render(!0);
+    });
   }
   /** @override */
   get template() {
@@ -76,8 +84,14 @@ const d = {
   "sheet-header": "_sheet-header_uh5qv_2"
 };
 class g extends ActorSheet {
-  constructor(e, t) {
-    super(e, t);
+  constructor(t, a) {
+    super(t, a);
+    n(this, "allowedItemTypes", [
+      "weapon",
+      "trait",
+      "system",
+      "mount"
+    ]);
   }
   /** @override */
   static get defaultOptions() {
@@ -90,8 +104,8 @@ class g extends ActorSheet {
     return "systems/lancer-lite/templates/actor/mech.hbs";
   }
   getData() {
-    const e = super.getData();
-    return e.styles = d, e;
+    const t = super.getData();
+    return t.styles = d, t;
   }
 }
 const y = {
@@ -110,10 +124,10 @@ class _ extends ItemSheet {
     return e.styles = y, console.log(e), e;
   }
 }
-const f = {
+const b = {
   "sheet-header": "_sheet-header_t1og4_2"
 };
-class S extends ItemSheet {
+class f extends ItemSheet {
   constructor(e, t) {
     super(e, t);
   }
@@ -123,10 +137,10 @@ class S extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = f, console.log(e), e;
+    return e.styles = b, console.log(e), e;
   }
 }
-const b = {
+const S = {
   "sheet-header": "_sheet-header_t1og4_2"
 };
 class D extends ItemSheet {
@@ -139,7 +153,7 @@ class D extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = b, console.log(e), e;
+    return e.styles = S, console.log(e), e;
   }
 }
 const I = {
@@ -178,14 +192,14 @@ const O = `
 <div class="trigger-card" data-item-id={{id}}>
 	{{name}}
 </div>
-`, v = `
+`, T = `
 <div class="weapon-card" data-item-id="{{id}}">
 {{name}}
 </div>
 `, r = "lancer-lite";
 CONFIG.debug.hooks = !0;
 Handlebars.registerPartial("trigger", O);
-Handlebars.registerPartial("weapon", v);
+Handlebars.registerPartial("weapon", T);
 Hooks.once("ready", async () => {
-  console.log("Init Hook"), game[r] = { PilotSheet: c }, Actors.unregisterSheet("core", ActorSheet), Actors.registerSheet(r, c, { label: "Pilot", types: ["pilot"], makeDefault: !0 }), Actors.registerSheet(r, g, { label: "Mech", types: ["mech"], makeDefault: !0 }), Items.unregisterSheet("core", ItemSheet), Items.registerSheet(r, _, { label: "Armor", types: ["armor"], makeDefault: !0 }), Items.registerSheet(r, S, { label: "Gear", types: ["gear"], makeDefault: !0 }), Items.registerSheet(r, D, { label: "System", types: ["system"], makeDefault: !0 }), Items.registerSheet(r, w, { label: "Trait", types: ["trait"], makeDefault: !0 }), Items.registerSheet(r, A, { label: "Weapon", types: ["weapon"], makeDefault: !0 }), await h(r);
+  console.log("Init Hook"), game[r] = { PilotSheet: c }, Actors.unregisterSheet("core", ActorSheet), Actors.registerSheet(r, c, { label: "Pilot", types: ["pilot"], makeDefault: !0 }), Actors.registerSheet(r, g, { label: "Mech", types: ["mech"], makeDefault: !0 }), Items.unregisterSheet("core", ItemSheet), Items.registerSheet(r, _, { label: "Armor", types: ["armor"], makeDefault: !0 }), Items.registerSheet(r, f, { label: "Gear", types: ["gear"], makeDefault: !0 }), Items.registerSheet(r, D, { label: "System", types: ["system"], makeDefault: !0 }), Items.registerSheet(r, w, { label: "Trait", types: ["trait"], makeDefault: !0 }), Items.registerSheet(r, A, { label: "Weapon", types: ["weapon"], makeDefault: !0 }), await h(r);
 });

@@ -1,12 +1,5 @@
 <div class="{{cssClass}} flexcol {{styles.sheet-container}}">
 	<form autocomplete="off">
-		<!--
-		<header class="sheet-header {{styles.sheet-header}}">
-			<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
-			<h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-			{{editor actor.system.biography target="system.biography" button="true"}}
-		</header>
-		-->
 		<header class="sheet-header {{styles.sheet-header}}">
 			<h1>PILOT</h1>
 		</header>
@@ -37,7 +30,7 @@
 						</div>
 						<!-- Mech Stats -->
 						<div class="flexcol">
-							<table>
+							<table class="{{styles.stat-table}}">
 								<tr>
 									<td>
 										<label>
@@ -88,7 +81,7 @@
 					<div class="flexrow">
 						<div class="flexcol">
 							<!-- Triggers -->
-							<h3>Triggers</h3>
+							<h2 class="{{styles.section-title}}">Triggers</h2>
 							<div class="triggers-container flexrow">
 								{{#each triggers}}
 									{{> trigger}}
@@ -107,14 +100,14 @@
 			<div class="flexrow">
 				<!-- Talents -->
 				<div class="flexcol">
-					<h3>Talents</h3>
+					<h2 class="{{styles.section-title}}">Talents</h2>
 					<div class="talents-container">
 
 					</div>
 				</div>
 				<!-- Licenses -->
 				<div class="flexcol">
-					<h3>Licenses</h3>
+					<h2 class="{{styles.section-title}}">Licenses</h2>
 					<div class="licenses-container">
 
 					</div>
@@ -129,21 +122,22 @@
 					<div class="flexrow">
 						<!-- Loadout -->
 						<div class="flexcol">
-							<h3>Loadout</h3>
+							<h2 class="{{styles.section-title}}">Loadout</h2>
 							<div class="loadout-container">
-								<h4>Armor</h4>
+								<h3>Armor</h3>
 								<div class="armor-container">
 
 								</div>
-								<h4>Weapons</h4>
+								<h3>Weapons</h3>
 								<div class="weapons-container">
 									{{#each weapons}}
 										{{> weapon}}
 									{{/each}}
 								</div>
-								<h4>Gear</h4>
+								<h3>Gear</h3>
 								<div class="gear-container">
-
+									{{#each gear}}
+									{{/each}}
 								</div>
 							</div>
 						</div>
@@ -155,9 +149,6 @@
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 		</div>
 	</form>

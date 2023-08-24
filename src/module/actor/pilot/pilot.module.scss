@@ -12,6 +12,11 @@
 	font-weight: bold;
 }
 
+.section-title {
+	font-family: $font-sans;
+	font-weight: bold;
+}
+
 div.field-group {
 	&.pilot-bio {
 		div.field {
@@ -25,6 +30,18 @@ div.field-group {
 			}
 		}
 	}
+}
+
+table.stat-table {
+	margin-top: 0rem;
+	border: none;
+	background-color: transparent;
+
+	label
+		{
+		font-weight: bold;
+		font-family: $font-sans;
+		}
 }
 
 div.pilot-portrait-frame {

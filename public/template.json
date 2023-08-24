@@ -19,10 +19,7 @@
 				"hull": 0,
 				"systems": 0,
 				"agility": 0,
-				"engineering": 0,
-				"armor": {},
-				"weapon": {},
-				"gear": []
+				"engineering": 0
 			},
 			"mech_common": {
 				"name": "New Mech",
@@ -44,22 +41,14 @@
 				"tech_attack": 0,
 				"evasion": 0,
 				"speed": 0,
-				"heat_cap": 0,
-				"mounts": [],
-				"weapons": [],
-				"installed_systems": [],
-				"traits": []
+				"heat_cap": 0
 			}
 		},
 		"pilot": {
 			"templates": [
 				"pilot_common"
 			],
-			"license_level": 0,
-			"triggers": [],
-			"licenses": {},
-			"talents": [],
-			"core_bonuses": []
+			"license_level": 0
 		},
 		"mech": {
 			"frame": "",
@@ -68,7 +57,11 @@
 			],
 			"core_system": [],
 			"traits": [],
-			"sp": 0,
+			"sp": {
+				"value": 0,
+				"min": 0,
+				"max": 0
+			},
 			"core_power": true,
 			"repairs": {
 				"value": 0,

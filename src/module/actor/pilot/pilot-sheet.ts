@@ -56,6 +56,10 @@ export class PilotSheet extends ActorSheet {
 
 	activateListeners(html: JQuery<HTMLElement>): void {
 		super.activateListeners(html);
+		html.find('.weapon-card').on('click', (ev) => {
+			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), {strict: true});
+			weapon.sheet?.render(true);
+		});
 	}
 
 	/** @override */
