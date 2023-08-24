@@ -1,14 +1,25 @@
 {
 	"Actor": {
-		"types": ["pilot", "mech", "npc_pilot", "npc_mech"],
+		"types": [
+			"pilot",
+			"mech",
+			"npc_pilot",
+			"npc_mech"
+		],
 		"templates": {
 			"pilot_common": {
+				"callsign": "",
 				"biography": "",
 				"hp": {
 					"value": 10,
 					"max": 10,
 					"min": 0
 				},
+				"grit": 0,
+				"hull": 0,
+				"systems": 0,
+				"agility": 0,
+				"engineering": 0,
 				"armor": {},
 				"weapon": {},
 				"gear": []
@@ -16,6 +27,10 @@
 			"mech_common": {
 				"name": "New Mech",
 				"description": "",
+				"hull": 0,
+				"systems": 0,
+				"agility": 0,
+				"engineering": 0,
 				"size": 1,
 				"save_target": 0,
 				"armor": 0,
@@ -31,18 +46,30 @@
 				"speed": 0,
 				"heat_cap": 0,
 				"mounts": [],
-				"systems": []
+				"weapons": [],
+				"installed_systems": [],
+				"traits": []
 			}
 		},
 		"pilot": {
-			"templates": ["pilot_common"],
-			"licenses": {}
+			"templates": [
+				"pilot_common"
+			],
+			"license_level": 0,
+			"triggers": [],
+			"licenses": {},
+			"talents": [],
+			"core_bonuses": []
 		},
 		"mech": {
-			"templates": ["mech_common"],
+			"frame": "",
+			"templates": [
+				"mech_common"
+			],
 			"core_system": [],
 			"traits": [],
 			"sp": 0,
+			"core_power": true,
 			"repairs": {
 				"value": 0,
 				"max": 0,
@@ -50,16 +77,25 @@
 			}
 		},
 		"npc_pilot": {
-			"templates": ["pilot_common"]
+			"templates": [
+				"pilot_common"
+			]
 		},
 		"npc_mech": {
-			"templates": ["mech_common"],
-			"optional_systems": [],
+			"templates": [
+				"mech_common"
+			],
 			"role": ""
 		}
 	},
 	"Item": {
-		"types": ["weapon", "system", "trait", "armor", "gear"],
+		"types": [
+			"weapon",
+			"system",
+			"trait",
+			"armor",
+			"gear"
+		],
 		"weapon": {
 			"name": "New Weapon",
 			"description": "",

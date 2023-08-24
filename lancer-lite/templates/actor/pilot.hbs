@@ -1,8 +1,164 @@
-<div class="{{cssClass}} flexcol">
+<div class="{{cssClass}} flexcol {{styles.sheet-container}}">
 	<form autocomplete="off">
-	<header class="sheet-header {{styles.sheet-header}}">
+		<!--
+		<header class="sheet-header {{styles.sheet-header}}">
 			<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
 			<h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-	</header>
+			{{editor actor.system.biography target="system.biography" button="true"}}
+		</header>
+		-->
+		<header class="sheet-header {{styles.sheet-header}}">
+			<h1>PILOT</h1>
+		</header>
+		<div class="flexcol">
+			<div class="flexrow">
+				<div class="flexcol flex2">
+					<div class="flexrow">
+						<!-- Bio -->
+						<div class="flexcol {{styles.field-group}} {{styles.pilot-bio}}">
+							<div class="{{styles.field}}">
+								<label>
+									NAME
+									<input name="name" type="text" value="{{actor.name}}">
+								</label>
+							</div>
+							<div class="{{styles.field}}">
+								<label>
+									CALLSIGN
+									<input name="system.callsign" type="text" value="{{actor.system.callsign}}">
+								</label>
+							</div>
+							<div class="{{styles.field}} {{styles.biography}}">
+								<label>
+									BIOGRAPHY
+									<textarea name="system.biography">{{actor.system.biography}}</textarea>
+								</label>
+							</div>
+						</div>
+						<!-- Mech Stats -->
+						<div class="flexcol">
+							<table>
+								<tr>
+									<td>
+										<label>
+											LL
+											<input type="text" name="system.license_level" value="{{actor.system.license_level}}"
+												data-dtype="Number">
+										</label>
+									</td>
+									<td>
+										<label>
+											GRIT
+											<input type="text" name="system.grit" value="{{actor.system.grit}}" data-dtype="Number">
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											HULL
+											<input type="text" name="system.hull" value="{{actor.system.hull}}" data-dtype="Number">
+										</label>
+									</td>
+									<td>
+										<label>
+											SYS
+											<input type="text" name="system.systems" value="{{actor.system.systems}}" data-dtype="Number">
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											AGI
+											<input type="text" name="system.agility" value="{{actor.system.agility}}" data-dtype="Number">
+										</label>
+									</td>
+									<td>
+										<label>
+											ENG
+											<input type="text" name="system.engineering" value="{{actor.system.engineering}}"
+												data-dtype="Number">
+										</label>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="flexrow">
+						<div class="flexcol">
+							<!-- Triggers -->
+							<h3>Triggers</h3>
+							<div class="triggers-container flexrow">
+								{{#each triggers}}
+									{{> trigger}}
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flexcol">
+					<!-- Portrait -->
+					<div class="{{styles.pilot-portrait-frame}}">
+						<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+					</div>
+				</div>
+			</div>
+			<div class="flexrow">
+				<!-- Talents -->
+				<div class="flexcol">
+					<h3>Talents</h3>
+					<div class="talents-container">
+
+					</div>
+				</div>
+				<!-- Licenses -->
+				<div class="flexcol">
+					<h3>Licenses</h3>
+					<div class="licenses-container">
+
+					</div>
+				</div>
+			</div>
+			<div class="flexrow">
+				<div class="flexcol">
+					<!-- Core Bonuses -->
+					<div class="flexrow">
+
+					</div>
+					<div class="flexrow">
+						<!-- Loadout -->
+						<div class="flexcol">
+							<h3>Loadout</h3>
+							<div class="loadout-container">
+								<h4>Armor</h4>
+								<div class="armor-container">
+
+								</div>
+								<h4>Weapons</h4>
+								<div class="weapons-container">
+									{{#each weapons}}
+										{{> weapon}}
+									{{/each}}
+								</div>
+								<h4>Gear</h4>
+								<div class="gear-container">
+
+								</div>
+							</div>
+						</div>
+						<!-- Stats -->
+						<div class="flexcol">
+							<div class="stats-container">
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
 	</form>
 </div>

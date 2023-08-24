@@ -31,5 +31,5 @@
   "gridUnits": "ft",
   "url": "https://github.com/citrus-thunder/lancer-lite-foundryvtt",
   "background": "systems/mysystem/assets/splash.webp",
-  "manifest": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/lancer-lite/system.json"
+  "manifest": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/blob/main/lancer-lite/system.json"
 }

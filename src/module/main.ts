@@ -9,7 +9,14 @@ import { SystemSheet } from "./item/system/system-sheet";
 import { TraitSheet } from "./item/trait/trait-sheet";
 import { WeaponSheet } from "./item/weapon/weapon-sheet";
 
+import triggerPartial from "./partial/triggerPartial";
+import weaponPartial from "./partial/weaponPartial";
+
 const SYSTEM_NAME = 'lancer-lite';
+CONFIG.debug.hooks = true;
+
+Handlebars.registerPartial('trigger', triggerPartial);
+Handlebars.registerPartial('weapon', weaponPartial);
 
 Hooks.once('ready', async () => {
 	console.log('Init Hook');
