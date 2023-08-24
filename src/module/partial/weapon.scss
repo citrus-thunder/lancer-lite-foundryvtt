@@ -1,0 +1,41 @@
+@import "/src/module/style/global";
+
+$header-color: $color-black2;
+$header-text-color: #efefef;
+
+$body-color: $color-black3;
+$body-text-color: #030303;
+
+div.weapon-card {
+	background-color: blue;
+
+	div.header {
+		background-color: $header-color;
+		color: $header-text-color;
+
+		div.title-row {
+			width: 100%;
+			font-family: $font-sans;
+			font-size: 1.2rem;
+			font-weight: bold;
+			padding: 0.2rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		div.tags,
+		div.traits {
+			font-family: $font-serif;
+		}
+	}
+
+	div.body {
+		background-color: $body-color;
+		color: $body-text-color;
+
+		div.description {
+			font-family: $font-sans;
+		}
+	}
+}

@@ -23,7 +23,6 @@ export class PilotSheet extends ActorSheet {
 	}
 
 	getData(): any {
-		//debugger;
 		const data: any = super.getData();
 		data.styles = styles;
 
@@ -51,15 +50,26 @@ export class PilotSheet extends ActorSheet {
 			}
 		});
 
+		// todo: sort?
+
 		return data;
 	}
 
 	activateListeners(html: JQuery<HTMLElement>): void {
 		super.activateListeners(html);
-		html.find('.weapon-card').on('click', (ev) => {
+
+		html.find('.weapon-edit').on('click', (ev) => {
 			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), {strict: true});
 			weapon.sheet?.render(true);
 		});
+
+		/*
+		// Maybe we should just have delete on the edit sheet?
+		html.find('.weapon-delete').on('click', (ev) => {
+			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), {strict: true});
+			weapon.delete();
+		});
+		*/
 	}
 
 	/** @override */

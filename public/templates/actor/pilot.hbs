@@ -70,8 +70,7 @@
 									<td>
 										<label>
 											ENG
-											<input type="text" name="system.engineering" value="{{actor.system.engineering}}"
-												data-dtype="Number">
+											<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
 										</label>
 									</td>
 								</tr>
@@ -129,13 +128,15 @@
 
 								</div>
 								<h3>Weapons</h3>
-								<div class="weapons-container">
+								<div class="{{styles.weapons-container}}">
 									{{#each weapons}}
-										{{> weapon}}
+										<div class="{{../styles.weapon-card-container}}">
+											{{> weapon}}
+										</div>
 									{{/each}}
 								</div>
 								<h3>Gear</h3>
-								<div class="gear-container">
+								<div class="{{styles.gear-container}}">
 									{{#each gear}}
 									{{/each}}
 								</div>
@@ -143,7 +144,7 @@
 						</div>
 						<!-- Stats -->
 						<div class="flexcol">
-							<div class="stats-container">
+							<div class="{{styles.stats-container}}">
 
 							</div>
 						</div>
