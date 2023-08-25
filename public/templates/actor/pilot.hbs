@@ -7,6 +7,12 @@
 			<div class="flexrow">
 				<div class="flexcol flex2">
 					<div class="flexrow">
+						<!-- Portrait -->
+						<div class="flexcol flex0 {{styles.pad-right}}">
+							<div class="{{styles.pilot-portrait-frame}}">
+								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+							</div>
+						</div>
 						<!-- Bio -->
 						<div class="flexcol {{styles.field-group}} {{styles.pilot-bio}}">
 							<div class="{{styles.field}}">
@@ -29,7 +35,7 @@
 							</div>
 						</div>
 						<!-- Mech Stats -->
-						<div class="flexcol">
+						<div class="flexcol flex0">
 							<table class="{{styles.stat-table}}">
 								<tr>
 									<td>
@@ -70,7 +76,8 @@
 									<td>
 										<label>
 											ENG
-											<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
+											<input type="text" name="system.engineering" value="{{actor.system.engineering}}"
+												data-dtype="Number">
 										</label>
 									</td>
 								</tr>
@@ -78,76 +85,114 @@
 						</div>
 					</div>
 					<div class="flexrow">
-						<div class="flexcol">
-							<!-- Triggers -->
-							<h2 class="{{styles.section-title}}">Triggers</h2>
+						<!-- Triggers -->
+						<div class="flexcol {{styles.pad-right}}">
+							<div class="{{styles.header-group}}">
+								<h2 class="{{styles.section-title}} {{styles.header-text}}">Triggers</h2>
+								<div class="{{styles.header-options}}">
+									<i class="fa-solid fa-plus trigger-add {{styles.icon-button}}" title="Add Trigger"></i>
+								</div>
+							</div>
 							<div class="triggers-container flexrow">
 								{{#each triggers}}
-									{{> trigger}}
+								{{> trigger-card}}
 								{{/each}}
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="flexcol">
-					<!-- Portrait -->
-					<div class="{{styles.pilot-portrait-frame}}">
-						<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
-					</div>
-				</div>
 			</div>
 			<div class="flexrow">
 				<!-- Talents -->
-				<div class="flexcol">
-					<h2 class="{{styles.section-title}}">Talents</h2>
+				<div class="flexcol {{styles.pad-right}}">
+					<!--<h2 class="{{styles.section-title}}">Talents</h2>-->
+					<div class="{{styles.header-group}}">
+						<h2 class="{{styles.section-title}} {{styles.header-text}}">Talents</h2>
+						<div class="{{styles.header-options}}">
+							<i class="fa-solid fa-plus talent-add {{styles.icon-button}}" title="Add Talent"></i>
+						</div>
+					</div>
 					<div class="talents-container">
 
 					</div>
 				</div>
 				<!-- Licenses -->
 				<div class="flexcol">
-					<h2 class="{{styles.section-title}}">Licenses</h2>
+					<div class="{{styles.header-group}}">
+						<h2 class="{{styles.section-title}} {{styles.header-text}}">Licenses</h2>
+						<div class="{{styles.header-options}}">
+							<i class="fa-solid fa-plus license-add {{styles.icon-button}}" title="Add License"></i>
+						</div>
+					</div>
 					<div class="licenses-container">
-
+						{{#each licenses}}
+						{{> license-card}}
+						{{/each}}
 					</div>
 				</div>
 			</div>
 			<div class="flexrow">
+				<!-- Core Bonuses -->
 				<div class="flexcol">
-					<!-- Core Bonuses -->
-					<div class="flexrow">
-
+					<div class="{{styles.header-group}}">
+						<h2 class="{{styles.section-title}} {{styles.header-text}}">Core Bonuses</h2>
+						<div class="{{styles.header-options}}">
+							<i class="fa-solid fa-plus core-bonus-add {{styles.icon-button}}" title="Add Core Bonus"></i>
+						</div>
 					</div>
 					<div class="flexrow">
-						<!-- Loadout -->
-						<div class="flexcol">
-							<h2 class="{{styles.section-title}}">Loadout</h2>
-							<div class="loadout-container">
-								<h3>Armor</h3>
-								<div class="armor-container">
-
-								</div>
-								<h3>Weapons</h3>
-								<div class="{{styles.weapons-container}}">
-									{{#each weapons}}
-										<div class="{{../styles.weapon-card-container}}">
-											{{> weapon}}
-										</div>
-									{{/each}}
-								</div>
-								<h3>Gear</h3>
-								<div class="{{styles.gear-container}}">
-									{{#each gear}}
-									{{/each}}
-								</div>
+						<div class="core-bonuses-container">
+							{{#each core_bonuses}}
+							{{> core-bonus-card}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flexrow">
+				<!-- Loadout -->
+				<div class="flexcol">
+					<h2 class="{{styles.section-title}}">Loadout</h2>
+					<div class="loadout-container">
+						<div class="{{styles.header-group}}">
+							<h3 class="{{styles.section-title}} {{styles.header-text}}">Armor</h3>
+							<div class="{{styles.header-options}}">
+								<i class="fa-solid fa-plus armor-add {{styles.icon-button}}" title="Add Armor"></i>
 							</div>
 						</div>
-						<!-- Stats -->
-						<div class="flexcol">
-							<div class="{{styles.stats-container}}">
-
+						<div class="armor-container">
+							{{#each armor}}
+							{{> armor-card}}
+							{{/each}}
+						</div>
+						<div class="{{styles.header-group}}">
+							<h3 class="{{styles.section-title}} {{styles.header-text}}">Weapons</h3>
+							<div class="{{styles.header-options}}">
+								<i class="fa-solid fa-plus weapon-add {{styles.icon-button}}" title="Add Weapon"></i>
 							</div>
 						</div>
+						<div class="flexrow {{styles.weapons-container}}">
+							{{#each weapons}}
+							{{> weapon-card}}
+							{{/each}}
+						</div>
+						<div class="{{styles.header-group}}">
+							<h3 class="{{styles.section-title}} {{styles.header-text}}">Gear</h3>
+							<div class="{{styles.header-options}}">
+								<i class="fa-solid fa-plus gear-add {{styles.icon-button}}" title="Add Gear"></i>
+							</div>
+						</div>
+						<div class="{{styles.gear-container}}">
+							{{#each gear}}
+							{{> gear-card}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+				<!-- Stats -->
+				<div class="flexcol flex0">
+					<div class="{{styles.stats-container}}">
+
 					</div>
 				</div>
 			</div>

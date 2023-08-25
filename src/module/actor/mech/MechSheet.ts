@@ -1,6 +1,6 @@
-import styles from './mech.module.scss';
+import styles from './mech-sheet.module.scss';
 
-export class MechSheet extends ActorSheet {
+export default class MechSheet extends ActorSheet {
 	allowedItemTypes = [
 	'weapon',
 	'trait',

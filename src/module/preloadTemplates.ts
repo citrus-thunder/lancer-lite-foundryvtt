@@ -1,4 +1,4 @@
-export async function preloadTemplates(system) {
+export default async function preloadTemplates(system) {
 	const templatePaths = [
 		`systems/${system}/templates/actor/pilot.hbs`,
 		`systems/${system}/templates/actor/mech.hbs`,

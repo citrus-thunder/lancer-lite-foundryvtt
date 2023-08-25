@@ -1,0 +1,44 @@
+@import "/src/module/style/global";
+
+$header-color: $color-red3;
+$header-text-color: #efefef;
+
+$body-color: $color-red4;
+$body-text-color: #030303;
+
+div.trigger-card {
+	.item-edit {
+		cursor: pointer;
+	}
+
+	div.header {
+		background-color: $header-color;
+		color: $header-text-color;
+
+		div.title-row {
+			width: 100%;
+			font-family: $font-sans;
+			font-size: 1.2rem;
+			font-weight: bold;
+			padding: 0.2rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		div.tags,
+		div.traits {
+			font-family: $font-serif;
+			padding: 0.2rem;
+		}
+	}
+
+	div.body {
+		background-color: $body-color;
+		color: $body-text-color;
+
+		div.description {
+			font-family: $font-sans;
+		}
+	}
+}

@@ -83,12 +83,58 @@
 	},
 	"Item": {
 		"types": [
-			"weapon",
-			"system",
-			"trait",
 			"armor",
-			"gear"
+			"core_bonus",
+			"gear",
+			"license",
+			"system",
+			"talent",
+			"trait",
+			"trigger",
+			"weapon"
 		],
+		"armor": {
+			"name": "New Armor",
+			"description": "",
+			"tags": "",
+			"bonuses": [],
+			"armor": 0,
+			"evasion": 0,
+			"e_defense": 0,
+			"speed": 0
+		},
+		"core_bonus": {
+			"name": "New Core Bonus",
+			"description": ""
+		},
+		"gear": {
+			"name": "New Gear",
+			"description": "",
+			"tags": ""
+		},
+		"license": {
+			"name": "New License",
+			"description": ""
+		},
+		"system": {
+			"name": "New System",
+			"description": "",
+			"sp_cost": 0,
+			"tags": ""
+		},
+		"talent": {
+			"name": "New Talent",
+			"description": ""
+		},
+		"trait": {
+			"type": "",
+			"name": "New Trait",
+			"description": ""
+		},
+		"trigger": {
+			"name": "New Trigger",
+			"description": ""
+		},
 		"weapon": {
 			"name": "New Weapon",
 			"description": "",
@@ -97,39 +143,10 @@
 				"type": ""
 			},
 			"destroyed": false,
-			"range": {
-				"value": 10,
-				"type": ""
-			},
-			"tags": [],
+			"range": "",
+			"tags": "",
 			"size": "",
 			"type": ""
-		},
-		"system": {
-			"name": "New System",
-			"description": "",
-			"sp_cost": 0,
-			"tags": []
-		},
-		"trait": {
-			"type": "",
-			"name": "New Trait",
-			"description": ""
-		},
-		"armor": {
-			"name": "New Armor",
-			"description": "",
-			"tags": [],
-			"bonuses": [],
-			"armor": 0,
-			"evasion": 0,
-			"e_defense": 0,
-			"speed": 0
-		},
-		"gear": {
-			"name": "New Gear",
-			"description": "",
-			"tags": []
 		}
 	}
 }

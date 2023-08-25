@@ -1,13 +1,13 @@
-import styles from "./gear.module.scss";
+import styles from "./trait.module.scss";
 
-export class GearSheet extends ItemSheet {
+export default class TraitSheet extends ItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/gear.hbs`;
+		return `systems/lancer-lite/templates/item/trait.hbs`;
 	}
 
 	getData() {

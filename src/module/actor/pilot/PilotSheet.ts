@@ -1,14 +1,14 @@
-import styles from './pilot.module.scss';
+import styles from './pilot-sheet.module.scss';
 
-export class PilotSheet extends ActorSheet {
+export default class PilotSheet extends ActorSheet {
 	allowedItemTypes = [
-		'weapon',
 		'armor',
+		'core_bonus',
 		'gear',
-		// trigger?
-		// talent?
-		// licenses?
-		// core bonuses?
+		'license',
+		'talent',
+		'trigger',
+		'weapon',
 	];
 
 	constructor(data: any, options: any) {
@@ -19,6 +19,8 @@ export class PilotSheet extends ActorSheet {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["character", "sheet", "actor"],
+			width: 675,
+			height: 700,
 		});
 	}
 
@@ -26,26 +28,37 @@ export class PilotSheet extends ActorSheet {
 		const data: any = super.getData();
 		data.styles = styles;
 
-		data.weapons = [];
-		data.gear = [];
 		// todo: multiple armors aren't really a thing in this system.
 		data.armor = [];
-		data.traits = [];
+		data.core_bonuses = [];
+		data.gear = [];
+		data.licenses = [];
+		data.talents = [];
+		data.triggers = [];
+		data.weapons = [];
 
 		this.actor.items.forEach((i) => {
 			switch (i.type) {
-				case 'weapon':
-					data.weapons.push(i);
+				case 'armor':
+					data.armor.push(i);
+					break;
+				case 'core_bonus':
+					data.core_bonuses.push(i);
 					break;
 				case 'gear':
 					data.gear.push(i);
 					break;
-				case 'trait':
-					data.traits.push(i);
+				case 'license':
+					data.licenses.push(i);
 					break;
-				case 'armor':
-					data.armor.push(i);
-					data
+				case 'talent':
+					data.talents.push(i);
+					break;
+				case 'trigger':
+					data.triggers.push(i);
+					break;
+				case 'weapon':
+					data.weapons.push(i);
 					break;
 			}
 		});
@@ -58,18 +71,18 @@ export class PilotSheet extends ActorSheet {
 	activateListeners(html: JQuery<HTMLElement>): void {
 		super.activateListeners(html);
 
-		html.find('.weapon-edit').on('click', (ev) => {
-			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), {strict: true});
-			weapon.sheet?.render(true);
+		html.find('.item-edit').on('click', (ev) => {
+			const item = this.actor.items.get($(ev.currentTarget).data('itemId'), {strict: true});
+			item.sheet?.render(true);
 		});
 
-		/*
-		// Maybe we should just have delete on the edit sheet?
-		html.find('.weapon-delete').on('click', (ev) => {
-			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), {strict: true});
-			weapon.delete();
+		html.find('.weapon-add').on('click', (ev) => {
+			const itemType = $(ev.currentTarget).data('itemType');
+			if (!itemType) {
+				// error
+			}
+			CONFIG.Item.documentClass.create({type: 'weapon', name: 'New Weapon'}, {parent: this.actor, renderSheet: true});
 		});
-		*/
 	}
 
 	/** @override */

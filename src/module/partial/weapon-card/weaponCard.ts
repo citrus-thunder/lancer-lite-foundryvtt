@@ -1,14 +1,13 @@
-import './weapon.scss';
+import './weapon-card.scss';
 
 export default
 `
-<div class="weapon-card" data-item-id="{{id}}">
+<div class="item-card weapon-card" data-item-id="{{id}}">
 	<div class="header">
 		<div class="title-row">
 			{{name}}
 			<div class="header-buttons">
-				<i class="fa-solid fa-pen-to-square weapon-edit" title="Edit Weapon" data-item-id="{{id}}"></i>
-				<i class="fa-solid fa-ban weapon-delete" title="Delete Weapon" data-item-id="{{id}}"></i>
+				<i class="fa-solid fa-pen-to-square item-edit" title="Edit Weapon" data-item-id="{{id}}"></i>
 			</div>
 		</div>
 		<div class="tags">

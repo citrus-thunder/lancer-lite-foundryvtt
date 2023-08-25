@@ -7,7 +7,9 @@ $body-color: $color-black3;
 $body-text-color: #030303;
 
 div.weapon-card {
-	background-color: blue;
+	.item-edit {
+		cursor: pointer;
+	}
 
 	div.header {
 		background-color: $header-color;

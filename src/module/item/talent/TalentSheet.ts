@@ -1,13 +1,13 @@
-import styles from "./weapon.module.scss";
+import styles from "./talent.module.scss";
 
-export class WeaponSheet extends ItemSheet {
+export default class TalentSheet extends ItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/weapon.hbs`;
+		return `systems/lancer-lite/templates/item/talent.hbs`;
 	}
 
 	getData() {

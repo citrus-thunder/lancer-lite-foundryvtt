@@ -1,13 +1,13 @@
-import styles from "./armor.module.scss";
+import styles from "./trigger.module.scss";
 
-export class ArmorSheet extends ItemSheet {
+export default class TriggerSheet extends ItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/armor.hbs`;
+		return `systems/lancer-lite/templates/item/trigger.hbs`;
 	}
 
 	getData() {

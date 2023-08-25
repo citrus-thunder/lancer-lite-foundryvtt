@@ -1,67 +1,81 @@
 var c = Object.defineProperty;
-var p = (s, e, t) => e in s ? c(s, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : s[e] = t;
-var n = (s, e, t) => (p(s, typeof e != "symbol" ? e + "" : e, t), t);
-async function d(s) {
-  const e = [
-    `systems/${s}/templates/actor/pilot.hbs`,
-    `systems/${s}/templates/actor/mech.hbs`
-  ];
-  return loadTemplates(e);
+var d = (s, e, t) => e in s ? c(s, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : s[e] = t;
+var i = (s, e, t) => (d(s, typeof e != "symbol" ? e + "" : e, t), t);
+class u extends Actor {
 }
-const m = "_field_1w2tg_19", h = {
-  "sheet-container": "_sheet-container_1w2tg_2",
-  "sheet-header": "_sheet-header_1w2tg_8",
-  "section-title": "_section-title_1w2tg_14",
-  "field-group": "_field-group_1w2tg_19",
-  "pilot-bio": "_pilot-bio_1w2tg_19",
-  field: m,
-  "stat-table": "_stat-table_1w2tg_31",
-  "pilot-portrait-frame": "_pilot-portrait-frame_1w2tg_41",
-  "weapons-container": "_weapons-container_1w2tg_52",
-  "weapon-card-container": "_weapon-card-container_1w2tg_52"
+class h extends Item {
+}
+const p = "_field_1enau_34", m = {
+  "sheet-container": "_sheet-container_1enau_2",
+  "row-reverse": "_row-reverse_1enau_8",
+  "sheet-header": "_sheet-header_1enau_23",
+  "section-title": "_section-title_1enau_29",
+  "field-group": "_field-group_1enau_34",
+  "pilot-bio": "_pilot-bio_1enau_34",
+  field: p,
+  "stat-table": "_stat-table_1enau_49",
+  "pilot-portrait-frame": "_pilot-portrait-frame_1enau_59",
+  "pad-right": "_pad-right_1enau_78",
+  "header-group": "_header-group_1enau_82",
+  "header-text": "_header-text_1enau_89",
+  "header-options": "_header-options_1enau_94",
+  "icon-button": "_icon-button_1enau_98"
 };
 class l extends ActorSheet {
   constructor(t, a) {
     super(t, a);
-    n(this, "allowedItemTypes", [
-      "weapon",
+    i(this, "allowedItemTypes", [
       "armor",
-      "gear"
-      // trigger?
-      // talent?
-      // licenses?
-      // core bonuses?
+      "core_bonus",
+      "gear",
+      "license",
+      "talent",
+      "trigger",
+      "weapon"
     ]);
   }
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["character", "sheet", "actor"]
+      classes: ["character", "sheet", "actor"],
+      width: 675,
+      height: 700
     });
   }
   getData() {
     const t = super.getData();
-    return t.styles = h, t.weapons = [], t.gear = [], t.armor = [], t.traits = [], this.actor.items.forEach((a) => {
+    return t.styles = m, t.armor = [], t.core_bonuses = [], t.gear = [], t.licenses = [], t.talents = [], t.triggers = [], t.weapons = [], this.actor.items.forEach((a) => {
       switch (a.type) {
-        case "weapon":
-          t.weapons.push(a);
+        case "armor":
+          t.armor.push(a);
+          break;
+        case "core_bonus":
+          t.core_bonuses.push(a);
           break;
         case "gear":
           t.gear.push(a);
           break;
-        case "trait":
-          t.traits.push(a);
+        case "license":
+          t.licenses.push(a);
           break;
-        case "armor":
-          t.armor.push(a);
+        case "talent":
+          t.talents.push(a);
+          break;
+        case "trigger":
+          t.triggers.push(a);
+          break;
+        case "weapon":
+          t.weapons.push(a);
           break;
       }
     }), t;
   }
   activateListeners(t) {
-    super.activateListeners(t), t.find(".weapon-edit").on("click", (a) => {
-      var i;
-      (i = this.actor.items.get($(a.currentTarget).data("itemId"), { strict: !0 }).sheet) == null || i.render(!0);
+    super.activateListeners(t), t.find(".item-edit").on("click", (a) => {
+      var o;
+      (o = this.actor.items.get($(a.currentTarget).data("itemId"), { strict: !0 }).sheet) == null || o.render(!0);
+    }), t.find(".weapon-add").on("click", (a) => {
+      CONFIG.Item.documentClass.create({ type: "weapon", name: "New Weapon" }, { parent: this.actor, renderSheet: !0 });
     });
   }
   /** @override */
@@ -69,26 +83,26 @@ class l extends ActorSheet {
     return "systems/lancer-lite/templates/actor/pilot.hbs";
   }
   async _onDropItem(t, a) {
-    var i;
+    var o;
     if (!this.actor.isOwner)
       return !1;
-    const o = await Item.bind(this).fromDropData(a);
-    if (!o)
+    const n = await Item.bind(this).fromDropData(a);
+    if (!n)
       return !1;
-    if (!this.allowedItemTypes.includes(o.type)) {
-      console.log("Preventing addition of new item: Invalid item type for this actor type! (" + this.actor.type + "/" + o.type + ")"), t.preventDefault();
+    if (!this.allowedItemTypes.includes(n.type)) {
+      console.log("Preventing addition of new item: Invalid item type for this actor type! (" + this.actor.type + "/" + n.type + ")"), t.preventDefault();
       return;
     }
-    return this.actor.uuid === ((i = o.parent) == null ? void 0 : i.uuid) ? this._onSortItem(t, o.toObject()) : super._onDropItem(t, a);
+    return this.actor.uuid === ((o = n.parent) == null ? void 0 : o.uuid) ? this._onSortItem(t, n.toObject()) : super._onDropItem(t, a);
   }
 }
-const u = {
+const g = {
   "sheet-header": "_sheet-header_uh5qv_2"
 };
-class g extends ActorSheet {
+class _ extends ActorSheet {
   constructor(t, a) {
     super(t, a);
-    n(this, "allowedItemTypes", [
+    i(this, "allowedItemTypes", [
       "weapon",
       "trait",
       "system",
@@ -107,13 +121,13 @@ class g extends ActorSheet {
   }
   getData() {
     const t = super.getData();
-    return t.styles = u, t;
+    return t.styles = g, t;
   }
 }
-const _ = {
+const y = {
   "sheet-header": "_sheet-header_t1og4_2"
 };
-class y extends ItemSheet {
+class b extends ItemSheet {
   constructor(e, t) {
     super(e, t);
   }
@@ -123,13 +137,29 @@ class y extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = _, console.log(e), e;
+    return e.styles = y, console.log(e), e;
   }
 }
 const f = {
   "sheet-header": "_sheet-header_t1og4_2"
 };
-class w extends ItemSheet {
+class S extends ItemSheet {
+  constructor(e, t) {
+    super(e, t);
+  }
+  /** @override */
+  get template() {
+    return "systems/lancer-lite/templates/item/core_bonus.hbs";
+  }
+  getData() {
+    const e = super.getData();
+    return e.styles = f, console.log(e), e;
+  }
+}
+const v = {
+  "sheet-header": "_sheet-header_t1og4_2"
+};
+class D extends ItemSheet {
   constructor(e, t) {
     super(e, t);
   }
@@ -139,13 +169,29 @@ class w extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = f, console.log(e), e;
+    return e.styles = v, console.log(e), e;
   }
 }
-const b = {
+const I = {
   "sheet-header": "_sheet-header_t1og4_2"
 };
-class S extends ItemSheet {
+class w extends ItemSheet {
+  constructor(e, t) {
+    super(e, t);
+  }
+  /** @override */
+  get template() {
+    return "systems/lancer-lite/templates/item/license.hbs";
+  }
+  getData() {
+    const e = super.getData();
+    return e.styles = I, console.log(e), e;
+  }
+}
+const k = {
+  "sheet-header": "_sheet-header_t1og4_2"
+};
+class T extends ItemSheet {
   constructor(e, t) {
     super(e, t);
   }
@@ -155,13 +201,29 @@ class S extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = b, console.log(e), e;
+    return e.styles = k, console.log(e), e;
   }
 }
-const D = {
+const x = {
+  "sheet-header": "_sheet-header_t1og4_2"
+};
+class A extends ItemSheet {
+  constructor(e, t) {
+    super(e, t);
+  }
+  /** @override */
+  get template() {
+    return "systems/lancer-lite/templates/item/talent.hbs";
+  }
+  getData() {
+    const e = super.getData();
+    return e.styles = x, console.log(e), e;
+  }
+}
+const O = {
   "sheet-header": "_sheet-header_1ye81_2"
 };
-class I extends ItemSheet {
+class C extends ItemSheet {
   constructor(e, t) {
     super(e, t);
   }
@@ -171,15 +233,40 @@ class I extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = D, console.log(e), e;
+    return e.styles = O, console.log(e), e;
   }
 }
-const v = {
+const L = {
   "sheet-header": "_sheet-header_t1og4_2"
 };
-class k extends ItemSheet {
+class P extends ItemSheet {
   constructor(e, t) {
     super(e, t);
+  }
+  /** @override */
+  get template() {
+    return "systems/lancer-lite/templates/item/trigger.hbs";
+  }
+  getData() {
+    const e = super.getData();
+    return e.styles = L, console.log(e), e;
+  }
+}
+const E = {
+  "sheet-header": "_sheet-header_129by_2",
+  "icon-button-container": "_icon-button-container_129by_2",
+  "button-icon": "_button-icon_129by_8"
+};
+class G extends ItemSheet {
+  constructor(e, t) {
+    super(e, t);
+  }
+  /** @override */
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      width: 600,
+      height: 600
+    });
   }
   /** @override */
   get template() {
@@ -187,22 +274,41 @@ class k extends ItemSheet {
   }
   getData() {
     const e = super.getData();
-    return e.styles = v, console.log(e), e;
+    return e.styles = E, console.log(e), e;
+  }
+  activateListeners(e) {
+    super.activateListeners(e), e.find(".weapon-delete").on("click", (t) => {
+      this.item.delete();
+    });
   }
 }
-const A = `
-<div class="trigger-card" data-item-id={{id}}>
-	{{name}}
-</div>
-`;
-const O = `
-<div class="weapon-card" data-item-id="{{id}}">
+const N = `
+<div class="item-card trigger-card" data-item-id="{{id}}">
 	<div class="header">
 		<div class="title-row">
 			{{name}}
 			<div class="header-buttons">
-				<i class="fa-solid fa-pen-to-square weapon-edit" title="Edit Weapon" data-item-id="{{id}}"></i>
-				<i class="fa-solid fa-ban weapon-delete" title="Delete Weapon" data-item-id="{{id}}"></i>
+				<i class="fa-solid fa-pen-to-square item-edit" title="Edit Trigger" data-item-id="{{id}}"></i>
+			</div>
+		</div>
+		<div class="tags">
+			Trigger
+		</div>
+	</div>
+	<div class="body">
+		<div class="description">
+			{{description}}
+		</div>
+	</div>
+</div>
+`;
+const W = `
+<div class="item-card weapon-card" data-item-id="{{id}}">
+	<div class="header">
+		<div class="title-row">
+			{{name}}
+			<div class="header-buttons">
+				<i class="fa-solid fa-pen-to-square item-edit" title="Edit Weapon" data-item-id="{{id}}"></i>
 			</div>
 		</div>
 		<div class="tags">
@@ -218,10 +324,20 @@ const O = `
 		</div>
 	</div>
 </div>
-`, r = "lancer-lite";
-CONFIG.debug.hooks = !0;
-Handlebars.registerPartial("trigger", A);
-Handlebars.registerPartial("weapon", O);
-Hooks.once("ready", async () => {
-  console.log("Init Hook"), game[r] = { PilotSheet: l }, Actors.unregisterSheet("core", ActorSheet), Actors.registerSheet(r, l, { label: "Pilot", types: ["pilot"], makeDefault: !0 }), Actors.registerSheet(r, g, { label: "Mech", types: ["mech"], makeDefault: !0 }), Items.unregisterSheet("core", ItemSheet), Items.registerSheet(r, y, { label: "Armor", types: ["armor"], makeDefault: !0 }), Items.registerSheet(r, w, { label: "Gear", types: ["gear"], makeDefault: !0 }), Items.registerSheet(r, S, { label: "System", types: ["system"], makeDefault: !0 }), Items.registerSheet(r, I, { label: "Trait", types: ["trait"], makeDefault: !0 }), Items.registerSheet(r, k, { label: "Weapon", types: ["weapon"], makeDefault: !0 }), await d(r);
+`, j = {
+  registerAll: function() {
+    Handlebars.registerPartial("trigger-card", N), Handlebars.registerPartial("weapon-card", W);
+  }
+};
+async function M(s) {
+  const e = [
+    `systems/${s}/templates/actor/pilot.hbs`,
+    `systems/${s}/templates/actor/mech.hbs`
+  ];
+  return loadTemplates(e);
+}
+const r = "lancer-lite";
+j.registerAll();
+Hooks.once("init", async () => {
+  game[r] = { PilotSheet: l }, CONFIG.Actor.documentClass = u, Actors.unregisterSheet("core", ActorSheet), Actors.registerSheet(r, l, { label: "Pilot", types: ["pilot"], makeDefault: !0 }), Actors.registerSheet(r, _, { label: "Mech", types: ["mech"], makeDefault: !0 }), CONFIG.Item.documentClass = h, Items.unregisterSheet("core", ItemSheet), Items.registerSheet(r, b, { label: "Armor", types: ["armor"], makeDefault: !0 }), Items.registerSheet(r, S, { label: "Core Bonus", types: ["core_bonus"], makeDefault: !0 }), Items.registerSheet(r, D, { label: "Gear", types: ["gear"], makeDefault: !0 }), Items.registerSheet(r, w, { label: "License", types: ["license"], makeDefault: !0 }), Items.registerSheet(r, T, { label: "System", types: ["system"], makeDefault: !0 }), Items.registerSheet(r, A, { label: "Talent", types: ["talent"], makeDefault: !0 }), Items.registerSheet(r, C, { label: "Trait", types: ["trait"], makeDefault: !0 }), Items.registerSheet(r, P, { label: "Trigger", types: ["trigger"], makeDefault: !0 }), Items.registerSheet(r, G, { label: "Weapon", types: ["weapon"], makeDefault: !0 }), await M(r);
 });

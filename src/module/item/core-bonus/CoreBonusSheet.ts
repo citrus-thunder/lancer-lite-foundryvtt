@@ -1,13 +1,13 @@
-import styles from "./trait.module.scss";
+import styles from "./core-bonus.module.scss"
 
-export class TraitSheet extends ItemSheet {
+export default class CoreBonusSheet extends ItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/trait.hbs`;
+		return `systems/lancer-lite/templates/item/core_bonus.hbs`;
 	}
 
 	getData() {

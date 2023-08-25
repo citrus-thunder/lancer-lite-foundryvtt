@@ -6,6 +6,23 @@
 	position: relative;
 }
 
+.row-reverse {
+	flex-direction: row-reverse;
+}
+
+:global(.trigger-card),
+:global(.weapon-card) {
+	//width: 15rem;
+	max-width: 15rem;
+	min-width: 10rem;
+	$margin: 0.2rem;
+	margin-bottom: $margin;
+
+	&:not(:first-child) {
+		margin-left: $margin;
+	}
+}
+
 .sheet-header h1 {
 	font-family: $font-sans;
 	font-size: 2.5rem;
@@ -19,6 +36,8 @@
 
 div.field-group {
 	&.pilot-bio {
+		justify-content: flex-end;
+
 		div.field {
 			min-width: 20rem;
 			margin-bottom: 0.2rem;
@@ -48,8 +67,8 @@ table.stat-table {
 
 div.pilot-portrait-frame {
 	border: 0.2rem solid $color-red;
-	width: 15rem;
-	height: 15rem;
+	width: 8rem;
+	height: 10rem;
 	background-color: $color-grey2;
 
 	>img {
@@ -57,9 +76,37 @@ div.pilot-portrait-frame {
 		height: 100%;
 	}
 }
-
+/*
 div.weapons-container {
 	div.weapon-card-container {
 		margin-bottom: 0.2rem;
+		max-width: 15rem;
 	}
+}
+*/
+.pad-right {
+	padding-right: 0.2rem;
+}
+
+div.header-group {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--color-underline-header);
+	margin-bottom: 0.2rem;
+	align-items: flex-end;
+
+	.header-text {
+		display: inline-block;
+		margin: 0;
+		border: none;
+	}
+
+	div.header-options {
+		display: flex;
+	}
+}
+
+.icon-button {
+	font-size: 1.2rem;
+	cursor: pointer;
 }
