@@ -5,16 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "watch": "vite build --watch",
+    "build": "cross-env DEBUG=true vite build",
+    "watch": "cross-env DEBUG=true vite build --watch",
     "clean": "rm -rf ./lancer-lite",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "prepublish": "npm run clean",
+    "publish": "vite build"
   },
   "devDependencies": {
     "@league-of-foundry-developers/foundry-vtt-types": "^9.280.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@tsconfig/svelte": "^5.0.2",
+    "cross-env": "^7.0.3",
     "sass": "^1.66.1",
     "svelte": "^4.0.5",
     "svelte-check": "^3.4.6",

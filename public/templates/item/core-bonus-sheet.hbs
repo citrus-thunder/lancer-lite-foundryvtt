@@ -1,0 +1,15 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header {{styles.sheet-header}}">
+		<img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+		<h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+		<div class="icon-button-container {{styles.icon-button-container}}">
+			<i class="fa-solid fa-ban item-delete button-icon {{styles.button-icon}}" title="Delete Core Bonus" data-item-id="{{id}}"></i>
+		</div>
+	</header>
+	<div>
+		<label>
+			Description
+			{{editor item.system.description target="system.description" button=false}}
+		</label>
+	</div>
+</form>

@@ -1,5 +1,7 @@
 @import '/src/module/style/global';
 
+$card-margin: 0.2rem;
+
 .sheet-container {
 	background-color: white;
 	padding: 1rem 2rem;
@@ -10,17 +12,15 @@
 	flex-direction: row-reverse;
 }
 
-:global(.trigger-card),
-:global(.weapon-card) {
-	//width: 15rem;
-	max-width: 15rem;
-	min-width: 10rem;
-	$margin: 0.2rem;
-	margin-bottom: $margin;
+.card-row :global(.item-card) {
+	max-width: 49%;
+	min-width: 49%;
+	margin-bottom: $card-margin;
+	margin-right: $card-margin;
+}
 
-	&:not(:first-child) {
-		margin-left: $margin;
-	}
+.card-col :global(.item-card) {
+	margin-bottom: $card-margin;
 }
 
 .sheet-header h1 {
@@ -54,7 +54,7 @@ div.field-group {
 	}
 }
 
-table.stat-table {
+table.skill-table {
 	margin-top: 0rem;
 	border: none;
 	background-color: transparent;
@@ -65,10 +65,21 @@ table.stat-table {
 	}
 }
 
+div.skill-container,
+div.stat-container {
+	padding: 0rem 0.5rem;
+	min-width: 6rem;
+
+	label {
+		font-weight: bold;
+		font-family: $font-sans;
+	}
+}
+
 div.pilot-portrait-frame {
 	border: 0.2rem solid $color-red;
 	width: 8rem;
-	height: 10rem;
+	height: 12rem;
 	background-color: $color-grey2;
 
 	>img {
@@ -76,24 +87,27 @@ div.pilot-portrait-frame {
 		height: 100%;
 	}
 }
-/*
-div.weapons-container {
-	div.weapon-card-container {
-		margin-bottom: 0.2rem;
-		max-width: 15rem;
-	}
-}
-*/
+
 .pad-right {
 	padding-right: 0.2rem;
 }
 
+.pad-bottom {
+	padding-bottom: 0.2rem;
+
+	&.--more {
+		padding-bottom: 0.5rem;
+	}
+}
+
+// todo: good candidate for item-sheet.scss
 div.header-group {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid var(--color-underline-header);
 	margin-bottom: 0.2rem;
 	align-items: flex-end;
+	flex-grow: 0;
 
 	.header-text {
 		display: inline-block;

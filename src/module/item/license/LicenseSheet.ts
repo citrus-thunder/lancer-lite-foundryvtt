@@ -1,19 +1,20 @@
-import styles from "./license.module.scss";
+import LancerItemSheet from "../LancerItemSheet";
 
-export default class LicenseSheet extends ItemSheet {
+import styles from "./license-sheet.module.scss";
+
+export default class LicenseSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/license.hbs`;
+		return `systems/lancer-lite/templates/item/license-sheet.hbs`;
 	}
 
 	getData() {
 		const data: any = super.getData();
 		data.styles = styles;
-		console.log(data);
 		return data;
 	};
 }

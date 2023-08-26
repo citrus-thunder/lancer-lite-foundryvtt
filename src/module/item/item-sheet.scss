@@ -1,0 +1,14 @@
+.sheet-header {
+	div.icon-button-container {
+		display: flex;
+		flex-grow: 0;
+		flex-direction: row-reverse;
+		justify-self: flex-end;
+
+		.button-icon {
+			cursor: pointer;
+			margin: 0.2rem;
+			font-size: 2.5rem;
+		}
+	}
+}

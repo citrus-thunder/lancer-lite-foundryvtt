@@ -1,19 +1,20 @@
-import styles from "./trait.module.scss";
+import LancerItemSheet from "../LancerItemSheet";
 
-export default class TraitSheet extends ItemSheet {
+import styles from "./trait-sheet.module.scss";
+
+export default class TraitSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/trait.hbs`;
+		return `systems/lancer-lite/templates/item/trait-sheet.hbs`;
 	}
 
 	getData() {
 		const data: any = super.getData();
 		data.styles = styles;
-		console.log(data);
 		return data;
 	};
 }

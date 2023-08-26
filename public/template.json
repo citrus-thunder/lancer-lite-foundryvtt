@@ -19,7 +19,11 @@
 				"hull": 0,
 				"systems": 0,
 				"agility": 0,
-				"engineering": 0
+				"engineering": 0,
+				"armor": 0,
+				"e_defense": 0,
+				"evasion": 0,
+				"speed": 0
 			},
 			"mech_common": {
 				"name": "New Mech",
@@ -114,6 +118,7 @@
 		},
 		"license": {
 			"name": "New License",
+			"level": 0,
 			"description": ""
 		},
 		"system": {
@@ -140,7 +145,7 @@
 			"description": "",
 			"damage": {
 				"value": 0,
-				"type": ""
+				"type": "Kinetic"
 			},
 			"destroyed": false,
 			"range": "",

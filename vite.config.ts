@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [svelte()],
 	build: {
 		outDir: "lancer-lite",
+		minify: process.env.DEBUG == 'true' ? false : 'esbuild',
 		emptyOutDir: true,
 		lib: {
 			name: "lancerlite",

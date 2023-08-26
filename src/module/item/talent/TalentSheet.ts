@@ -1,19 +1,20 @@
-import styles from "./talent.module.scss";
+import LancerItemSheet from "../LancerItemSheet";
 
-export default class TalentSheet extends ItemSheet {
+import styles from "./talent-sheet.module.scss";
+
+export default class TalentSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/talent.hbs`;
+		return `systems/lancer-lite/templates/item/talent-sheet.hbs`;
 	}
 
 	getData() {
 		const data: any = super.getData();
 		data.styles = styles;
-		console.log(data);
 		return data;
 	};
 }

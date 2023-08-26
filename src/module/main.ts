@@ -18,12 +18,14 @@ import WeaponSheet from "./item/weapon/WeaponSheet";
 
 // Helpers & Utilities
 import partials from "./partial/partials";
+import helpers from "./actor/helper/helpers";
 import preloadTemplates from "./preloadTemplates";
 
 const SYSTEM_NAME = 'lancer-lite';
 //CONFIG.debug.hooks = true;
 
 partials.registerAll();
+helpers.registerAll();
 
 Hooks.once('init', async () => {
 	game[SYSTEM_NAME] = { PilotSheet };

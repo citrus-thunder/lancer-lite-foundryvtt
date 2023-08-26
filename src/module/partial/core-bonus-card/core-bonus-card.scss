@@ -1,12 +1,12 @@
 @import "/src/module/style/global";
 
-$header-color: $color-black2;
+$header-color: $color-red3;
 $header-text-color: #efefef;
 
-$body-color: $color-black3;
+$body-color: $color-red4;
 $body-text-color: #030303;
 
-div.weapon-card {
+div.core-bonus-card {
 	.item-edit {
 		cursor: pointer;
 	}

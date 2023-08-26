@@ -1,19 +1,20 @@
-import styles from "./core-bonus.module.scss"
+import LancerItemSheet from "../LancerItemSheet";
 
-export default class CoreBonusSheet extends ItemSheet {
+import styles from "./core-bonus-sheet.module.scss"
+
+export default class CoreBonusSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/core_bonus.hbs`;
+		return `systems/lancer-lite/templates/item/core-bonus-sheet.hbs`;
 	}
 
 	getData() {
 		const data: any = super.getData();
 		data.styles = styles;
-		console.log(data);
 		return data;
 	};
 }

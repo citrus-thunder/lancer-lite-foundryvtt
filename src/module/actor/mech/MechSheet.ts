@@ -21,7 +21,7 @@ export default class MechSheet extends ActorSheet {
 
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/actor/mech.hbs`;
+		return `systems/lancer-lite/templates/actor/mech-sheet.hbs`;
 	}
 
 	getData() {

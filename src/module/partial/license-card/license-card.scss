@@ -1,19 +1,37 @@
 @import "/src/module/style/global";
 
-$header-color: $color-black2;
+$header-color1: $color-red1;
+$header-color2: $color-red5;
+$header-color3: $color-red7;
+
 $header-text-color: #efefef;
 
-$body-color: $color-black3;
+$body-color: #efefef;
 $body-text-color: #030303;
 
-div.weapon-card {
+div.license-card {
 	.item-edit {
 		cursor: pointer;
 	}
 
 	div.header {
-		background-color: $header-color;
+		background-color: $header-color1;
 		color: $header-text-color;
+
+		&.--level-1
+			{
+			background-color: $header-color1;
+			}
+
+		&.--level-2
+			{
+			background-color: $header-color2;
+			}
+
+		&.--level-3
+			{
+			background-color: $header-color3;
+			}
 
 		div.title-row {
 			width: 100%;

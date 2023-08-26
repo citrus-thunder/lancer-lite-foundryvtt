@@ -1,35 +1,20 @@
-import styles from "./weapon.module.scss";
+import LancerItemSheet from "../LancerItemSheet";
 
-export default class WeaponSheet extends ItemSheet {
+import styles from "./weapon-sheet.module.scss";
+
+export default class WeaponSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
-	}
-
-	/** @override */
-	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
-			width: 600,
-			height: 600,
-		});
 	}
 	
 	/** @override */
 	get template() {
-		return `systems/lancer-lite/templates/item/weapon.hbs`;
+		return `systems/lancer-lite/templates/item/weapon-sheet.hbs`;
 	}
 
 	getData() {
 		const data: any = super.getData();
 		data.styles = styles;
-		console.log(data);
 		return data;
-	}
-
-	activateListeners(html: JQuery<HTMLElement>): void {
-		super.activateListeners(html);
-
-		html.find('.weapon-delete').on('click', (ev) => {
-			this.item.delete();
-		});
 	}
 }
