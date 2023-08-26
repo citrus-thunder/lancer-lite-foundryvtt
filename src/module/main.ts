@@ -19,7 +19,7 @@ import WeaponSheet from "./item/weapon/WeaponSheet";
 
 // Helpers & Utilities
 import partials from "./partial/partials";
-import helpers from "./actor/helper/helpers";
+import helpers from "./helper/helpers";
 import preloadTemplates from "./preloadTemplates";
 
 const SYSTEM_NAME = 'lancer-lite';
