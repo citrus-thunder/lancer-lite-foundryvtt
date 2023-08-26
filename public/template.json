@@ -143,12 +143,10 @@
 		"weapon": {
 			"name": "New Weapon",
 			"description": "",
-			"damage": {
-				"value": 0,
-				"type": "Kinetic"
-			},
+			"damage": "",
 			"destroyed": false,
 			"range": "",
+			"threat": 0,
 			"tags": "",
 			"size": "",
 			"type": ""
