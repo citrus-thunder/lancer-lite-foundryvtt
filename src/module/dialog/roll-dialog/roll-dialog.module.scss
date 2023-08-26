@@ -1,0 +1,11 @@
+@import '/src/module/style/global';
+
+:global(.dialog-content) {
+	min-height: 10rem;
+	min-width: 10rem;
+}
+
+div.dialog-body {
+	// min-height: 10rem;
+	// min-width: 10rem;
+}

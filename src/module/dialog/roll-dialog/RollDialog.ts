@@ -1,16 +1,19 @@
-import dialogTemplate from "./rollDialogTemplate";
-
 import type LancerItem from "../../item/LancerItem";
+import styles from './roll-dialog.module.scss';
 
 export default class RollDialog extends Dialog {
 
 	weapon: LancerItem;
 
+	static get defaultOptions() {
+		return mergeObject(super.defaultOptions, {
+
+		});
+	}
+
 	constructor(weapon: LancerItem) {
 		let data: any = {};
 		let options: any = {};
-
-		const template = Handlebars.compile(dialogTemplate);
 
 		const rollAttack = (html) => {
 			let actor = weapon.parent;
@@ -27,7 +30,7 @@ export default class RollDialog extends Dialog {
 
 		data = {
 			title: "Roll Weapon",
-			content: template(weapon),
+			content: '',
 			buttons: {
 				attack: {
 					icon: '<i class="fas fa-dice-d20"></i>',
@@ -45,5 +48,15 @@ export default class RollDialog extends Dialog {
 
 		super(data, options);
 		this.weapon = weapon;
+	}
+
+	protected override async _injectHTML(html: JQuery<HTMLElement>): Promise<void> {
+		super._injectHTML(html);
+		const data =  {
+			weapon: this.weapon,
+			styles: styles
+		};
+		const content = await renderTemplate('systems/lancer-lite/templates/dialog/roll-dialog.hbs', data);
+		$(html.find('.dialog-content')[0]).html(content);
 	}
 }
