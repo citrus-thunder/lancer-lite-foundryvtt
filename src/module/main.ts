@@ -1,5 +1,6 @@
 import LancerActor from "./actor/LancerActor";
 import LancerItem from "./item/LancerItem";
+import LancerChatMessage from "./chat/LancerChatMessage";
 
 // Actor Sheets
 import PilotSheet from "./actor/pilot/PilotSheet";
@@ -29,6 +30,8 @@ helpers.registerAll();
 
 Hooks.once('init', async () => {
 	game[SYSTEM_NAME] = { PilotSheet };
+
+	CONFIG.ChatMessage.documentClass = LancerChatMessage;
 
 	CONFIG.Actor.documentClass = LancerActor;
 	Actors.unregisterSheet("core", ActorSheet);

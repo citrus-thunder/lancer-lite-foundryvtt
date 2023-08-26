@@ -1,6 +1,8 @@
+import LancerActorSheet from '../LancerActorSheet';
+
 import styles from './mech-sheet.module.scss';
 
-export default class MechSheet extends ActorSheet {
+export default class MechSheet extends LancerActorSheet {
 	allowedItemTypes = [
 	'weapon',
 	'trait',

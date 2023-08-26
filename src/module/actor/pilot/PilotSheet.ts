@@ -1,6 +1,8 @@
+import LancerActorSheet from '../LancerActorSheet';
+
 import styles from './pilot-sheet.module.scss';
 
-export default class PilotSheet extends ActorSheet {
+export default class PilotSheet extends LancerActorSheet {
 	allowedItemTypes = [
 		'armor',
 		'core_bonus',
@@ -87,29 +89,6 @@ export default class PilotSheet extends ActorSheet {
 		});
 
 		return data;
-	}
-
-	activateListeners(html: JQuery<HTMLElement>): void {
-		super.activateListeners(html);
-
-		html.find('.item-edit').on('click', (ev) => {
-			const item = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
-			item.sheet?.render(true);
-		});
-
-		html.find('.item-add').on('click', (ev) => {
-			const itemName: string = $(ev.currentTarget).data('itemName') ?? 'Item';
-			const itemType: string = $(ev.currentTarget).data('itemType');
-			if (!itemType) {
-				console.error('Unable to add new item: no item type specified by data-item-type attribute');
-			}
-
-			CONFIG.Item.documentClass.create({ type: itemType, name: itemName }, { parent: this.actor, renderSheet: true });
-		});
-
-		html.find('.weapon-add').on('click', (ev) => {
-			CONFIG.Item.documentClass.create({ type: 'weapon', name: 'New Weapon' }, { parent: this.actor, renderSheet: true });
-		});
 	}
 
 	protected override async _onDropItem(event: DragEvent, data: ActorSheet.DropData.Item): Promise<unknown> {
