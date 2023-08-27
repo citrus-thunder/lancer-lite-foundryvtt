@@ -1,12 +1,4 @@
 <div class="{{cssClass}} flexcol sheet-container">
-	<!--
-	TODO: 
-	-Tabs
-		- Tab 1: Traits
-		- Tab 2: Licenses
-		- Tab 3: Loadout
-		- Move Skills/Stats to "header"
-	-->
 	<form autocomplete="off">
 		<header class="sheet-header">
 			<h1>PILOT</h1>
@@ -21,11 +13,6 @@
 							<div class="pilot-portrait-frame">
 								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
 							</div>
-							<div class="pad-bottom"></div>
-							<button class="skill-check quick-button">
-								<i class="fas fa-dice-d20"></i>
-								Skill Check
-							</button>
 						</div>
 						<!-- Bio -->
 						<div class="flexcol flex0 field-group pilot-bio pad-right --more">
@@ -98,6 +85,12 @@
 									</label>
 									<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
 								</div>
+							</div>
+							<div class="flexrow pad-top --more">
+								<button class="skill-check quick-button">
+									<i class="fas fa-dice-d20"></i>
+									Skill Check
+								</button>
 							</div>
 						</div>
 						<div class="flexcol field-group pilot-stats">

@@ -50,7 +50,10 @@ export default class PilotSheet extends LancerActorSheet {
 
 	getData(): any {
 		const data: any = super.getData();
-
+		// todo: derived values?
+		//  - grit
+		//  - hp
+		
 		// todo: multiple armors aren't really a thing in this system.
 		data.armor = [];
 		data.core_bonuses = [];
