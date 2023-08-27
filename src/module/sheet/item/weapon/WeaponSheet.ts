@@ -1,7 +1,5 @@
 import LancerItemSheet from "../LancerItemSheet";
 
-import styles from "./weapon-sheet.module.scss";
-
 export default class WeaponSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
@@ -10,11 +8,5 @@ export default class WeaponSheet extends LancerItemSheet {
 	/** @override */
 	get template() {
 		return `systems/lancer-lite/template/sheet/item/weapon-sheet.hbs`;
-	}
-
-	getData() {
-		const data: any = super.getData();
-		data.styles = styles;
-		return data;
 	}
 }

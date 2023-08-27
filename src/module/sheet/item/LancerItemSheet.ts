@@ -1,5 +1,3 @@
-import "./item-sheet.scss";
-
 export default class LancerItemSheet extends ItemSheet {
 
 	/** @override */

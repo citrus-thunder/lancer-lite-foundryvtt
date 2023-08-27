@@ -1,7 +1,5 @@
 import LancerItemSheet from "../LancerItemSheet";
 
-import styles from "./trigger-sheet.module.scss";
-
 export default class TriggerSheet extends LancerItemSheet {
 	constructor(data, options) {
 		super(data, options);
@@ -11,10 +9,4 @@ export default class TriggerSheet extends LancerItemSheet {
 	get template() {
 		return `systems/lancer-lite/template/sheet/item/trigger-sheet.hbs`;
 	}
-
-	getData() {
-		const data: any = super.getData();
-		data.styles = styles;
-		return data;
-	};
 }
