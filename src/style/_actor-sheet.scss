@@ -14,11 +14,15 @@ $card-margin: 0.2rem;
 
 	.pad-right {
 		padding-right: 0.2rem;
+
+		&.--more {
+			padding-right: 0.5rem;
+		}
 	}
-	
+
 	.pad-bottom {
 		padding-bottom: 0.2rem;
-	
+
 		&.--more {
 			padding-bottom: 0.5rem;
 		}
@@ -51,28 +55,6 @@ $card-margin: 0.2rem;
 		font-weight: bold;
 	}
 
-	div.field-group {
-
-		// todo: genericize or remove
-		&.pilot-bio {
-			justify-content: flex-end;
-
-			div.field {
-				min-width: 20rem;
-				margin-bottom: 0.2rem;
-
-				>label {
-					font-weight: bold;
-
-					>input,
-					textarea {
-						font-family: $font-serif;
-					}
-				}
-			}
-		}
-	}
-
 	// todo: should this be a table at all?
 	table.skill-table {
 		margin-top: 0rem;
@@ -102,7 +84,7 @@ $card-margin: 0.2rem;
 		width: 8rem;
 		height: 12rem;
 		background-color: $color-grey2;
-	
+
 		>img {
 			width: 100%;
 			height: 100%;
@@ -116,13 +98,13 @@ $card-margin: 0.2rem;
 		margin-bottom: 0.2rem;
 		align-items: flex-end;
 		flex-grow: 0;
-	
+
 		.header-text {
 			display: inline-block;
 			margin: 0;
 			border: none;
 		}
-	
+
 		div.header-options {
 			display: flex;
 		}
@@ -130,5 +112,36 @@ $card-margin: 0.2rem;
 
 	button.quick-button {
 		max-width: 8rem;
+	}
+
+	// Pilot Sheet
+	.pilot-bio {
+		//justify-content: flex-end;
+		
+		div.field {
+			min-width: 18rem;
+			margin-bottom: 0.2rem;
+
+			>label {
+				font-weight: bold;
+
+				>input,
+				textarea {
+					font-family: $font-serif;
+				}
+			}
+		}
+	}
+
+	.pilot-skills {
+		.flexrow {
+			min-width: 4rem;
+		}
+	}
+
+	.pilot-stats {
+		.flexrow {
+			min-width: 4rem;
+		}
 	}
 }

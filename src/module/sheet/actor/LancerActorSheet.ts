@@ -7,6 +7,10 @@ export default class LancerActorSheet extends ActorSheet {
 	activateListeners(html: JQuery<HTMLElement>): void {
 		super.activateListeners(html);
 
+		// We provide an empty callback to simply suppress a "callback is not a function" error in the console
+		const tabs = new Tabs({navSelector: ".tabs", contentSelector: ".content", initial: "traits", callback: () => {}});
+		tabs.bind(html.get(0)!);
+
 		html.find('.item-edit').on('click', (ev) => {
 			const item = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
 			item.sheet?.render(true);

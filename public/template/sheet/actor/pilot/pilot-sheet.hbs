@@ -1,4 +1,12 @@
 <div class="{{cssClass}} flexcol sheet-container">
+	<!--
+	TODO: 
+	-Tabs
+		- Tab 1: Traits
+		- Tab 2: Licenses
+		- Tab 3: Loadout
+		- Move Skills/Stats to "header"
+	-->
 	<form autocomplete="off">
 		<header class="sheet-header">
 			<h1>PILOT</h1>
@@ -13,9 +21,14 @@
 							<div class="pilot-portrait-frame">
 								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
 							</div>
+							<div class="pad-bottom"></div>
+							<button class="skill-check quick-button">
+								<i class="fas fa-dice-d20"></i>
+								Skill Check
+							</button>
 						</div>
 						<!-- Bio -->
-						<div class="flexcol field-group pilot-bio pad-right">
+						<div class="flexcol flex0 field-group pilot-bio pad-right --more">
 							<h2 class="section-title">Bio</h2>
 							<div class="field">
 								<label>
@@ -36,15 +49,101 @@
 								</label>
 							</div>
 						</div>
+						<div class="flexcol flex0 field-group pilot-skills pad-right --more">
+							<h2 class="section-title">Skills</h2>
+							<div class="flexrow stats-row">
+								<label>
+									LL
+									<input type="text" name="system.license_level" value="{{actor.system.license_level}}"
+										data-dtype="Number">
+								</label>
+								<label>
+									GRIT
+									<input type="text" name="system.grit" value="{{actor.system.grit}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow stats-row">
+								<label>
+									HULL
+									<input type="text" name="system.hull" value="{{actor.system.hull}}" data-dtype="Number">
+								</label>
+								<label>
+									SYS
+									<input type="text" name="system.systems" value="{{actor.system.systems}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow stats-row">
+								<label>
+									AGI
+									<input type="text" name="system.agility" value="{{actor.system.agility}}" data-dtype="Number">
+								</label>
+								<label>
+									ENG
+									<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
+								</label>
+							</div>
+						</div>
+						<div class="flexcol field-group pilot-stats">
+							<h2 class="section-title">Stats</h2>
+							<div class="flexrow">
+								<label>
+									HP
+									<div class="flexrow flex0">
+										<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
+										&nbsp;/&nbsp;
+										<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
+									</div>
+								</label>
+							</div>
+							<div class="flexrow stats-row">
+								<label>
+									ARMOR
+									<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow stats-row">
+								<label>
+									E-DEF
+									<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow stats-row">
+								<label>
+									EVASION
+									<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow stats-row">
+								<label>
+									SPEED
+									<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dtype="Number">
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Row 2: Quick Buttons -->
+			<!-- Row 2: Tabs -->
 			<div class="flexrow pad-bottom --more">
+				<!--
 				<button class="skill-check quick-button">
 					<i class="fas fa-dice-d20"></i>
 					Skill Check
 				</button>
+				-->
+				<nav class="tabs" data-group="primary-tabs">
+					<a class="item" data-tab="traits" data-group="primary-tabs">Traits</a>
+					<a class="item" data-tab="licenses" data-group="primary-tabs">Licenses</a>
+					<a class="item" data-tab="loadout" data-group="primary-tabs">Loadout</a>
+				</nav>
+			</div>
+			<!-- Row 3: Content -->
+			<div class="flexrow">
+				<section class="content">
+					<div class="tab" data-tab="traits" data-group="primary-tabs">Traits Content</div>
+					<div class="tab" data-tab="licenses" data-group="primary-tabs">Licenses Content</div>
+					<div class="tab" data-tab="loadout" data-group="primary-tabs">Loudout Content</div>
+				</section>
 			</div>
 			<!-- Row 3: Triggers, Skills, Stats -->
 			<div class="flexrow pad-bottom --more">
@@ -63,7 +162,23 @@
 						{{/each}}
 					</div>
 				</div>
+				<!-- Talents -->
+				<div class="flexcol pad-right">
+					<div class="header-group">
+						<h2 class="section-title header-text">Talents</h2>
+						<div class="header-options}">
+							<i class="fa-solid fa-plus item-add icon-button" title="Add Talent" data-item-type="talent"
+								data-item-name="New Talent"></i>
+						</div>
+					</div>
+					<div class="card-col">
+						{{#each talents}}
+						{{> "systems/lancer-lite/template/card/talent-card.hbs"}}
+						{{/each}}
+					</div>
+				</div>
 				<!-- Skills -->
+				<!--
 				<div class="flexcol flex0 skill-container pad-right">
 					<h2 class="section-title">Skills</h2>
 					<table class="skill-table">
@@ -112,7 +227,9 @@
 						</tr>
 					</table>
 				</div>
+				-->
 				<!-- Stats -->
+				<!--
 				<div class="flexcol flex0 stat-container">
 					<h2 class="section-title">Stats</h2>
 					<div class="flexrow stats-row">
@@ -150,24 +267,11 @@
 						</label>
 					</div>
 				</div>
+				-->
 			</div>
 			<!-- Row 4: Talents & Licenses -->
 			<div class="flexrow pad-bottom --more">
-				<!-- Talents -->
-				<div class="flexcol pad-right">
-					<div class="header-group">
-						<h2 class="section-title header-text">Talents</h2>
-						<div class="header-options}">
-							<i class="fa-solid fa-plus item-add icon-button" title="Add Talent" data-item-type="talent"
-								data-item-name="New Talent"></i>
-						</div>
-					</div>
-					<div class="card-col">
-						{{#each talents}}
-						{{> "systems/lancer-lite/template/card/talent-card.hbs"}}
-						{{/each}}
-					</div>
-				</div>
+
 				<!-- Licenses -->
 				<div class="flexcol">
 					<div class="header-group">
@@ -191,8 +295,8 @@
 					<div class="header-group">
 						<h2 class="section-title header-text">Core Bonuses</h2>
 						<div class="header-options">
-							<i class="fa-solid fa-plus item-add icon-button" title="Add Core Bonus"
-								data-item-type="core_bonus" data-item-name="New Core Bonus"></i>
+							<i class="fa-solid fa-plus item-add icon-button" title="Add Core Bonus" data-item-type="core_bonus"
+								data-item-name="New Core Bonus"></i>
 						</div>
 					</div>
 					<div class="flexrow card-row">

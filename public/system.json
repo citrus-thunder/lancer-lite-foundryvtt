@@ -29,13 +29,6 @@
 	"styles": [
 		"style.css"
 	],
-	"packs": [
-		{
-			"name": "weapons",
-			"label": "Weapons",
-			"type": "Item"
-		}
-	],
 	"socket": false,
 	"initiative": "1d20",
 	"gridDistance": 10,
