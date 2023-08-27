@@ -101,7 +101,7 @@
 			"name": "New Armor",
 			"description": "",
 			"tags": "",
-			"bonuses": [],
+			"bonuses": "",
 			"armor": 0,
 			"evasion": 0,
 			"e_defense": 0,

@@ -10,10 +10,9 @@ export default
 				<i class="fa-solid fa-pen-to-square item-edit" title="Edit Gear" data-item-id="{{id}}"></i>
 			</div>
 		</div>
-		{{#if tags}}
 		<div class="tags">
+			Gear{{#if system.tags}}, {{system.tags}}{{/if}}
 		</div>
-		{{/if}}
 	</div>
 	<div class="body">
 		<div class="description">
