@@ -7,6 +7,7 @@ import PilotSheet from "./actor/pilot/PilotSheet";
 import MechSheet from "./actor/mech/MechSheet";
 
 // Item Sheets
+import ActionSheet from "./item/action/ActionSheet";
 import ArmorSheet from "./item/armor/ArmorSheet";
 import CoreBonusSheet from "./item/core-bonus/CoreBonusSheet";
 import GearSheet from "./item/gear/GearSheet";
@@ -40,6 +41,7 @@ Hooks.once('init', async () => {
 
 	CONFIG.Item.documentClass = LancerItem;
 	Items.unregisterSheet("core", ItemSheet);
+	Items.registerSheet(SYSTEM_NAME, ActionSheet, {label: 'Action', types: ['action'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, ArmorSheet, {label: 'Armor', types: ['armor'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, CoreBonusSheet, {label: 'Core Bonus', types: ['core_bonus'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, GearSheet, {label: 'Gear', types: ['gear'], makeDefault: true});

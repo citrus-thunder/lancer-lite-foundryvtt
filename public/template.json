@@ -45,7 +45,16 @@
 				"tech_attack": 0,
 				"evasion": 0,
 				"speed": 0,
-				"heat_cap": 0
+				"heat": {
+					"value": 0,
+					"max": 0,
+					"min": 0
+				},
+				"structure": {
+					"value": 0,
+					"max": 0,
+					"min": 0
+				}
 			}
 		},
 		"pilot": {
@@ -55,12 +64,11 @@
 			"license_level": 0
 		},
 		"mech": {
-			"frame": "",
 			"templates": [
 				"mech_common"
 			],
-			"core_system": [],
-			"traits": [],
+			"frame": "",
+			"core_system": "",
 			"sp": {
 				"value": 0,
 				"min": 0,
@@ -87,6 +95,7 @@
 	},
 	"Item": {
 		"types": [
+			"action",
 			"armor",
 			"core_bonus",
 			"gear",
@@ -97,6 +106,13 @@
 			"trigger",
 			"weapon"
 		],
+		"action": {
+			"name": "New Action",
+			"type": "",
+			"cost": "",
+			"description": "",
+			"tags": ""
+		},
 		"armor": {
 			"name": "New Armor",
 			"description": "",
