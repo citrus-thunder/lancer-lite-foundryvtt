@@ -1,8 +1,9 @@
-import type LancerItem from '../../sheet/item/LancerItem';
+export type SkillDialogInfo = {
+	bonus: number,
+	bonusSource: string
+}
 
 export default class SkillDialog extends Dialog {
-
-	trigger: LancerItem | null = null;
 
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
@@ -10,20 +11,20 @@ export default class SkillDialog extends Dialog {
 		});
 	}
 
-	constructor(trigger: LancerItem | null = null) {
+	constructor(info: SkillDialogInfo | null = null) {
 		let data: any = {};
 		let options: any = {};
 
 		const rollSkill = async (html: JQuery<HTMLElement>) => {
-			let t: any = trigger;
 			let accuracy = parseInt(html.find('#input-accuracy').val() as string);
 			let difficulty = parseInt(html.find('#input-difficulty').val() as string);
 			let flavor = 'Skill Check';
 			let formula = `1d20`;
 
-			if (t) {
-				flavor += ` | +${t.system.bonus} ${t.name}`;
-				formula += ` + ${t.system.bonus}`;
+			if (info) {
+				const operator = info.bonus >= 0 ? '+' : '-';
+				flavor += ` | ${operator}${info.bonus} ${info.bonusSource}`;
+				formula += ` ${operator} ${info.bonus}`;
 			}
 
 			if (accuracy > 0) {
@@ -64,17 +65,14 @@ export default class SkillDialog extends Dialog {
 		};
 
 		super(data, options);
-		this.trigger = trigger;
 	}
 
 	protected override async _injectHTML(html: JQuery<HTMLElement>): Promise<void> {
 		super._injectHTML(html);
-		const data = {
-			trigger: this?.trigger,
-			actor: this?.trigger?.parent,
-		};
 
+		const data = {};
 		const content = await renderTemplate('systems/lancer-lite/template/dialog/skill-dialog.hbs', data);
+
 		$(html.find('.dialog-content')[0]).html(content);
 	}
 }

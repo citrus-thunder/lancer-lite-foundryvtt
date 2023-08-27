@@ -51,36 +51,52 @@
 						</div>
 						<div class="flexcol flex0 field-group pilot-skills pad-right --more">
 							<h2 class="section-title">Skills</h2>
-							<div class="flexrow stats-row">
-								<label>
-									LL
+							<div class="flexrow">
+								<div class="pad-right --more">
+									<label>
+										LL
+									</label>
 									<input type="text" name="system.license_level" value="{{actor.system.license_level}}"
 										data-dtype="Number">
-								</label>
-								<label>
-									GRIT
+								</div>
+								<div>
+									<label>
+										GRIT
+									</label>
 									<input type="text" name="system.grit" value="{{actor.system.grit}}" data-dtype="Number">
-								</label>
+								</div>
 							</div>
-							<div class="flexrow stats-row">
-								<label>
-									HULL
+							<div class="flexrow">
+								<div class="pad-right --more">
+									<label>
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="hull" data-stat-label="Hull"></i>
+										HULL
+									</label>
 									<input type="text" name="system.hull" value="{{actor.system.hull}}" data-dtype="Number">
-								</label>
-								<label>
-									SYS
+								</div>
+								<div>
+									<label>
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="systems" data-stat-label="Systems"></i>
+										SYS
+									</label>
 									<input type="text" name="system.systems" value="{{actor.system.systems}}" data-dtype="Number">
-								</label>
+								</div>
 							</div>
-							<div class="flexrow stats-row">
-								<label>
-									AGI
+							<div class="flexrow">
+								<div class="pad-right --more">
+									<label class="pad-right --more">
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="agility" data-stat-label="Agility"></i>
+										AGI
+									</label>
 									<input type="text" name="system.agility" value="{{actor.system.agility}}" data-dtype="Number">
-								</label>
-								<label>
-									ENG
+								</div>
+								<div>
+									<label>
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="engineering" data-stat-label="Engineering"></i>
+										ENG
+									</label>
 									<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
-								</label>
+								</div>
 							</div>
 						</div>
 						<div class="flexcol field-group pilot-stats">
@@ -95,25 +111,25 @@
 									</div>
 								</label>
 							</div>
-							<div class="flexrow stats-row">
+							<div class="flexrow">
 								<label>
 									ARMOR
 									<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
 								</label>
 							</div>
-							<div class="flexrow stats-row">
+							<div class="flexrow">
 								<label>
 									E-DEF
 									<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dtype="Number">
 								</label>
 							</div>
-							<div class="flexrow stats-row">
+							<div class="flexrow">
 								<label>
 									EVASION
 									<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dtype="Number">
 								</label>
 							</div>
-							<div class="flexrow stats-row">
+							<div class="flexrow">
 								<label>
 									SPEED
 									<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dtype="Number">
@@ -125,12 +141,6 @@
 			</div>
 			<!-- Row 2: Tabs -->
 			<div class="flexrow pad-bottom --more">
-				<!--
-				<button class="skill-check quick-button">
-					<i class="fas fa-dice-d20"></i>
-					Skill Check
-				</button>
-				-->
 				<nav class="tabs" data-group="primary-tabs">
 					<a class="item" data-tab="traits" data-group="primary-tabs">Traits</a>
 					<a class="item" data-tab="licenses" data-group="primary-tabs">Licenses</a>
@@ -177,97 +187,6 @@
 						{{/each}}
 					</div>
 				</div>
-				<!-- Skills -->
-				<!--
-				<div class="flexcol flex0 skill-container pad-right">
-					<h2 class="section-title">Skills</h2>
-					<table class="skill-table">
-						<tr>
-							<td>
-								<label>
-									LL
-									<input type="text" name="system.license_level" value="{{actor.system.license_level}}"
-										data-dtype="Number">
-								</label>
-							</td>
-							<td>
-								<label>
-									GRIT
-									<input type="text" name="system.grit" value="{{actor.system.grit}}" data-dtype="Number">
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label>
-									HULL
-									<input type="text" name="system.hull" value="{{actor.system.hull}}" data-dtype="Number">
-								</label>
-							</td>
-							<td>
-								<label>
-									SYS
-									<input type="text" name="system.systems" value="{{actor.system.systems}}" data-dtype="Number">
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label>
-									AGI
-									<input type="text" name="system.agility" value="{{actor.system.agility}}" data-dtype="Number">
-								</label>
-							</td>
-							<td>
-								<label>
-									ENG
-									<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
-								</label>
-							</td>
-						</tr>
-					</table>
-				</div>
-				-->
-				<!-- Stats -->
-				<!--
-				<div class="flexcol flex0 stat-container">
-					<h2 class="section-title">Stats</h2>
-					<div class="flexrow stats-row">
-						<label>
-							HP
-							<div class="flexrow flex0">
-								<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
-								&nbsp;/&nbsp;
-								<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
-							</div>
-						</label>
-					</div>
-					<div class="flexrow stats-row">
-						<label>
-							ARMOR
-							<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
-						</label>
-					</div>
-					<div class="flexrow stats-row">
-						<label>
-							E-DEF
-							<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dtype="Number">
-						</label>
-					</div>
-					<div class="flexrow stats-row">
-						<label>
-							EVASION
-							<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dtype="Number">
-						</label>
-					</div>
-					<div class="flexrow stats-row">
-						<label>
-							SPEED
-							<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dtype="Number">
-						</label>
-					</div>
-				</div>
-				-->
 			</div>
 			<!-- Row 4: Talents & Licenses -->
 			<div class="flexrow pad-bottom --more">

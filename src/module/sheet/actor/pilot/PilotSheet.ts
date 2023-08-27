@@ -33,20 +33,15 @@ export default class PilotSheet extends LancerActorSheet {
 	activateListeners(html: JQuery<HTMLElement>): void {
 		super.activateListeners(html);
 
-		html.find('.skill-check').on('click', async (ev) => {
-			new SkillDialog().render(true);
-		});
-
 		html.find('.trigger-roll').on('click', async (ev) => {
 			const trigger = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
-			const d = new SkillDialog(trigger);
-			d.render(true);
+			const t:any = trigger;
+			new SkillDialog({bonus: t.system.bonus, bonusSource: t.name}).render(true);
 		});
 	}
 
 	getData(): any {
 		const data: any = super.getData();
-		//data.styles = styles;
 
 		// todo: multiple armors aren't really a thing in this system.
 		data.armor = [];

@@ -117,9 +117,9 @@ $card-margin: 0.2rem;
 	// Pilot Sheet
 	.pilot-bio {
 		//justify-content: flex-end;
-		
+
 		div.field {
-			min-width: 18rem;
+			min-width: 15rem;
 			margin-bottom: 0.2rem;
 
 			>label {
@@ -134,12 +134,20 @@ $card-margin: 0.2rem;
 	}
 
 	.pilot-skills {
+		label {
+			font-weight: bold;
+		}
+
 		.flexrow {
-			min-width: 4rem;
+			min-width: 8rem;
 		}
 	}
 
 	.pilot-stats {
+		label {
+			font-weight: bold;
+		}
+
 		.flexrow {
 			min-width: 4rem;
 		}
