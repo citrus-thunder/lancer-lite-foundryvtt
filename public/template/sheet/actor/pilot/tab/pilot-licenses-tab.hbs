@@ -1,0 +1,32 @@
+<div class="flexrow pad-bottom --more">
+	<!-- Licenses -->
+	<div class="flexcol pad-right">
+		<div class="header-group">
+			<h2 class="section-title header-text">Licenses</h2>
+			<div class="header-options">
+				<i class="fa-solid fa-plus item-add icon-button" title="Add License" data-item-type="license"
+					data-item-name="New License"></i>
+			</div>
+		</div>
+		<div class="card-col">
+			{{#each licenses}}
+			{{> "systems/lancer-lite/template/card/license-card.hbs"}}
+			{{/each}}
+		</div>
+	</div>
+	<!-- Core Bonuses -->
+	<div class="flexcol">
+		<div class="header-group">
+			<h2 class="section-title header-text">Core Bonuses</h2>
+			<div class="header-options">
+				<i class="fa-solid fa-plus item-add icon-button" title="Add Core Bonus" data-item-type="core_bonus"
+					data-item-name="New Core Bonus"></i>
+			</div>
+		</div>
+		<div class="card-col">
+			{{#each core_bonuses}}
+			{{> "systems/lancer-lite/template/card/core-bonus-card.hbs"}}
+			{{/each}}
+		</div>
+	</div>
+</div>

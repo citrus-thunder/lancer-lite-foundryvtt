@@ -1,0 +1,52 @@
+<div class="flexcol">
+	<!-- Row: Armor / Weapons -->
+	<div class="flexrow">
+		<!-- Column: Armor -->
+		<div class="flexcol pad-right">
+			<div class="header-group">
+				<h2 class="section-title header-text">Armor</h3>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Armor" data-item-type="armor"
+						data-item-name="New Armor"></i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each armor}}
+				{{> "systems/lancer-lite/template/card/armor-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+		<!-- Column: Weapons -->
+		<div class="flexcol">
+			<div class="header-group">
+				<h2 class="section-title header-text">Weapons</h3>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
+						data-item-name="New Weapon"></i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each weapons}}
+				{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<!-- Row: Gear -->
+	<div class="flexrow">
+		<div class="flexcol">
+			<div class="header-group">
+				<h2 class="section-title header-text">Gear</h3>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Gear" data-item-type="gear"
+						data-item-name="New Gear"></i>
+				</div>
+			</div>
+			<div class="flexrow card-row">
+				{{#each gear}}
+				{{> "systems/lancer-lite/template/card/gear-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

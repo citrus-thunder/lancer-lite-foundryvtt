@@ -21,7 +21,15 @@ export default class PilotSheet extends LancerActorSheet {
 		return mergeObject(super.defaultOptions, {
 			classes: ["character", "sheet", "actor"],
 			width: 675,
-			height: 700,
+			height: 725,
+			tabs: [
+				{
+					group: 'primary',
+					navSelector: '.tabs', 
+					contentSelector: '.content', 
+					initial: 'traits'
+				}
+			],
 		});
 	}
 

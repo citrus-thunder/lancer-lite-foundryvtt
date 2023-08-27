@@ -1,0 +1,32 @@
+<div class="flexrow">
+	<!-- Triggers -->
+	<div class="flexcol pad-right">
+		<div class="header-group">
+			<h2 class="section-title header-text">Triggers</h2>
+			<div class="header-options">
+				<i class="fa-solid fa-plus item-add icon-button" title="Add Trigger" data-item-type="trigger"
+					data-item-name="New Trigger"></i>
+			</div>
+		</div>
+		<div class="card-col">
+			{{#each triggers}}
+			{{> "systems/lancer-lite/template/card/trigger-card.hbs"}}
+			{{/each}}
+		</div>
+	</div>
+	<!-- Talents -->
+	<div class="flexcol pad-right">
+		<div class="header-group">
+			<h2 class="section-title header-text">Talents</h2>
+			<div class="header-options}">
+				<i class="fa-solid fa-plus item-add icon-button" title="Add Talent" data-item-type="talent"
+					data-item-name="New Talent"></i>
+			</div>
+		</div>
+		<div class="card-col">
+			{{#each talents}}
+			{{> "systems/lancer-lite/template/card/talent-card.hbs"}}
+			{{/each}}
+		</div>
+	</div>
+</div>
