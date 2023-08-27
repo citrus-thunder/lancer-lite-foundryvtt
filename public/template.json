@@ -129,6 +129,7 @@
 		},
 		"talent": {
 			"name": "New Talent",
+			"rank": 1,
 			"description": ""
 		},
 		"trait": {
