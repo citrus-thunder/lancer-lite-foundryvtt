@@ -8,9 +8,6 @@ export default async function preloadTemplates(system) {
 		`systems/${system}/template/card/talent-card.hbs`,
 		`systems/${system}/template/card/trigger-card.hbs`,
 		`systems/${system}/template/card/weapon-card.hbs`,
-		
-		//`systems/${system}/templates/actor/pilot-sheet.hbs`,
-		//`systems/${system}/templates/actor/mech-sheet.hbs`,
 	];
 
 	return loadTemplates(templatePaths);

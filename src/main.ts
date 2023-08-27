@@ -28,9 +28,6 @@ import './lancer.scss';
 const SYSTEM_NAME = 'lancer-lite';
 //CONFIG.debug.hooks = true;
 
-//partials.registerAll();
-//helpers.registerAll();
-
 Hooks.once('init', async () => {
 	game[SYSTEM_NAME] = { PilotSheet };
 
