@@ -144,6 +144,7 @@
 			"name": "New Weapon",
 			"description": "",
 			"damage": "",
+			"roll_formula": "",
 			"destroyed": false,
 			"range": "",
 			"threat": 0,

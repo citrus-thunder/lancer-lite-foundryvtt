@@ -96,7 +96,7 @@ export default class PilotSheet extends LancerActorSheet {
 			return false;
 		}
 
-		const item = await Item.bind(this).fromDropData(data);
+		const item = await CONFIG.Item.documentClass.bind(this).fromDropData(data);
 		if (!item) {
 			return false;
 		}

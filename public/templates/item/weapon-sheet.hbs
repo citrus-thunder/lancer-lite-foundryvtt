@@ -32,21 +32,12 @@
 								<input type="text" name="system.damage" value="{{item.system.damage}}">
 							</label>
 						</div>
-						<!--
 						<div class="{{styles.field}}">
 							<label>
-								DAMAGE TYPE
-								<select name="system.damage.type">
-									{{#select system.damage.type}}
-									<option value="Kinetic">Kinetic</option>
-									<option value="Explosive">Explosive</option>
-									<option value="Energy">Energy</option>
-									<option value="Burn">Burn</option>
-									{{/select}}
-								</select>
+								ROLL FORMULA
+								<input type="text" name="system.roll_formula" value="{{item.system.roll_formula}}">
 							</label>
 						</div>
-						-->
 					</div>
 					<!-- Range -->
 					<div class="flexrow {{styles.field-group}}">
@@ -130,32 +121,5 @@
 				</div>
 			</div>
 		</div>
-		<!--
-	<div>
-		<label>
-			Range
-			<input type="text" name="system.range" value="{{item.system.range}}">
-		</label>
-		<label>
-			Damage
-			<input type="text" name="system.damage.value" value="{{item.system.damage.value}}">
-		</label>
-		<label>
-			Damage Type
-			<select name="system.damage.type">
-				{{#select system.damage.type}}
-				<option value="Kinetic">Kinetic</option>
-				<option value="Explosive">Explosive</option>
-				<option value="Energy">Energy</option>
-				<option value="Burn">Burn</option>
-				{{/select}}
-			</select>
-		</label>
-		<label>
-			Tags
-			<input type="text" name="system.tags" value="{{item.system.tags}}">
-		</label>
-	</div>
-	-->
 	</form>
 </div>

@@ -22,10 +22,6 @@ export default class LancerActorSheet extends ActorSheet {
 		});
 
 		html.find('.weapon-roll').on('click', async (ev) => {
-			/* // Keeping this test code as sample code for creating a chat message
-			const chatData = {content: 'Opening Weapon Roll Dialog'};
-			CONFIG.ChatMessage.documentClass.create(chatData);
-			*/
 			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
 			const d = new RollDialog(weapon);
 			d.render(true);
