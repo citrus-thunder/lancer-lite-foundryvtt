@@ -10,7 +10,7 @@ export default defineConfig({
 		emptyOutDir: true,
 		lib: {
 			name: "lancerlite",
-			entry: "src/module/main.ts",
+			entry: "src/main.ts",
 			formats: ["es"],
 			fileName: "main"
 		}

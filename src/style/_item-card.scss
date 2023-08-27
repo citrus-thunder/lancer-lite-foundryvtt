@@ -1,0 +1,192 @@
+@import "/src/style/global";
+
+$header-color: $color-black2;
+$header-text-color: #efefef;
+
+$body-color: $color-black3;
+$body-text-color: #030303;
+
+$color-text-white: #efefef;
+$color-text-black: #030303;
+
+div.item-card {
+
+	// Common
+	.icon-button {
+		cursor: pointer;
+	}
+
+	div.header {
+		div.title-row {
+			width: 100%;
+			font-family: $font-sans;
+			font-size: 1.2rem;
+			font-weight: bold;
+			padding: 0.2rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		div.type,
+		div.tags,
+		div.traits {
+			font-family: $font-serif;
+			padding: 0.2rem;
+		}
+	}
+
+	div.body {
+		div.description {
+			font-family: $font-sans;
+		}
+	}
+
+	// Action Card
+	&.action-card {
+		div.header {
+			background-color: $color-red1;
+			color: $color-text-white;
+
+			&.--action {
+				background-color: $color-green1;
+			}
+
+			&.--reaction {
+				background-color: $color-teal1;
+			}
+
+			&.--tech-action {
+				background-color: $color-purple1;
+			}
+
+			&.--protocol {
+				background-color: $color-orange1;
+			}
+		}
+
+		div.body {
+			background-color: $color-text-white;
+			color: $color-text-black;
+
+			&.--action {
+				background-color: $color-green2;
+			}
+
+			&.--reaction {
+				background-color: $color-teal2;
+			}
+
+			&.--tech-action {
+				background-color: $color-purple2;
+			}
+
+			&.--protocol {
+				background-color: $color-orange2;
+			}
+		}
+	}
+
+	// Armor Card
+	&.armor-card {
+		div.header {
+			background-color: $color-brown1;
+			color: $color-text-white;
+		}
+
+		div.body {
+			background: $color-brown2;
+			color: $color-text-black;
+		}
+	}
+
+	// Core Bonus Card
+	&.core-bonus-card {
+		div.header {
+			background-color: $color-red3;
+			color: $color-text-white;
+		}
+
+		div.body {
+			background-color: $color-red4;
+			color: $color-text-black;
+		}
+	}
+
+	// Gear Card
+	&.gear-card {
+		div.header {
+			background-color: $color-brown1;
+			color: $color-text-white;
+		}
+
+		div.body {
+			background-color: $color-brown2;
+			color: $color-text-black;
+		}
+	}
+
+	// License Card
+	&.license-card {
+		div.header {
+			background-color: $color-red1;
+			color: $color-text-white;
+
+			&.--level-1 {
+				background-color: $color-red1;
+			}
+
+			&.--level-2 {
+				background-color: $color-red5;
+			}
+
+			&.--level-3 {
+				background-color: $color-red7;
+			}
+		}
+
+		div.body {
+			background-color: $color-text-white;
+			color: $color-text-black;
+		}
+	}
+
+	// Talent Card
+	&.talent-card {
+		div.header {
+			background-color: $color-blue1;
+			color: $color-text-white;
+		}
+
+		div.body {
+			background-color: $color-text-white;
+			color: $color-text-black;
+		}
+	}
+
+	// Trigger Card
+	&.trigger-card {
+		div.header {
+			background-color: $color-teal1;
+			color: $color-text-white;
+		}
+
+		div.body {
+			background-color: $color-teal2;
+			color: $color-text-black;
+		}
+	}
+
+	// Weapon Card
+	&.weapon-card {
+		div.header {
+			background-color: $color-black2;
+			color: $color-text-white;
+		}
+
+		div.body {
+			background-color: $color-black3;
+			color: $color-text-black;
+		}
+	}
+}

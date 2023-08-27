@@ -1,4 +1,4 @@
-import type LancerItem from "../../item/LancerItem";
+import type LancerItem from '../../sheet/item/LancerItem';
 
 import styles from './weapon-dialog.module.scss';
 
@@ -104,7 +104,7 @@ export default class WeaponDialog extends Dialog {
 			styles: styles
 		};
 
-		const content = await renderTemplate('systems/lancer-lite/templates/dialog/weapon-dialog.hbs', data);
+		const content = await renderTemplate('systems/lancer-lite/template/dialog/weapon-dialog.hbs', data);
 		$(html.find('.dialog-content')[0]).html(content);
 	}
 }
