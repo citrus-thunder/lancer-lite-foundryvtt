@@ -95,19 +95,27 @@
 						</div>
 						<div class="{{styles.field}}">
 							<label>
-								DESTROYED
-								<div class="{{styles.input-container}}">
-									<input type="checkbox" name="system.destroyed" {{checked item.system.destroyed}}>
-								</div>
+								MOUNT
+								<input type="text" name="system.mount" value="{{item.system.mount}}">
 							</label>
 						</div>
 					</div>
-					<!-- Tags -->
-					<div class="flexrow {{styles.field}}">
-						<label>
-							TAGS
-							<input type="text" name="system.tags" value="{{item.system.tags}}">
-						</label>
+					<!-- Tags & Destroyed -->
+					<div class="flexrow">
+						<div class="flex2 {{styles.field}}">
+							<label>
+								TAGS
+								<input type="text" name="system.tags" value="{{item.system.tags}}">
+							</label>
+						</div>
+						<div class="{{styles.field}}">
+							<label>
+								DESTROYED
+							</label>
+							<div class="{{styles.input-container}}">
+								<input type="checkbox" name="system.destroyed" {{checked item.system.destroyed}}>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

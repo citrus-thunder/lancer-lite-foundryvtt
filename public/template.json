@@ -152,7 +152,8 @@
 			"threat": 0,
 			"tags": "",
 			"size": "",
-			"type": ""
+			"type": "",
+			"mount": ""
 		}
 	}
 }
