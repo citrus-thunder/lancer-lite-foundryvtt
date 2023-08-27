@@ -1,7 +1,5 @@
 import LancerActorSheet from '../LancerActorSheet';
 
-import styles from './mech-sheet.module.scss';
-
 export default class MechSheet extends LancerActorSheet {
 	allowedItemTypes = [
 	'weapon',
@@ -24,11 +22,5 @@ export default class MechSheet extends LancerActorSheet {
 	/** @override */
 	get template() {
 		return `systems/lancer-lite/template/sheet/actor/mech/mech-sheet.hbs`;
-	}
-
-	getData() {
-		const data: any = super.getData();
-		data.styles = styles;
-		return data;
 	}
 }

@@ -1,8 +1,6 @@
 import LancerActorSheet from '../LancerActorSheet';
 import SkillDialog from '../../../dialog/skill-dialog/SkillDialog';
 
-import styles from './pilot-sheet.module.scss';
-
 export default class PilotSheet extends LancerActorSheet {
 	allowedItemTypes = [
 		'armor',
@@ -48,7 +46,7 @@ export default class PilotSheet extends LancerActorSheet {
 
 	getData(): any {
 		const data: any = super.getData();
-		data.styles = styles;
+		//data.styles = styles;
 
 		// todo: multiple armors aren't really a thing in this system.
 		data.armor = [];

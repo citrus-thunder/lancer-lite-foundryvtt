@@ -1,35 +1,35 @@
-<div class="{{cssClass}} flexcol {{styles.sheet-container}}">
+<div class="{{cssClass}} flexcol sheet-container">
 	<form autocomplete="off">
-		<header class="sheet-header {{styles.sheet-header}}">
+		<header class="sheet-header">
 			<h1>PILOT</h1>
 		</header>
 		<div class="flexcol">
 			<!-- Row 1: Portrait & Bio -->
-			<div class="flexrow {{styles.pad-bottom}} {{styles.--more}}">
+			<div class="flexrow pad-bottom --more">
 				<div class="flexcol flex2">
 					<div class="flexrow">
 						<!-- Portrait -->
-						<div class="flexcol flex0 {{styles.pad-right}}">
-							<div class="{{styles.pilot-portrait-frame}}">
+						<div class="flexcol flex0 pad-right">
+							<div class="pilot-portrait-frame">
 								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
 							</div>
 						</div>
 						<!-- Bio -->
-						<div class="flexcol {{styles.field-group}} {{styles.pilot-bio}} {{styles.pad-right}}">
-							<h2 class="{{styles.section-title}}">Bio</h2>
-							<div class="{{styles.field}}">
+						<div class="flexcol field-group pilot-bio pad-right">
+							<h2 class="section-title">Bio</h2>
+							<div class="field">
 								<label>
 									NAME
 									<input name="name" type="text" value="{{actor.name}}">
 								</label>
 							</div>
-							<div class="{{styles.field}}">
+							<div class="field">
 								<label>
 									CALLSIGN
 									<input name="system.callsign" type="text" value="{{actor.system.callsign}}">
 								</label>
 							</div>
-							<div class="{{styles.field}} {{styles.biography}}">
+							<div class="field">
 								<label>
 									BIOGRAPHY
 									<textarea name="system.biography">{{actor.system.biography}}</textarea>
@@ -40,33 +40,33 @@
 				</div>
 			</div>
 			<!-- Row 2: Quick Buttons -->
-			<div class="flexrow {{styles.pad-bottom}} {{styles.--more}}">
-				<button class="skill-check {{styles.quick-button}}">
+			<div class="flexrow pad-bottom --more">
+				<button class="skill-check quick-button">
 					<i class="fas fa-dice-d20"></i>
 					Skill Check
 				</button>
 			</div>
 			<!-- Row 3: Triggers, Skills, Stats -->
-			<div class="flexrow {{styles.pad-bottom}} {{styles.--more}}">
+			<div class="flexrow pad-bottom --more">
 				<!-- Triggers -->
-				<div class="flexcol {{styles.pad-right}}">
-					<div class="{{styles.header-group}}">
-						<h2 class="{{styles.section-title}} {{styles.header-text}}">Triggers</h2>
-						<div class="{{styles.header-options}}">
-							<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add Trigger" data-item-type="trigger"
+				<div class="flexcol pad-right">
+					<div class="header-group">
+						<h2 class="section-title header-text">Triggers</h2>
+						<div class="header-options">
+							<i class="fa-solid fa-plus item-add icon-button" title="Add Trigger" data-item-type="trigger"
 								data-item-name="New Trigger"></i>
 						</div>
 					</div>
-					<div class="{{styles.card-col}}">
+					<div class="card-col">
 						{{#each triggers}}
 						{{> "systems/lancer-lite/template/card/trigger-card.hbs"}}
 						{{/each}}
 					</div>
 				</div>
 				<!-- Skills -->
-				<div class="flexcol flex0 {{styles.skill-container}} {{styles.pad-right}}">
-					<h2 class="{{styles.section-title}}">Skills</h2>
-					<table class="{{styles.skill-table}}">
+				<div class="flexcol flex0 skill-container pad-right">
+					<h2 class="section-title">Skills</h2>
+					<table class="skill-table">
 						<tr>
 							<td>
 								<label>
@@ -113,9 +113,9 @@
 					</table>
 				</div>
 				<!-- Stats -->
-				<div class="flexcol flex0 {{styles.stat-container}}">
-					<h2 class="{{styles.section-title}}">Stats</h2>
-					<div class="flexrow {{styles.stats-row}}">
+				<div class="flexcol flex0 stat-container">
+					<h2 class="section-title">Stats</h2>
+					<div class="flexrow stats-row">
 						<label>
 							HP
 							<div class="flexrow flex0">
@@ -125,25 +125,25 @@
 							</div>
 						</label>
 					</div>
-					<div class="flexrow {{styles.stats-row}}">
+					<div class="flexrow stats-row">
 						<label>
 							ARMOR
 							<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
 						</label>
 					</div>
-					<div class="flexrow {{styles.stats-row}}">
+					<div class="flexrow stats-row">
 						<label>
 							E-DEF
 							<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dtype="Number">
 						</label>
 					</div>
-					<div class="flexrow {{styles.stats-row}}">
+					<div class="flexrow stats-row">
 						<label>
 							EVASION
 							<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dtype="Number">
 						</label>
 					</div>
-					<div class="flexrow {{styles.stats-row}}">
+					<div class="flexrow stats-row">
 						<label>
 							SPEED
 							<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dtype="Number">
@@ -152,17 +152,17 @@
 				</div>
 			</div>
 			<!-- Row 4: Talents & Licenses -->
-			<div class="flexrow {{styles.pad-bottom}} {{styles.--more}}">
+			<div class="flexrow pad-bottom --more">
 				<!-- Talents -->
-				<div class="flexcol {{styles.pad-right}}">
-					<div class="{{styles.header-group}}">
-						<h2 class="{{styles.section-title}} {{styles.header-text}}">Talents</h2>
-						<div class="{{styles.header-options}}">
-							<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add Talent" data-item-type="talent"
+				<div class="flexcol pad-right">
+					<div class="header-group">
+						<h2 class="section-title header-text">Talents</h2>
+						<div class="header-options}">
+							<i class="fa-solid fa-plus item-add icon-button" title="Add Talent" data-item-type="talent"
 								data-item-name="New Talent"></i>
 						</div>
 					</div>
-					<div class="{{styles.card-col}}">
+					<div class="card-col">
 						{{#each talents}}
 						{{> "systems/lancer-lite/template/card/talent-card.hbs"}}
 						{{/each}}
@@ -170,14 +170,14 @@
 				</div>
 				<!-- Licenses -->
 				<div class="flexcol">
-					<div class="{{styles.header-group}}">
-						<h2 class="{{styles.section-title}} {{styles.header-text}}">Licenses</h2>
-						<div class="{{styles.header-options}}">
-							<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add License" data-item-type="license"
+					<div class="header-group">
+						<h2 class="section-title header-text">Licenses</h2>
+						<div class="header-options">
+							<i class="fa-solid fa-plus item-add icon-button" title="Add License" data-item-type="license"
 								data-item-name="New License"></i>
 						</div>
 					</div>
-					<div class="{{styles.card-col}}">
+					<div class="card-col">
 						{{#each licenses}}
 						{{> "systems/lancer-lite/template/card/license-card.hbs"}}
 						{{/each}}
@@ -185,17 +185,17 @@
 				</div>
 			</div>
 			<!-- Row 5: Core Bonuses -->
-			<div class="flexrow {{styles.pad-bottom}} {{styles.--more}}">
+			<div class="flexrow pad-bottom --more">
 				<!-- Core Bonuses -->
 				<div class="flexcol">
-					<div class="{{styles.header-group}}">
-						<h2 class="{{styles.section-title}} {{styles.header-text}}">Core Bonuses</h2>
-						<div class="{{styles.header-options}}">
-							<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add Core Bonus"
+					<div class="header-group">
+						<h2 class="section-title header-text">Core Bonuses</h2>
+						<div class="header-options">
+							<i class="fa-solid fa-plus item-add icon-button" title="Add Core Bonus"
 								data-item-type="core_bonus" data-item-name="New Core Bonus"></i>
 						</div>
 					</div>
-					<div class="flexrow {{styles.card-row}}">
+					<div class="flexrow card-row">
 						{{#each core_bonuses}}
 						{{> "systems/lancer-lite/template/card/core-bonus-card.hbs"}}
 						{{/each}}
@@ -206,40 +206,40 @@
 			<div class="flexrow">
 				<!-- Loadout -->
 				<div class="flexcol">
-					<h2 class="{{styles.section-title}}">Loadout</h2>
+					<h2 class="section-title">Loadout</h2>
 					<div class="loadout-container">
-						<div class="{{styles.header-group}}">
-							<h3 class="{{styles.section-title}} {{styles.header-text}}">Armor</h3>
-							<div class="{{styles.header-options}}">
-								<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add Armor" data-item-type="armor"
+						<div class="header-group">
+							<h3 class="section-title header-text">Armor</h3>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Armor" data-item-type="armor"
 									data-item-name="New Armor"></i>
 							</div>
 						</div>
-						<div class="flexrow {{styles.card-row}}">
+						<div class="flexrow card-row">
 							{{#each armor}}
 							{{> "systems/lancer-lite/template/card/armor-card.hbs"}}
 							{{/each}}
 						</div>
-						<div class="{{styles.header-group}}">
-							<h3 class="{{styles.section-title}} {{styles.header-text}}">Weapons</h3>
-							<div class="{{styles.header-options}}">
-								<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add Weapon" data-item-type="weapon"
+						<div class="header-group">
+							<h3 class="section-title header-text">Weapons</h3>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
 									data-item-name="New Weapon"></i>
 							</div>
 						</div>
-						<div class="flexrow {{styles.card-row}}">
+						<div class="flexrow card-row">
 							{{#each weapons}}
 							{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
 							{{/each}}
 						</div>
-						<div class="{{styles.header-group}}">
-							<h3 class="{{styles.section-title}} {{styles.header-text}}">Gear</h3>
-							<div class="{{styles.header-options}}">
-								<i class="fa-solid fa-plus item-add {{styles.icon-button}}" title="Add Gear" data-item-type="gear"
+						<div class="header-group">
+							<h3 class="section-title header-text">Gear</h3>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Gear" data-item-type="gear"
 									data-item-name="New Gear"></i>
 							</div>
 						</div>
-						<div class="flexrow {{styles.card-row}}">
+						<div class="flexrow card-row">
 							{{#each gear}}
 							{{> "systems/lancer-lite/template/card/gear-card.hbs"}}
 							{{/each}}
