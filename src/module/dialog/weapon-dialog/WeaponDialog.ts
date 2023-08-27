@@ -1,8 +1,8 @@
 import type LancerItem from "../../item/LancerItem";
 
-import styles from './roll-dialog.module.scss';
+import styles from './weapon-dialog.module.scss';
 
-export default class RollDialog extends Dialog {
+export default class WeaponDialog extends Dialog {
 
 	weapon: LancerItem;
 
@@ -50,9 +50,8 @@ export default class RollDialog extends Dialog {
 		};
 
 		const rollDamage = async (html: JQuery<HTMLElement>) => {
-			debugger;
 			let w: any = weapon;
-			
+
 			let flavor = `${w.name} Damage`;
 
 			let formula = w.system.roll_formula;
@@ -104,7 +103,8 @@ export default class RollDialog extends Dialog {
 			actor: this.weapon.parent,
 			styles: styles
 		};
-		const content = await renderTemplate('systems/lancer-lite/templates/dialog/roll-dialog.hbs', data);
+
+		const content = await renderTemplate('systems/lancer-lite/templates/dialog/weapon-dialog.hbs', data);
 		$(html.find('.dialog-content')[0]).html(content);
 	}
 }

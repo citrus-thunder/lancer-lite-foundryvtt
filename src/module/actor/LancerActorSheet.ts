@@ -1,4 +1,5 @@
-import RollDialog from "../dialog/roll-dialog/RollDialog";
+import SkillDialog from "../dialog/skill-dialog/SkillDialog";
+import WeaponDialog from "../dialog/weapon-dialog/WeaponDialog";
 
 export default class LancerActorSheet extends ActorSheet {
 
@@ -23,7 +24,7 @@ export default class LancerActorSheet extends ActorSheet {
 
 		html.find('.weapon-roll').on('click', async (ev) => {
 			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
-			const d = new RollDialog(weapon);
+			const d = new WeaponDialog(weapon);
 			d.render(true);
 		});
 	}

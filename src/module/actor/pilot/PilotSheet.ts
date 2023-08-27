@@ -1,4 +1,5 @@
 import LancerActorSheet from '../LancerActorSheet';
+import SkillDialog from '../../dialog/skill-dialog/SkillDialog';
 
 import styles from './pilot-sheet.module.scss';
 
@@ -29,6 +30,20 @@ export default class PilotSheet extends LancerActorSheet {
 	/** @override */
 	get template() {
 		return `systems/lancer-lite/templates/actor/pilot-sheet.hbs`;
+	}
+
+	activateListeners(html: JQuery<HTMLElement>): void {
+		super.activateListeners(html);
+
+		html.find('.skill-check').on('click', async (ev) => {
+			new SkillDialog().render(true);
+		});
+
+		html.find('.trigger-roll').on('click', async (ev) => {
+			const trigger = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
+			const d = new SkillDialog(trigger);
+			d.render(true);
+		});
 	}
 
 	getData(): any {

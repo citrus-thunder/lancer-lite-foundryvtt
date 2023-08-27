@@ -138,6 +138,7 @@
 		},
 		"trigger": {
 			"name": "New Trigger",
+			"bonus": 2,
 			"description": ""
 		},
 		"weapon": {
