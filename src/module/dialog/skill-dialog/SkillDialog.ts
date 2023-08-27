@@ -1,7 +1,5 @@
 import type LancerItem from '../../sheet/item/LancerItem';
 
-import styles from './skill-dialog.module.scss';
-
 export default class SkillDialog extends Dialog {
 
 	trigger: LancerItem | null = null;
@@ -74,7 +72,6 @@ export default class SkillDialog extends Dialog {
 		const data = {
 			trigger: this?.trigger,
 			actor: this?.trigger?.parent,
-			styles: styles
 		};
 
 		const content = await renderTemplate('systems/lancer-lite/template/dialog/skill-dialog.hbs', data);

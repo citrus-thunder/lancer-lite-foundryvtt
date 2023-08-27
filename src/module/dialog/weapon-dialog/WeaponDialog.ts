@@ -1,7 +1,5 @@
 import type LancerItem from '../../sheet/item/LancerItem';
 
-import styles from './weapon-dialog.module.scss';
-
 export default class WeaponDialog extends Dialog {
 
 	weapon: LancerItem;
@@ -101,7 +99,6 @@ export default class WeaponDialog extends Dialog {
 		const data = {
 			weapon: this.weapon,
 			actor: this.weapon.parent,
-			styles: styles
 		};
 
 		const content = await renderTemplate('systems/lancer-lite/template/dialog/weapon-dialog.hbs', data);

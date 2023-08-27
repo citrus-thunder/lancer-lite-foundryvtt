@@ -1,6 +1,6 @@
 @import "/src/style/global";
 
-:global(.dialog-buttons) {
+.dialog-buttons {
 	flex-grow: 0;
 	max-height: 2.5rem;
 }
