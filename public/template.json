@@ -95,24 +95,17 @@
 	},
 	"Item": {
 		"types": [
-			"action",
 			"armor",
 			"core_bonus",
 			"gear",
 			"license",
+			"reaction",
 			"system",
 			"talent",
 			"trait",
 			"trigger",
 			"weapon"
 		],
-		"action": {
-			"name": "New Action",
-			"type": "",
-			"cost": "",
-			"description": "",
-			"tags": ""
-		},
 		"armor": {
 			"name": "New Armor",
 			"description": "",
@@ -137,8 +130,15 @@
 			"level": 0,
 			"description": ""
 		},
+		"reaction": {
+			"name": "New Rection",
+			"frequency": "1/round",
+			"description": "",
+			"tags": ""
+		},
 		"system": {
 			"name": "New System",
+			"type": "",
 			"description": "",
 			"sp_cost": 0,
 			"tags": ""

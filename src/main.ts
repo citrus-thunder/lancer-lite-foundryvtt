@@ -7,11 +7,11 @@ import PilotSheet from "./module/sheet/actor/pilot/PilotSheet";
 import MechSheet from "./module/sheet/actor/mech/MechSheet";
 
 // Item Sheets
-import ActionSheet from "./module/sheet/item/action/ActionSheet";
 import ArmorSheet from "./module/sheet/item/armor/ArmorSheet";
 import CoreBonusSheet from "./module/sheet/item/core-bonus/CoreBonusSheet";
 import GearSheet from "./module/sheet/item/gear/GearSheet";
 import LicenseSheet from "./module/sheet/item/license/LicenseSheet";
+import ReactionSheet from "./module/sheet/item/reaction/ReactionSheet";
 import SystemSheet from "./module/sheet/item/system/SystemSheet";
 import TalentSheet from "./module/sheet/item/talent/TalentSheet";
 import TraitSheet from "./module/sheet/item/trait/TraitSheet";
@@ -40,11 +40,11 @@ Hooks.once('init', async () => {
 
 	CONFIG.Item.documentClass = LancerItem;
 	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet(SYSTEM_NAME, ActionSheet, {label: 'Action', types: ['action'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, ArmorSheet, {label: 'Armor', types: ['armor'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, CoreBonusSheet, {label: 'Core Bonus', types: ['core_bonus'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, GearSheet, {label: 'Gear', types: ['gear'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, LicenseSheet, {label: 'License', types: ['license'], makeDefault: true});
+	Items.registerSheet(SYSTEM_NAME, ReactionSheet, {label: 'Action', types: ['action'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, SystemSheet, {label: 'System', types: ['system'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, TalentSheet, {label: 'Talent', types: ['talent'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, TraitSheet, {label: 'Trait', types: ['trait'], makeDefault: true});

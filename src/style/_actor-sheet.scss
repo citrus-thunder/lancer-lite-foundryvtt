@@ -60,6 +60,12 @@ $card-margin: 0.2rem;
 		margin-bottom: $card-margin;
 	}
 
+	div.field {
+		>label {
+			font-weight: bold;
+		}
+	}
+
 	header.sheet-header h1 {
 		flex-grow: 0;
 		font-family: $font-sans;

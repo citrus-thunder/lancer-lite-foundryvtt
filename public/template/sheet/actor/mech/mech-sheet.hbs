@@ -1,8 +1,234 @@
-<div class="{{cssClass}} flexcol">
+<div class="{{cssClass}} flexcol sheet-container">
 	<form autocomplete="off">
-	<header class="sheet-header {{styles.sheet-header}}">
-			<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
-			<h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-	</header>
+		<header class="sheet-header">
+			<h1>MECH</h1>
+		</header>
+		<div class="flexcol">
+			<!-- Row 1: Portrait & Bio -->
+			<div class="flexrow pad-bottom --more">
+				<div class="flexcol flex2">
+					<div class="flexrow">
+						<!-- Portrait -->
+						<div class="flexcol flex0 pad-right">
+							<div class="pilot-portrait-frame">
+								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+							</div>
+						</div>
+						<!-- Bio -->
+						<div class="flexcol flex0 field-group pilot-bio pad-right --more">
+							<h2 class="section-title">Bio</h2>
+							<div class="field">
+								<label>
+									NAME
+									<input name="name" type="text" value="{{actor.name}}">
+								</label>
+							</div>
+							<div class="field">
+								<label>
+									FRAME
+									<input name="system.frame" type="text" value="{{actor.system.frame}}">
+								</label>
+							</div>
+							<div class="field">
+								<label>
+									BIOGRAPHY
+									<textarea name="system.biography">{{actor.system.biography}}</textarea>
+								</label>
+							</div>
+						</div>
+						<div class="flexcol flex0 field-group pilot-skills pad-right --more">
+							<h2 class="section-title">Skills</h2>
+							<div class="flexrow">
+								<div class="pad-right --more">
+									<label>
+										LL
+									</label>
+									<input type="text" name="system.license_level" value="{{actor.system.license_level}}"
+										data-dtype="Number">
+								</div>
+								<div>
+									<label>
+										GRIT
+									</label>
+									<input type="text" name="system.grit" value="{{actor.system.grit}}" data-dtype="Number">
+								</div>
+							</div>
+							<div class="flexrow">
+								<div class="pad-right --more">
+									<label>
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="hull" data-stat-label="Hull"></i>
+										HULL
+									</label>
+									<input type="text" name="system.hull" value="{{actor.system.hull}}" data-dtype="Number">
+								</div>
+								<div>
+									<label>
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="systems" data-stat-label="Systems"></i>
+										SYS
+									</label>
+									<input type="text" name="system.systems" value="{{actor.system.systems}}" data-dtype="Number">
+								</div>
+							</div>
+							<div class="flexrow">
+								<div class="pad-right --more">
+									<label class="pad-right --more">
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="agility" data-stat-label="Agility"></i>
+										AGI
+									</label>
+									<input type="text" name="system.agility" value="{{actor.system.agility}}" data-dtype="Number">
+								</div>
+								<div>
+									<label>
+										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="engineering"
+											data-stat-label="Engineering"></i>
+										ENG
+									</label>
+									<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
+								</div>
+							</div>
+							<div class="flexrow pad-top --more">
+								<button class="skill-check quick-button">
+									<i class="fas fa-dice-d20"></i>
+									Skill Check
+								</button>
+							</div>
+						</div>
+						<div class="flexcol field-group pilot-stats">
+							<h2 class="section-title">Vitals</h2>
+							<div class="flexrow">
+								<label>
+									HP
+									<div class="flexrow flex0">
+										<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
+										&nbsp;/&nbsp;
+										<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
+									</div>
+								</label>
+							</div>
+							<div class="flexrow">
+								<label>
+									ARMOR
+									<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow">
+								<label>
+									E-DEF
+									<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow">
+								<label>
+									EVASION
+									<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dtype="Number">
+								</label>
+							</div>
+							<div class="flexrow">
+								<label>
+									SPEED
+									<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dtype="Number">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row: Stats -->
+			<div class="mech-stats flexrow pad-bottom">
+				<div class="field">
+					<label>
+						ATK BONUS
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						TECH ATK
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						SAVE TGT
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						SPEED
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						E-DEF
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						EVASION
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						SENSORS
+						<input type="text">
+					</label>
+				</div>
+				<div class="field">
+					<label>
+						SIZE
+						<input type="text">
+					</label>
+				</div>
+			</div>
+			<!-- Row 2: Tabs -->
+			<div class="flexrow pad-bottom --more">
+				<nav class="tabs" data-group="primary-tabs">
+					<a class="item" data-tab="traits" data-group="primary-tabs">TRAITS</a>
+					<a class="item" data-tab="systems" data-group="primary-tabs">SYSTEMS</a>
+					<a class="item" data-tab="weapons" data-group="primary-tabs">WEAPONS</a>
+					<a class="item" data-tab="equipment" data-group="primary-tabs">EQUIPMENT</a>
+				</nav>
+			</div>
+			<!-- Row 3: Content -->
+			<div class="flexrow tab-content">
+				<section class="content">
+					<div class="tab" data-tab="traits" data-group="primary-tabs">
+						
+					</div>
+					<div class="tab" data-tab="systems" data-group="primary-tabs">
+						
+					</div>
+					<div class="tab" data-tab="weapons" data-group="primary-tabs">
+						
+					</div>
+					<div class="tab" data-tab="equipment" data-group="primary-tabs">
+						
+					</div>
+				</section>
+			</div>
+			<!-- Row 4: Temp Layout -->
+			<!-- We'll put the total layout here before breaking it down into tabs -->
+			<div class="flexrow">
+				<!-- Tab 1 -->
+				<!-- Traits -->
+				<!-- Reactions -->
+				<!-- Systems -->
+					<!-- Passive Systems -->
+					<!-- Action Systems -->
+					<!-- Tech Action Systems -->
+					<!-- Protocol Systems -->
+				<!-- Mounts -->
+					<!-- Weapons -->
+				<!-- /Tab 1 -->
+
+				<!-- Tab 2 -->
+				<!-- Mech Equipment & Gear -->
+				<!-- /Tab 2 -->
+			</div>
+		</div>
 	</form>
 </div>

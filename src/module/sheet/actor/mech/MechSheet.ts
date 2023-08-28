@@ -16,8 +16,19 @@ export default class MechSheet extends LancerActorSheet {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["character", "sheet", "actor"],
+			width: 675,
+			height: 725,
+			tabs: [
+				{
+					group: 'primary',
+					navSelector: '.tabs', 
+					contentSelector: '.content', 
+					initial: 'traits'
+				}
+			],
 		});
 	}
+
 
 	/** @override */
 	get template() {
