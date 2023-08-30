@@ -200,6 +200,19 @@ div.item-card {
 			div.header {
 				background-color: $color-red3;
 			}
+
+			div.body {
+				background-color: $color-red4;
+				color: $color-text-black;
+				border: 0.2rem solid $color-red3;
+				overflow-y: auto;
+				max-height: 10rem;
+
+				div.description p {
+					margin: 0;
+					padding: 0.2rem;
+				}
+			}
 		}
 
 		&.--passive {
