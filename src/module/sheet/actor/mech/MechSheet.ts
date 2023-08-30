@@ -39,6 +39,20 @@ export default class MechSheet extends LancerActorSheet {
 		return `systems/lancer-lite/template/sheet/actor/mech/mech-sheet.hbs`;
 	}
 
+	activateListeners(html: JQuery<HTMLElement>): void {
+		super.activateListeners(html);
+
+		const dragDrop = new DragDrop({
+			dragSelector: ".weapon-card",
+			dropSelector: ".weapon-card-drop",
+			//@ts-expect-error
+			permissions: {dragstart: this._canDragStart.bind(this), drop: this._canDragDrop.bind(this)},
+			callbacks: {dragstart: this._onDragStart.bind(this), drop: this._onDrop.bind(this)} // todo: replace these methods with our own specialized ones
+		});
+
+		//dragDrop.bind(html[0]); // temp disable
+	}
+
 	/** @override */
 	override async getData() {
 		const data: any = super.getData();
@@ -137,9 +151,21 @@ export default class MechSheet extends LancerActorSheet {
 	 */
 	private async buildMount(mount: any): Promise<object> {
 		const mountData: any = {
-			type: mount.type,
+			id: mount.id,
 			weapons: []
 		};
+
+		const labels = {
+			'aux': 'AUX MOUNT',
+			'aux_aux': 'AUX/AUX MOUNT',
+			'flex': 'FLEX MOUNT',
+			'main': 'MAIN MOUNT',
+			'main_aux': 'MAIN/AUX MOUNT',
+			'heavy': 'HEAVY MOUNT',
+			'integrated': 'INTEGRATED MOUNT',
+		}
+
+		mountData.label = labels[mount.system.type] ?? 'NEW MOUNT';
 
 		const weapons: any[] = [];
 		const missing: any[] = [];
@@ -160,12 +186,18 @@ export default class MechSheet extends LancerActorSheet {
 			}
 		}
 
-		if (missing) {
+		if (missing.length > 0) {
 			await mount.update({ 'system.weapons': mount.system.weapons.filter((w: any) => { !missing.includes(w.id) }) });
 			console.info(`Removed ${missing.length} errant IDs from mount data`);
 		}
 
 		mountData.weapons = weapons;
 		return mountData;
+	}
+
+	protected override _onDrop(event: DragEvent): void {
+		super._onDrop(event);
+
+		console.log(event);
 	}
 }

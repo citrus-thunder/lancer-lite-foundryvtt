@@ -1,0 +1,17 @@
+<div class="item-card mount-card weapon-card-drop" data-item-id="{{id}}">
+	<div class="header">
+		<div class="title-row">
+			{{label}}
+			<div class="header-buttons">
+				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Mount" data-item-id="{{id}}"></i>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="weapon-list">
+		{{#each weapons}}
+		{{name}}
+		{{/each}}
+		</div>
+	</div>
+</div>

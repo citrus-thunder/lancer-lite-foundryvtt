@@ -298,9 +298,9 @@
 										data-item-name="New Mount"></i>
 								</div>
 							</div>
-							<div class="mounts">
+							<div class="mounts card-col">
 								{{#each mounts}}
-								{{> "systems/lancer-lite/template/sheet/actor/mech/partial/mount.hbs"}}
+								{{> "systems/lancer-lite/template/card/mount-card.hbs"}}
 								{{/each}}
 							</div>
 						</div>
@@ -309,7 +309,7 @@
 							<div class="header-group">
 								<h3 class="section-title header-text">Unmounted</h3>
 							</div>
-							<div class="nomount">
+							<div class="nomount card-col">
 								{{#each nomount}}
 								{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
 								{{/each}}

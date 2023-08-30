@@ -11,6 +11,7 @@ import ArmorSheet from "./module/sheet/item/armor/ArmorSheet";
 import CoreBonusSheet from "./module/sheet/item/core-bonus/CoreBonusSheet";
 import GearSheet from "./module/sheet/item/gear/GearSheet";
 import LicenseSheet from "./module/sheet/item/license/LicenseSheet";
+import MountSheet from "./module/sheet/item/mount/MountSheet";
 import ReactionSheet from "./module/sheet/item/reaction/ReactionSheet";
 import SystemSheet from "./module/sheet/item/system/SystemSheet";
 import TalentSheet from "./module/sheet/item/talent/TalentSheet";
@@ -44,6 +45,7 @@ Hooks.once('init', async () => {
 	Items.registerSheet(SYSTEM_NAME, CoreBonusSheet, {label: 'Core Bonus', types: ['core_bonus'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, GearSheet, {label: 'Gear', types: ['gear'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, LicenseSheet, {label: 'License', types: ['license'], makeDefault: true});
+	Items.registerSheet(SYSTEM_NAME, MountSheet, {label: 'Mount', types: ['mount'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, ReactionSheet, {label: 'Reaction', types: ['reaction'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, SystemSheet, {label: 'System', types: ['system'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, TalentSheet, {label: 'Talent', types: ['talent'], makeDefault: true});

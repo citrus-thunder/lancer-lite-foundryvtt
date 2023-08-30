@@ -15,9 +15,11 @@
 			{{system.tags}}
 		</div>
 		{{/if}}
+		{{#if system.traits}}
 		<div class="traits">
 			{{#if system.range}}[Range: {{system.range}}]{{/if}} {{#if system.threat}}[Threat: {{system.threat}}]{{/if}} {{#if system.damage}}[Damage: {{system.damage}}]{{/if}}
 		</div>
+		{{/if}}
 	</div>
 	<div class="body">
 		<div class="description">
