@@ -177,15 +177,16 @@ export default class MechSheet extends LancerActorSheet {
 				weapons.push(weapon);
 			}
 			else {
+				// The weapon cannot be found; it was probably deleted.
 				// We'll remove the missing values after this loop in order to not alter the
 				// list while we're still iterating over it
-				console.warn(`Mount contains ID of a weapon that cannot be found. Queueing errant ID for removal: ${weaponId}`);
+				console.info(`Mount contains ID of a weapon that cannot be found. Queueing errant ID for removal: ${weaponId}`);
 				missing.push(weaponId);
 			}
 		}
 
 		if (missing.length > 0) {
-			await mount.update({ 'system.weapons': mount.system.weapons.filter((w: any) => { !missing.includes(w.id) }) });
+			await mount.update({ 'system.weapons': mount.system.weapons.filter((w: any) => { return !missing.includes(w) }) });
 			console.info(`Removed ${missing.length} errant IDs from mount data`);
 		}
 		
@@ -254,7 +255,6 @@ export default class MechSheet extends LancerActorSheet {
 
 		const mounts = this.actor.items.filter((i) => i.type === 'mount');
 		mounts.forEach(async (m: any) => {
-			console.log(m);
 			if (m.id == mountId) {
 				if (!m.system.weapons.includes(weaponId)) {
 					m.system.weapons.push(weaponId);
@@ -263,7 +263,7 @@ export default class MechSheet extends LancerActorSheet {
 			}
 			else {
 				if (m.system.weapons.includes(weaponId)) {
-					await m.update({ 'system.weapons': m.system.weapons.filter((w: any) => { w.id != weaponId }) });
+					await m.update({ 'system.weapons': m.system.weapons.filter((w: any) => { return w != weaponId }) });
 				}
 			}
 		});
