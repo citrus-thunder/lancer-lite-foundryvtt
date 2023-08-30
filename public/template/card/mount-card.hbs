@@ -1,4 +1,4 @@
-<div class="item-card mount-card weapon-card-drop" data-item-id="{{id}}">
+<div class="item-card mount-card" data-item-id="{{id}}">
 	<div class="header">
 		<div class="title-row">
 			{{label}}
@@ -8,10 +8,12 @@
 		</div>
 	</div>
 	<div class="body">
+		{{#if weapons}}
 		<div class="weapon-list">
 		{{#each weapons}}
-		{{name}}
+		{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
 		{{/each}}
 		</div>
+		{{/if}}
 	</div>
 </div>

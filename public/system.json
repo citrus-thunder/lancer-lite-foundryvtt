@@ -35,5 +35,21 @@
 	"gridUnits": "ft",
 	"url": "https://github.com/citrus-thunder/lancer-lite-foundryvtt",
 	"background": "systems/mysystem/assets/splash.webp",
-	"manifest": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/blob/main/lancer-lite/system.json"
+	"manifest": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/releases/latest/download/system.json",
+	"download": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/releases/latest/download/lancer-lite.zip",
+	"readme": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/blob/release/ReadMe.md",
+	"bugs": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/issues/new/choose",
+	"changelog": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/blob/release/ChangeLog.md",
+	"media": [
+		{
+			"type": "cover",
+			"url": "https://massifpress.com/_next/image?url=%2Fimages%2Flegal%2Fpowered_by_Lancer-01.svg&w=640&q=75",
+			"caption": "Powered by Lancer"
+		},
+		{
+			"type": "icon",
+			"url": "https://massifpress.com/_next/image?url=%2Fimages%2Flegal%2Fpowered_by_Lancer-01.svg&w=640&q=75",
+			"caption": "Powered by Lancer"
+		}
+	]
 }

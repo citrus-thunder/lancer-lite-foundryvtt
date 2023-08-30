@@ -44,13 +44,13 @@ export default class MechSheet extends LancerActorSheet {
 
 		const dragDrop = new DragDrop({
 			dragSelector: ".weapon-card",
-			dropSelector: ".weapon-card-drop",
+			dropSelector: ".mount-card",
 			//@ts-expect-error
-			permissions: {dragstart: this._canDragStart.bind(this), drop: this._canDragDrop.bind(this)},
-			callbacks: {dragstart: this._onDragStart.bind(this), drop: this._onDrop.bind(this)} // todo: replace these methods with our own specialized ones
+			permissions: { dragstart: this._canDragStart.bind(this), drop: this._canDragDrop.bind(this) },
+			callbacks: { dragstart: this._onDragWeaponCard.bind(this), drop: this._onDropWeaponCard.bind(this) }
 		});
 
-		//dragDrop.bind(html[0]); // temp disable
+		dragDrop.bind(html[0]);
 	}
 
 	/** @override */
@@ -103,7 +103,7 @@ export default class MechSheet extends LancerActorSheet {
 					break;
 				case 'trait':
 					data.traits.push(i);
-						break;
+					break;
 				case 'weapon':
 					data.weapons.push(i);
 					break;
@@ -171,15 +171,13 @@ export default class MechSheet extends LancerActorSheet {
 		const missing: any[] = [];
 
 		for (const weaponId of mount.system.weapons) {
-			debugger;
 			const weapon = this.actor.items.get(weaponId);
 			if (weapon) {
-				debugger;
 				this.mountedWeaponIds.push(weapon.id!);
 				weapons.push(weapon);
 			}
 			else {
-				// We'll remove the missing values later in order to not alter the
+				// We'll remove the missing values after this loop in order to not alter the
 				// list while we're still iterating over it
 				console.warn(`Mount contains ID of a weapon that cannot be found. Queueing errant ID for removal: ${weaponId}`);
 				missing.push(weaponId);
@@ -190,14 +188,84 @@ export default class MechSheet extends LancerActorSheet {
 			await mount.update({ 'system.weapons': mount.system.weapons.filter((w: any) => { !missing.includes(w.id) }) });
 			console.info(`Removed ${missing.length} errant IDs from mount data`);
 		}
+		
+		// Sort weapons by size (desc), followed by name (asc)
+		weapons.sort((a: any, b:any) => {
+			const sizePriority = {
+				'Superheavy': 1,
+				'Heavy': 2,
+				'Main': 3,
+				'Auxiliary': 4,
+			}
+
+			const aSizePriority = sizePriority.hasOwnProperty(a.system.size) ? sizePriority[a.system.size] : 0;
+			const bSizePriority = sizePriority.hasOwnProperty(b.system.size) ? sizePriority[b.system.size] : 0;
+
+			let alpha = 0;
+
+			if (a.name > b.name) {
+				alpha = 1;
+			}
+			else if (a.name < b.name) {
+				alpha = -1;
+			}
+
+			return 0
+				|| Math.sign(aSizePriority - bSizePriority)
+				|| alpha;
+		});
 
 		mountData.weapons = weapons;
 		return mountData;
 	}
 
-	protected override _onDrop(event: DragEvent): void {
-		super._onDrop(event);
+	private _onDragWeaponCard(event: DragEvent): void {
+		const htmlElement = event.currentTarget as HTMLElement ?? undefined;
 
-		console.log(event);
+		if (!htmlElement) {
+			console.error('Unable to start drag operation on weapon card: error getting html element from event data');
+			return;
+		}
+
+		event.dataTransfer?.setData('text/plain', $(htmlElement).data('itemId'));
+	}
+
+	private async _onDropWeaponCard(event: DragEvent): Promise<void> {
+		const htmlElement = event.currentTarget as HTMLElement ?? undefined;
+		if (!htmlElement) {
+			console.error('Unable to process weapon drop operation: error getting html element from event data');
+		}
+
+		const mountId = $(htmlElement).data('itemId') ?? undefined;
+		if (!mountId) {
+			console.error('Unable to process weaon drop operation: destination mount has missing or invalid data-item-id attribute');
+		}
+
+		const weaponId = event.dataTransfer?.getData("text") ?? undefined;
+		if (!weaponId) {
+			console.error('Unable to process weapon drop operation: missing or invalid weapon id provided from drag event data');
+			return;
+		}
+
+		const weapon = this.actor.items.get(weaponId);
+		if (!weapon) {
+			console.warn(`Unable to process weapon drop operation: unable to get weapon with ID ${weaponId} from actor item data. Does this actor own this item?`);
+		}
+
+		const mounts = this.actor.items.filter((i) => i.type === 'mount');
+		mounts.forEach(async (m: any) => {
+			console.log(m);
+			if (m.id == mountId) {
+				if (!m.system.weapons.includes(weaponId)) {
+					m.system.weapons.push(weaponId);
+					await m.update({ 'system.weapons': m.system.weapons});
+				}
+			}
+			else {
+				if (m.system.weapons.includes(weaponId)) {
+					await m.update({ 'system.weapons': m.system.weapons.filter((w: any) => { w.id != weaponId }) });
+				}
+			}
+		});
 	}
 }
