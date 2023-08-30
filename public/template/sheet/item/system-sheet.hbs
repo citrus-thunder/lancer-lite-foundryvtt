@@ -1,4 +1,4 @@
-<div class="{{cssClass}} flexcol sheet-container item-sheet license-sheet">
+<div class="{{cssClass}} flexcol sheet-container item-sheet system-sheet">
 	<form autocomplete="off">
 		<header class="sheet-header">
 			<h1>SYSTEM</h1>
@@ -16,12 +16,42 @@
 					</div>
 				</div>
 				<div class="flexcol field-group">
-					<!-- Name -->
-					<div class="field">
-						<label>
-							NAME
-							<input type="text" name="name" value="{{item.name}}">
-						</label>
+					<!-- Name / Type-->
+					<div class="flexrow field-group">
+						<div class="field">
+							<label>
+								NAME
+								<input type="text" name="name" value="{{item.name}}">
+							</label>
+						</div>
+						<div class="field">
+							<label>
+								TYPE
+								<select name="system.type">
+									{{#select item.system.type}}
+									<option value="action">Action</option>
+									<option value="core">Core</option>
+									<option value="passive">Passive</option>
+									<option value="protocol">Protocol</option>
+									<option value="tech">Tech Action</option>
+									{{/select}}
+								</select>
+							</label>
+						</div>
+						<div class="flexrow field-group">
+							<div class="field">
+								SP COST
+								<input type="text" name="system.sp_cost" value="{{item.system.sp_cost}}" data-dType="Number">
+							</div>
+						</div>
+					</div>
+					<div class="fieldrow">
+						<div class="field">
+							<label>
+								TAGS
+								<input type="text" name="system.tags" value="{{item.system.tags}}">
+							</label>
+						</div>
 					</div>
 				</div>
 			</div>

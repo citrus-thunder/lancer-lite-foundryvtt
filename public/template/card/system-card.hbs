@@ -1,0 +1,32 @@
+<div class="item-card system-card --{{system.type}}" data-item-id="{{id}}">
+	<div class="header">
+		<div class="title-row">
+			{{name}}
+			<div class="header-buttons">
+				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Weapon" data-item-id="{{id}}"></i>
+			</div>
+		</div>
+		<div class="tags">
+			{{#ifEquals system.type "action"}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Action{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{/ifEquals}}
+			{{#ifEquals system.type "core"}}
+			Core System{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{/ifEquals}}
+			{{#ifEquals system.type "passive"}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP{{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{/ifEquals}}
+			{{#ifEquals system.type "protocol"}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Protocol{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{/ifEquals}}
+			{{#ifEquals system.type "tech"}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP{{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{/ifEquals}}
+		</div>
+	</div>
+	<div class="body">
+		<div class="description">
+			{{description}}
+		</div>
+	</div>
+</div>

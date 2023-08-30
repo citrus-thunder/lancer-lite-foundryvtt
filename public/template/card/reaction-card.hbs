@@ -1,0 +1,18 @@
+<div class="item-card reaction-card" data-item-id="{{id}}">
+	<div class="header">
+		<div class="title-row">
+			{{name}}
+			<div class="header-buttons">
+				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Reaction" data-item-id="{{id}}"></i>
+			</div>
+		</div>
+		<div class="tags">
+			Reaction{{#if system.tags}}, {{system.tags}}{{/if}}
+		</div>
+	</div>
+	<div class="body">
+		<div class="description">
+			{{description}}
+		</div>
+	</div>
+</div>

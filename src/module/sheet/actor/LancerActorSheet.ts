@@ -13,13 +13,34 @@ export default class LancerActorSheet extends ActorSheet {
 		});
 
 		html.find('.item-add').on('click', (ev) => {
-			const itemName: string = $(ev.currentTarget).data('itemName') ?? 'Item';
-			const itemType: string = $(ev.currentTarget).data('itemType');
+			const $element = $(ev.currentTarget);
+			const itemName: string = $element.data('itemName') ?? 'Item';
+			const itemType: string = $element.data('itemType');
+
 			if (!itemType) {
 				console.error('Unable to add new item: no item type specified by data-item-type attribute');
 			}
 
-			CONFIG.Item.documentClass.create({ type: itemType, name: itemName }, { parent: this.actor, renderSheet: true });
+			let itemData = { type: itemType, name: itemName, system: {} };
+			
+			const $defaultDataFields = $element.find('input[type=hidden][name^="default."]');
+			$defaultDataFields.each((index, element) => {
+				let fieldData: object = {};
+				let fieldName: string = $(element).attr('name') ?? 'DEFAULT_ERR';
+				let fieldValue: any = $(element).val();
+
+				let itemFieldName = fieldName.split('.')[1] ?? undefined;
+
+				if (itemFieldName === undefined) {
+					console.error('Unable to populate default field info: invalid default input name');
+					return;
+				}
+
+				fieldData[itemFieldName] = fieldValue;
+				itemData.system = mergeObject(itemData.system, fieldData);
+			});
+
+			CONFIG.Item.documentClass.create(itemData, { parent: this.actor, renderSheet: true });
 		});
 
 		html.find('.weapon-roll').on('click', async (ev) => {
@@ -38,7 +59,7 @@ export default class LancerActorSheet extends ActorSheet {
 
 			const a: any = this.actor;
 			const stat: number = a.system[statName];
-			new SkillDialog({bonus: stat, bonusSource: statLabel}).render(true);
+			new SkillDialog({ bonus: stat, bonusSource: statLabel }).render(true);
 		})
 	}
 }

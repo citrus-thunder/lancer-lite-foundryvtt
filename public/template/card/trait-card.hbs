@@ -1,0 +1,17 @@
+<div class="item-card trait-card" data-item-id="{{id}}">
+	<div class="header">
+		<div class="title-row">
+			{{name}}
+			<div class="header-buttons">
+				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Trait" data-item-id="{{id}}"></i>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		{{#if system.description}}
+		<div class="description">
+			{{{system.description}}}
+		</div>
+		{{/if}}
+	</div>
+</div>

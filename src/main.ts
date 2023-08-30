@@ -44,7 +44,7 @@ Hooks.once('init', async () => {
 	Items.registerSheet(SYSTEM_NAME, CoreBonusSheet, {label: 'Core Bonus', types: ['core_bonus'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, GearSheet, {label: 'Gear', types: ['gear'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, LicenseSheet, {label: 'License', types: ['license'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, ReactionSheet, {label: 'Action', types: ['action'], makeDefault: true});
+	Items.registerSheet(SYSTEM_NAME, ReactionSheet, {label: 'Reaction', types: ['reaction'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, SystemSheet, {label: 'System', types: ['system'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, TalentSheet, {label: 'Talent', types: ['talent'], makeDefault: true});
 	Items.registerSheet(SYSTEM_NAME, TraitSheet, {label: 'Trait', types: ['trait'], makeDefault: true});

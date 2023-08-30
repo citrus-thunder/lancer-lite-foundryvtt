@@ -99,6 +99,7 @@
 			"core_bonus",
 			"gear",
 			"license",
+			"mount",
 			"reaction",
 			"system",
 			"talent",
@@ -129,6 +130,10 @@
 			"name": "New License",
 			"level": 0,
 			"description": ""
+		},
+		"mount": {
+			"type": "",
+			"weapons": []
 		},
 		"reaction": {
 			"name": "New Rection",
@@ -168,8 +173,7 @@
 			"threat": 0,
 			"tags": "",
 			"size": "",
-			"type": "",
-			"mount": ""
+			"type": ""
 		}
 	}
 }

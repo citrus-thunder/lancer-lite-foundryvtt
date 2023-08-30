@@ -197,37 +197,167 @@
 			<div class="flexrow tab-content">
 				<section class="content">
 					<div class="tab" data-tab="traits" data-group="primary-tabs">
-						
+
 					</div>
 					<div class="tab" data-tab="systems" data-group="primary-tabs">
-						
+
 					</div>
 					<div class="tab" data-tab="weapons" data-group="primary-tabs">
-						
+
 					</div>
 					<div class="tab" data-tab="equipment" data-group="primary-tabs">
-						
+
 					</div>
 				</section>
 			</div>
 			<!-- Row 4: Temp Layout -->
 			<!-- We'll put the total layout here before breaking it down into tabs -->
-			<div class="flexrow">
-				<!-- Tab 1 -->
-				<!-- Traits -->
-				<!-- Reactions -->
-				<!-- Systems -->
-					<!-- Passive Systems -->
-					<!-- Action Systems -->
-					<!-- Tech Action Systems -->
-					<!-- Protocol Systems -->
-				<!-- Mounts -->
-					<!-- Weapons -->
-				<!-- /Tab 1 -->
 
-				<!-- Tab 2 -->
-				<!-- Mech Equipment & Gear -->
-				<!-- /Tab 2 -->
+			<!-- Tab 1 -->
+			<!-- Traits -->
+			<!-- Reactions -->
+			<!-- Systems -->
+			<!-- Passive Systems -->
+			<!-- Action Systems -->
+			<!-- Tech Action Systems -->
+			<!-- Protocol Systems -->
+			<!-- Mounts -->
+			<!-- Weapons -->
+			<!-- /Tab 1 -->
+
+			<!-- Tab 2 -->
+			<!-- Mech Equipment & Gear -->
+			<!-- /Tab 2 -->
+			<div class="flexrow">
+				<div class="flexcol pad-right">
+					<!-- Core Systems -->
+					<div class="flexcol pad-bottom">
+						<div class="header-group">
+							<h2 class="section-title header-text">Core Systems</h2>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Core System" data-item-type="system"
+									data-item-name="New Core System">
+									<input type="hidden" name="default.type" value="core">
+								</i>
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each core_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+					<!-- Traits -->
+					<div class="flexcol pad-bottom">
+						<div class="header-group">
+							<h2 class="section-title header-text">Traits</h2>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Trait" data-item-type="trait"
+									data-item-name="New Trait"></i>
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each traits}}
+							{{> "systems/lancer-lite/template/card/trait-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+					<!-- Reactions -->
+					<div class="flexcol">
+						<div class="header-group">
+							<h2 class="section-title header-text">Reactions</h2>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Reaction" data-item-type="reaction"
+									data-item-name="New Reaction"></i>
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each reactions}}
+							{{> "systems/lancer-lite/template/card/reaction-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+				<div class="flexcol">
+					<!-- Weapons -->
+					<div class="flexcol pad-bottom">
+						<div class="header-group">
+							<h2 class="section-title header-text">Weapons</h3>
+								<div class="header-options">
+									<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
+										data-item-name="New Weapon">
+										<!-- TODO: default value inputs for mech weapon-->
+										</i>
+								</div>
+						</div>
+						<div class="flexcol">
+							<div class="header-group">
+								<h3 class="section-title header-text">Mounts</h3>
+								<div class="header-options">
+									<i class="fa-solid fa-plus item-add icon-button" title="Add Mount" data-item-type="mount"
+										data-item-name="New Mount"></i>
+								</div>
+							</div>
+							<div class="mounts">
+								{{#each mounts}}
+								{{> "systems/lancer-lite/template/sheet/actor/mech/partial/mount.hbs"}}
+								{{/each}}
+							</div>
+						</div>
+						{{#if nomount}}
+						<div class="flexcol">
+							<div class="header-group">
+								<h3 class="section-title header-text">Unmounted</h3>
+							</div>
+							<div class="nomount">
+								{{#each nomount}}
+								{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
+								{{/each}}
+							</div>
+						</div>
+						{{/if}}
+					</div>
+					<!-- Systems -->
+					<div class="flexcol">
+						<div class="header-group">
+							<h2 class="section-title header-text">Systems</h2>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add System" data-item-type="system"
+									data-item-name="New System"></i>
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each passive_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+							{{#each action_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+							{{#each tech_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+							{{#each protocols}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flexrow">
+				<div class="flexcol">
+					<div class="header-group">
+						<h2 class="section-title header-text">Gear</h3>
+							<div class="header-options">
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Gear" data-item-type="gear"
+									data-item-name="New Gear"></i>
+							</div>
+					</div>
+					<div class="flexrow card-row">
+						{{#each gear}}
+						{{> "systems/lancer-lite/template/card/gear-card.hbs"}}
+						{{/each}}
+					</div>
+				</div>
 			</div>
 		</div>
 	</form>
