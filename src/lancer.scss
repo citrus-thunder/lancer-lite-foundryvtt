@@ -1,8 +1,16 @@
+// Global Styles
 @import './style/global';
 
-@import './style/item-card';
+// Actor Sheet Styles
+@import './style/sheet/actor/actor-sheet';
+@import './style/sheet/actor/pilot-sheet';
+@import './style/sheet/actor/mech-sheet';
 
-@import './style/item-sheet';
-@import './style/actor-sheet';
+// Item Sheet Styles
+@import './style/sheet/item/item-sheet';
 
-@import './style/dialog';
+// Item Card Styles
+@import './style/card/item-card';
+
+// Dialog Styles
+@import './style/dialog/dialog';

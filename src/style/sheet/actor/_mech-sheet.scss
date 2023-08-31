@@ -1,0 +1,30 @@
+@import '/src/style/global';
+
+.sheet-container.mech-sheet {
+	div.skills {
+		label {
+			font-weight: bold;
+		}
+
+		.flexrow {
+			min-width: 8rem;
+			flex-grow: 0;
+		}
+	}
+
+	div.stats {
+		label {
+			font-size: 0.73rem;
+		}
+
+		table {
+			border: none;
+			margin: 0;
+			background-color: inherit;
+
+			td {
+				padding: 0.2rem;
+			}
+		}
+	}
+}

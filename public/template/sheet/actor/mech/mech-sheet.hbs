@@ -1,4 +1,4 @@
-<div class="{{cssClass}} flexcol sheet-container">
+<div class="{{cssClass}} flexcol sheet-container mech-sheet">
 	<form autocomplete="off">
 		<header class="sheet-header">
 			<h1>MECH</h1>
@@ -10,13 +10,13 @@
 					<div class="flexrow">
 						<!-- Portrait -->
 						<div class="flexcol flex0 pad-right">
-							<div class="pilot-portrait-frame">
+							<div class="portrait-frame">
 								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
 							</div>
 						</div>
 						<!-- Bio -->
-						<div class="flexcol flex0 field-group mech-bio pad-right --more">
-							<h2 class="section-title">Bio</h2>
+						<div class="flexcol field-group info pad-right --more">
+							<h2 class="section-title">Info</h2>
 							<div class="field">
 								<label>
 									NAME
@@ -33,7 +33,8 @@
 								<div class="field no-grow">
 									<label>
 										SIZE <br>
-										<input name="system.size" class="--small" type="text" value="{{actor.system.size}}" data-dType="Number">
+										<input name="system.size" class="--small" type="text" value="{{actor.system.size}}"
+											data-dType="Number">
 									</label>
 								</div>
 							</div>
@@ -44,7 +45,7 @@
 								</label>
 							</div>
 						</div>
-						<div class="flexcol flex0 field-group pilot-skills pad-right --more">
+						<div class="flexcol flex0 field-group skills pad-right --more">
 							<h2 class="section-title">Skills</h2>
 							<div class="flexrow">
 								<div class="pad-right --more">
@@ -101,73 +102,86 @@
 								</button>
 							</div>
 						</div>
-						<div class="flexcol field-group pilot-stats">
+						<div class="flexcol field-group stats">
 							<h2 class="section-title">Vitals</h2>
-							<!-- TODO: To Table -->
-							<div class="flexrow resource-row">
-								<div class="resource-field">
-									<label>STRUCTURE</label>
-									<div class="resources">
-										<input type="text" name="system.structure.value" value="{{actor.system.structure.value}}"
-											data-dtype="Number">
-										&nbsp;/&nbsp;
-										<input type="text" name="system.structure.max" value="{{actor.system.structure.max}}"
-											data-dtype="Number">
-									</div>
-								</div>
-								<div class="resource-field">
-									<label>HP</label>
-									<div class="resources">
-										<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
-										&nbsp;/&nbsp;
-										<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
-									</div>
-								</div>
-							</div>
-							<div class="flexrow resource-row" <div class="flexrow">
-								<div class="resource-field">
-									<label>HEAT</label>
-									<div class="flexrow flex0 resources">
-										<input type="text" class="--small" name="system.heat.value" value="{{actor.system.heat.value}}"
-											data-dtype="Number">
-										&nbsp;/&nbsp;
-										<input type="text" class="--small" name="system.heat.max" value="{{actor.system.heat.max}}"
-											data-dtype="Number">
-									</div>
-								</div>
-								<div class="resource-field">
-									<label>STRESS</label>
-									<div class="flexrow flex0 resources">
-										<input type="text" class="--small" name="system.stress.value" value="{{actor.system.stress.value}}"
-											data-dtype="Number">
-										&nbsp;/&nbsp;
-										<input type="text" class="--small" name="system.stress.max" value="{{actor.system.stress.max}}"
-											data-dtype="Number">
-									</div>
-								</div>
-							</div>
-							<div class="flexrow resource-row">
-								<div class="resource-field no-grow">
-									<label style="font-size: 0.73rem">OVERSHIELD</label>
-									<div class="flexrow flex0 resources">
-										<input type="text" class="--small" name="system.overshield.value"
-											value="{{actor.system.overshield.value}}" data-dtype="Number">
-										&nbsp;/&nbsp;
-										<input type="text" class="--small" name="system.overshield.max"
-											value="{{actor.system.overshield.max}}" data-dtype="Number">
-									</div>
-								</div>
-								<div class="resource-field no-grow">
-									<label >REPAIR</label>
-									<div class="flexrow flex0 resources">
-										<input type="text" class="--small" name="system.repair.value"
-											value="{{actor.system.repair.value}}" data-dtype="Number">
-										&nbsp;/&nbsp;
-										<input type="text" class="--small" name="system.repair.max"
-											value="{{actor.system.repair.max}}" data-dtype="Number">
-									</div>
-								</div>
-							</div>
+							<table>
+								<tr>
+									<td>
+										<div class="resource-field">
+											<label>STRUCTURE</label>
+											<div class="resources">
+												<input type="text" name="system.structure.value" value="{{actor.system.structure.value}}"
+													data-dtype="Number">
+												&nbsp;/&nbsp;
+												<input type="text" name="system.structure.max" value="{{actor.system.structure.max}}"
+													data-dtype="Number">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field">
+											<label>HP</label>
+											<div class="resources">
+												<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
+												&nbsp;/&nbsp;
+												<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="resource-field">
+											<label>HEAT</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.heat.value" value="{{actor.system.heat.value}}"
+													data-dtype="Number">
+												&nbsp;/&nbsp;
+												<input type="text" class="--small" name="system.heat.max" value="{{actor.system.heat.max}}"
+													data-dtype="Number">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field">
+											<label>STRESS</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.stress.value"
+													value="{{actor.system.stress.value}}" data-dtype="Number">
+												&nbsp;/&nbsp;
+												<input type="text" class="--small" name="system.stress.max" value="{{actor.system.stress.max}}"
+													data-dtype="Number">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="resource-field no-grow">
+											<label style="font-size: 0.73rem">OVERSHIELD</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.overshield.value"
+													value="{{actor.system.overshield.value}}" data-dtype="Number">
+												&nbsp;/&nbsp;
+												<input type="text" class="--small" name="system.overshield.max"
+													value="{{actor.system.overshield.max}}" data-dtype="Number">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field no-grow">
+											<label>REPAIR</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.repair.value"
+													value="{{actor.system.repair.value}}" data-dtype="Number">
+												&nbsp;/&nbsp;
+												<input type="text" class="--small" name="system.repair.max" value="{{actor.system.repair.max}}"
+													data-dtype="Number">
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
 						</div>
 					</div>
 				</div>

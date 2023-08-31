@@ -1,0 +1,48 @@
+@import '/src/style/global';
+
+.sheet-container.pilot-sheet {
+	div.bio {
+		div.field {
+			min-width: 15rem;
+			margin-bottom: 0.2rem;
+
+			>label {
+				font-weight: bold;
+
+				>input,
+				textarea {
+					font-family: $font-serif;
+				}
+			}
+		}
+
+		div.field-group {
+			min-width: 15rem;
+			display: flex;
+
+			&>div.field {
+				min-width: initial;
+			}
+		}
+	}
+
+	div.skills {
+		label {
+			font-weight: bold;
+		}
+
+		.flexrow {
+			min-width: 8rem;
+		}
+	}
+
+	div.stats {
+		label {
+			font-weight: bold;
+		}
+
+		.flexrow {
+			min-width: 4rem;
+		}
+	}
+}

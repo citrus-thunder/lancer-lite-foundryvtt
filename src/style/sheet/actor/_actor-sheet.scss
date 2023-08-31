@@ -13,6 +13,10 @@ $card-margin: 0.2rem;
 		width: 100%;
 	}
 
+	input.--small {
+		max-width: 2rem;
+	}
+
 	.no-grow {
 		flex-grow: 0;
 	}
@@ -95,31 +99,7 @@ $card-margin: 0.2rem;
 		flex-grow: 0;
 	}
 
-	// todo: should this be a table at all?
-	table.skill-table {
-		margin-top: 0rem;
-		border: none;
-		background-color: transparent;
-
-		label {
-			font-weight: bold;
-			font-family: $font-sans;
-		}
-	}
-
-	div.skill-container,
-	div.stat-container {
-		padding: 0rem 0.5rem;
-		min-width: 6rem;
-
-		label {
-			font-weight: bold;
-			font-family: $font-sans;
-		}
-	}
-
-	// todo: genericize
-	div.pilot-portrait-frame {
+	div.portrait-frame {
 		border: 0.2rem solid $color-red;
 		width: 8rem;
 		height: 12rem;
@@ -175,33 +155,27 @@ $card-margin: 0.2rem;
 		max-width: 8rem;
 	}
 
-	div.resource-row {
-		div.resource-field {
-			border: 1px solid $color-grey2;
-			border-radius: 0.2rem;
-			padding: 0.2rem;
+	div.resource-field {
+		border: 1px solid $color-grey2;
+		border-radius: 0.2rem;
+		padding: 0.2rem;
 
-			&:not(:last-child) {
-				margin-right: 0.2rem;
-			}
+		&:not(:last-child) {
+			margin-right: 0.2rem;
+		}
 
-			>label {
-				font-weight: bold;
-			}
+		>label {
+			font-weight: bold;
+		}
 
-			>div.resources {
-				display: flex;
-				align-items: center;
+		>div.resources {
+			display: flex;
+			align-items: center;
 
-				input {
-					max-width: 1.5rem;
-				}
+			input {
+				max-width: 1.5rem;
 			}
 		}
-	}
-
-	input.--small {
-		max-width: 2rem;
 	}
 
 	nav.tabs {
@@ -235,92 +209,6 @@ $card-margin: 0.2rem;
 
 			&:not(:last-child) {
 				margin-right: 0.3rem;
-			}
-		}
-	}
-
-	// Pilot Sheet
-	.pilot-bio {
-		div.field {
-			min-width: 15rem;
-			margin-bottom: 0.2rem;
-
-			>label {
-				font-weight: bold;
-
-				>input,
-				textarea {
-					font-family: $font-serif;
-				}
-			}
-		}
-
-		div.field-group {
-			min-width: 15rem;
-			display: flex;
-
-			&>div.field {
-				min-width: initial;
-			}
-		}
-	}
-
-	.pilot-skills {
-		label {
-			font-weight: bold;
-		}
-
-		.flexrow {
-			min-width: 8rem;
-		}
-	}
-
-	.pilot-stats {
-		label {
-			font-weight: bold;
-		}
-
-		.flexrow {
-			min-width: 4rem;
-		}
-	}
-
-	// Mech Sheet
-	.core-system-editor .editor {
-		min-height: 5rem;
-		padding-bottom: 2rem;
-	}
-
-	div.mech-stats {
-		div.field {
-			input {
-				max-width: 4rem;
-			}
-		}
-	}
-
-	div.mech-bio {
-		$field-width: 10rem;
-
-		div.field {
-			min-width: $field-width;
-			margin-bottom: 0.2rem;
-
-			>label {
-				font-weight: bold;
-
-				>input,
-				textarea {
-					font-family: $font-serif;
-				}
-			}
-		}
-
-		div.field-group {
-			min-width: $field-width;
-
-			&>div.field {
-				min-width: initial;
 			}
 		}
 	}
