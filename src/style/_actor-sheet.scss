@@ -56,8 +56,6 @@ $card-margin: 0.2rem;
 	.icon-button {
 		font-size: 1.2rem;
 		cursor: pointer;
-		display: flex;
-		align-items: center;
 	}
 
 	.card-row .item-card {
@@ -151,12 +149,12 @@ $card-margin: 0.2rem;
 			display: flex;
 
 			div.header-field {
-				> label {
+				>label {
 					font-weight: bold;
 				}
 
-				> input,
-				> label > input {
+				>input,
+				>label>input {
 					font-weight: initial;
 					width: 0.2rem;
 				}
@@ -164,6 +162,11 @@ $card-margin: 0.2rem;
 				&:not(:last-child) {
 					margin-right: 0.2rem;
 				}
+			}
+
+			.icon-button {
+				display: flex;
+				align-items: center;
 			}
 		}
 	}
@@ -255,6 +258,7 @@ $card-margin: 0.2rem;
 		div.field-group {
 			min-width: 15rem;
 			display: flex;
+
 			&>div.field {
 				min-width: initial;
 			}
