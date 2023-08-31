@@ -1,0 +1,29 @@
+@import '/src/style/global';
+@import './item-card';
+
+div.item-card.trait-card {
+	div.header {
+		background-color: $color-red3;
+		color: $color-text-white;
+		clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - 0.4rem), calc(100% - 2rem) 0);
+
+		div.title-row {
+			font-size: 1rem;
+			align-items: center;
+
+			div.header-buttons {
+				margin-right: 2rem;
+			}
+		}
+	}
+
+	div.body {
+		background-color: $color-red4;
+		color: $color-text-black;
+
+		div.description p {
+			margin: 0;
+			padding: 0.2rem;
+		}
+	}
+}

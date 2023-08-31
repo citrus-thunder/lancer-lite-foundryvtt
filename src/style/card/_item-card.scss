@@ -49,6 +49,7 @@ div.item-card {
 	}
 
 	// Action Card
+	/*
 	&.action-card {
 		div.header {
 			background-color: $color-red1;
@@ -92,8 +93,9 @@ div.item-card {
 			}
 		}
 	}
-
+	*/
 	// Armor Card
+	/*
 	&.armor-card {
 		div.header {
 			background-color: $color-brown1;
@@ -105,8 +107,9 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
-
+	*/
 	// Core Bonus Card
+	/*
 	&.core-bonus-card {
 		div.header {
 			background-color: $color-red3;
@@ -118,8 +121,10 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
+	*/
 
 	// Gear Card
+	/*
 	&.gear-card {
 		div.header {
 			background-color: $color-brown1;
@@ -131,8 +136,10 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
+	*/
 
 	// License Card
+	/*
 	&.license-card {
 		div.header {
 			background-color: $color-red1;
@@ -156,8 +163,9 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
-
+	*/
 	// Mount Card
+	/*
 	&.mount-card {
 		div.header {
 			background-color: $color-red3;
@@ -169,8 +177,10 @@ div.item-card {
 			padding: 0 0.5rem 0.5rem 0.5rem;
 		}
 	}
+	*/
 
 	// Reaction Card
+	/*
 	&.reaction-card {
 		div.header {
 			background-color: $color-teal1;
@@ -182,8 +192,9 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
-
+	*/
 	// System Card
+	/*
 	&.system-card {
 		div.header {
 			background-color: $color-red4;
@@ -239,8 +250,9 @@ div.item-card {
 			}
 		}
 	}
-
+	*/
 	// Talent Card
+	/*
 	&.talent-card {
 		div.header {
 			background-color: $color-blue1;
@@ -252,8 +264,9 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
-
+	*/
 	// Trait Card
+	/*
 	&.trait-card {
 		div.header {
 			background-color: $color-red3;
@@ -280,8 +293,9 @@ div.item-card {
 			}
 		}
 	}
-
+	*/
 	// Trigger Card
+	/*
 	&.trigger-card {
 		div.header {
 			background-color: $color-teal1;
@@ -293,8 +307,9 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
-
+	*/
 	// Weapon Card
+	/*
 	&.weapon-card {
 		div.header {
 			background-color: $color-black2;
@@ -306,4 +321,5 @@ div.item-card {
 			color: $color-text-black;
 		}
 	}
+	*/
 }

@@ -8,19 +8,19 @@
 		</div>
 		<div class="tags">
 			{{#ifEquals system.type "action"}}
-			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Action{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{system.sp_cost}} SP, Action{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "core"}}
 			Core System{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "passive"}}
-			{{#if system.sp_cost}}{{system.sp_cost}} SP{{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{system.sp_cost}} SP{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "protocol"}}
-			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Protocol{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{system.sp_cost}} SP, Protocol{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "tech"}}
-			{{#if system.sp_cost}}{{system.sp_cost}} SP{{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{system.sp_cost}} SP{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 		</div>
 	</div>

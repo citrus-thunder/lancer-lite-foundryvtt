@@ -1,0 +1,46 @@
+@import '/src/style/global';
+@import './item-card';
+
+div.item-card.action-card {
+	div.header {
+		background-color: $color-red1;
+		color: $color-text-white;
+
+		&.--action {
+			background-color: $color-green1;
+		}
+
+		&.--reaction {
+			background-color: $color-teal1;
+		}
+
+		&.--tech-action {
+			background-color: $color-purple1;
+		}
+
+		&.--protocol {
+			background-color: $color-orange1;
+		}
+	}
+
+	div.body {
+		background-color: $color-text-white;
+		color: $color-text-black;
+
+		&.--action {
+			background-color: $color-green2;
+		}
+
+		&.--reaction {
+			background-color: $color-teal2;
+		}
+
+		&.--tech-action {
+			background-color: $color-purple2;
+		}
+
+		&.--protocol {
+			background-color: $color-orange2;
+		}
+	}
+}

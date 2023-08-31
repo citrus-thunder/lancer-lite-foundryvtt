@@ -1,0 +1,57 @@
+@import '/src/style/global';
+@import './item-card';
+
+div.item-card.system-card {
+	div.header {
+		background-color: $color-red4;
+		color: $color-text-white;
+	}
+
+	div.body {
+		background-color: $color-text-white;
+		color: $color-text-black;
+	}
+
+	&.--action {
+		div.header {
+			background-color: $color-green1;
+		}
+	}
+
+	&.--core {
+		div.header {
+			background-color: $color-red3;
+		}
+
+		div.body {
+			background-color: $color-red4;
+			color: $color-text-black;
+			border: 0.2rem solid $color-red3;
+			overflow-y: auto;
+			max-height: 10rem;
+
+			div.description p {
+				margin: 0;
+				padding: 0.2rem;
+			}
+		}
+	}
+
+	&.--passive {
+		div.header {
+			background-color: $color-red3;
+		}
+	}
+
+	&.--protocol {
+		div.header {
+			background-color: $color-orange1;
+		}
+	}
+
+	&.--tech {
+		div.header {
+			background-color: $color-purple1;
+		}
+	}
+}

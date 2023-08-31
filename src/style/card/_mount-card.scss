@@ -1,0 +1,14 @@
+@import '/src/style/global';
+@import './item-card';
+
+div.item-card.mount-card {
+	div.header {
+		background-color: $color-red3;
+		color: $color-text-white;
+	}
+
+	> div.body > .weapon-list{
+		background-color: $color-red3;
+		padding: 0 0.5rem 0.5rem 0.5rem;
+	}
+}

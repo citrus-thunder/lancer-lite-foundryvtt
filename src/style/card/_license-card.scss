@@ -1,0 +1,26 @@
+@import '/src/style/global';
+@import './item-card';
+
+div.item-card.license-card {
+	div.header {
+		background-color: $color-red1;
+		color: $color-text-white;
+
+		&.--level-1 {
+			background-color: $color-red1;
+		}
+
+		&.--level-2 {
+			background-color: $color-red5;
+		}
+
+		&.--level-3 {
+			background-color: $color-red7;
+		}
+	}
+
+	div.body {
+		background-color: $color-text-white;
+		color: $color-text-black;
+	}
+}
