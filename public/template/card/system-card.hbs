@@ -2,9 +2,12 @@
 	<div class="header">
 		<div class="title-row">
 			<span class="toggle-body">{{name}}</span>
+			{{#unless hideButtons}}
 			<div class="header-buttons">
-				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Weapon" data-item-id="{{id}}"></i>
+				<i class="fa-regular fa-message item-post icon-button" title="Post System to Chat" data-item-id="{{id}}"></i>
+				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit System" data-item-id="{{id}}"></i>
 			</div>
+			{{/unless}}
 		</div>
 		<div class="tags">
 			{{#ifEquals system.type "action"}}
@@ -25,19 +28,8 @@
 		</div>
 	</div>
 	<div class="body">
-		{{#ifEquals system.type "core"}}
-		{{#if system.description}}
-		<div class="description --show">
+		<div class="description {{#ifEquals system.type "core"}}{{#unless hideDescription}}--show{{/unless}}{{/ifEquals}}">
 			{{{system.description}}}
 		</div>
-		{{/if}}
-		{{/ifEquals}}
-		{{#ifNotEquals system.type "core"}}
-		{{#if system.description}}
-		<div class="description">
-			{{{system.description}}}
-		</div>
-		{{/if}}
-		{{/ifNotEquals}}
 	</div>
 </div>

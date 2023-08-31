@@ -20,7 +20,6 @@ import TriggerSheet from "./module/sheet/item/trigger/TriggerSheet";
 import WeaponSheet from "./module/sheet/item/weapon/WeaponSheet";
 
 // Helpers & Utilities
-//import partials from "./module/partial/partials";
 import helpers from "./module/helper/helpers";
 import preloadTemplates from "./module/preloadTemplates";
 
@@ -55,4 +54,13 @@ Hooks.once('init', async () => {
 	
 	helpers.registerAll();
 	await preloadTemplates(SYSTEM_NAME);
+});
+
+Hooks.on('renderChatMessage', async (app: any, html: any) => {
+	html.find('.item-card .toggle-body').on('click', (ev) => {
+		$(ev.currentTarget)
+			.closest('.item-card')
+			.find('.body .description')
+			.slideToggle()
+	});
 });

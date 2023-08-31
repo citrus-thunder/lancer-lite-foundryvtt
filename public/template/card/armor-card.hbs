@@ -2,9 +2,12 @@
 	<div class="header">
 		<div class="title-row">
 			<span class="toggle-body">{{name}}</span>
+			{{#unless hideButtons}}
 			<div class="header-buttons">
+				<i class="fa-regular fa-message item-post icon-button" title="Post Armor to Chat" data-item-id="{{id}}"></i>
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Armor" data-item-id="{{id}}"></i>
 			</div>
+			{{/unless}}
 		</div>
 		{{#if tags}}
 		<div class="tags">

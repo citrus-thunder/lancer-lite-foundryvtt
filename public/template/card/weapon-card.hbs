@@ -2,10 +2,13 @@
 	<div class="header">
 		<div class="title-row">
 			<span class="toggle-body">{{name}}</span>
+			{{#unless hideButtons}}
 			<div class="header-buttons">
+				<i class="fa-regular fa-message item-post icon-button" title="Post Weapon to Chat" data-item-id="{{id}}"></i>
 				<i class="fa-solid fa-dice-d20 weapon-roll icon-button" title="Roll Weapon" data-item-id="{{id}}"></i>
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Weapon" data-item-id="{{id}}"></i>
 			</div>
+			{{/unless}}
 		</div>
 		<div class="type">
 			{{system.size}} {{system.type}}
@@ -15,11 +18,9 @@
 			{{system.tags}}
 		</div>
 		{{/if}}
-		{{#if system.traits}}
 		<div class="traits">
 			{{#if system.range}}[Range: {{system.range}}]{{/if}} {{#if system.threat}}[Threat: {{system.threat}}]{{/if}} {{#if system.damage}}[Damage: {{system.damage}}]{{/if}}
 		</div>
-		{{/if}}
 	</div>
 	<div class="body">
 		<div class="description">

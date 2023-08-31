@@ -43,6 +43,25 @@ export default class LancerActorSheet extends ActorSheet {
 			CONFIG.Item.documentClass.create(itemData, { parent: this.actor, renderSheet: true });
 		});
 
+		html.find('.item-post').on('click', async (ev) => {
+			const item = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true});
+			
+			let type = item.type as string;
+			type = type.replaceAll('_', '-');
+
+			let templatePath = `systems/lancer-lite/template/card/${type}.hbs`;
+
+			const itemData: any = item;
+			itemData.hideButtons = true;
+			itemData.hideDescription = true;
+
+			const cardHtml = await renderTemplate(`systems/lancer-lite/template/card/${type}-card.hbs`, item)
+			let messageData: any = {
+				content: cardHtml
+			}
+			CONFIG.ChatMessage.documentClass.create(messageData);
+		})
+
 		html.find('.weapon-roll').on('click', async (ev) => {
 			const weapon = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
 			const d = new WeaponDialog(weapon);

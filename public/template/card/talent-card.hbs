@@ -3,7 +3,10 @@
 		<div class="title-row">
 			<span class="toggle-body">{{name}} {{romanize system.rank}}</span>
 			<div class="header-buttons">
+				{{#unless hideButtons}}
+				<i class="fa-regular fa-message item-post icon-button" title="Post Talent to Chat" data-item-id="{{id}}"></i>
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Talent" data-item-id="{{id}}"></i>
+				{{/unless}}
 			</div>
 		</div>
 		{{#if tags}}
