@@ -28,6 +28,7 @@
 			"mech_common": {
 				"name": "New Mech",
 				"description": "",
+				"attack": 0,
 				"hull": 0,
 				"systems": 0,
 				"agility": 0,
