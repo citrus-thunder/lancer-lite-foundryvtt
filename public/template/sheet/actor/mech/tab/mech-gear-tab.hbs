@@ -1,0 +1,17 @@
+<div class="flexrow">
+	<!-- Gear -->
+	<div class="flexcol">
+		<div class="header-group">
+			<h2 class="section-title header-text">Gear</h3>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Gear" data-item-type="gear"
+						data-item-name="New Gear"></i>
+				</div>
+		</div>
+		<div class="flexrow card-row">
+			{{#each gear}}
+			{{> "systems/lancer-lite/template/card/gear-card.hbs"}}
+			{{/each}}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+<!-- Row: Stats -->
+<div class="mech-stats flexrow pad-bottom">
+	<div class="field">
+		<label>
+			ATK
+			<input type="text" name="system.attack" value="{{actor.system.attack}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			TECH ATK
+			<input type="text" name="system.tech_attack" value="{{actor.system.tech_attack}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			SAVE TGT
+			<input type="text" name="system.save_target" value="{{actor.system.save_target}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			SPEED
+			<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			E-DEF
+			<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			EVASION
+			<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			SENSORS
+			<input type="text" name="system.sensors" value="{{actor.system.sensors}}" data-dType="Number">
+		</label>
+	</div>
+	<div class="field">
+		<label>
+			ARMOR
+			<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
+		</label>
+	</div>
+</div>
+<hr>
+<!-- Row: Main Tab Content -->
+<div class="flexrow">
+	<!-- Left Col -->
+	<div class="flexcol pad-right">
+		<!-- Core Systems -->
+		<div class="flexcol pad-bottom">
+			<div class="header-group">
+				<h2 class="section-title header-text">Core Systems</h2>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Core System" data-item-type="system"
+						data-item-name="New Core System">
+						<input type="hidden" name="default.type" value="core">
+					</i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each core_systems}}
+				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+		<!-- Reactions -->
+		<div class="flexcol">
+			<div class="header-group">
+				<h2 class="section-title header-text">Reactions</h2>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Reaction" data-item-type="reaction"
+						data-item-name="New Reaction"></i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each reactions}}
+				{{> "systems/lancer-lite/template/card/reaction-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<!-- Right Col -->
+	<div class="flexcol">
+		<!-- Traits -->
+		<div class="flexcol pad-bottom">
+			<div class="header-group">
+				<h2 class="section-title header-text">Traits</h2>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Trait" data-item-type="trait"
+						data-item-name="New Trait"></i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each traits}}
+				{{> "systems/lancer-lite/template/card/trait-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

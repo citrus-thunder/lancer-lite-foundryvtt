@@ -5,6 +5,11 @@ export default async function preloadTemplates(system) {
 		`systems/${system}/template/sheet/actor/pilot/tab/pilot-licenses-tab.hbs`,
 		`systems/${system}/template/sheet/actor/pilot/tab/pilot-loadout-tab.hbs`,
 
+		// Mech Sheet Tabs
+		`systems/${system}/template/sheet/actor/mech/tab/mech-traits-tab.hbs`,
+		`systems/${system}/template/sheet/actor/mech/tab/mech-loadout-tab.hbs`,
+		`systems/${system}/template/sheet/actor/mech/tab/mech-gear-tab.hbs`,
+
 		// Card Partials
 		`systems/${system}/template/card/armor-card.hbs`,
 		`systems/${system}/template/card/core-bonus-card.hbs`,
