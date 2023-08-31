@@ -1,6 +1,7 @@
 .vs
 .vscode
 lancer-lite/
+bin/
 
 foundry.zip
 
