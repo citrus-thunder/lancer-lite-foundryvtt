@@ -3,11 +3,12 @@
 
 div.item-card.system-card {
 	div.header {
-		background-color: $color-red4;
+		background-color: $color-red3;
 		color: $color-text-white;
 	}
 
 	div.body {
+		border: 0.2rem solid $color-red3;
 		background-color: $color-text-white;
 		color: $color-text-black;
 	}
@@ -15,6 +16,11 @@ div.item-card.system-card {
 	&.--action {
 		div.header {
 			background-color: $color-green1;
+		}
+
+		div.body {
+			border: 0.2rem solid $color-green1;
+			background-color: $color-green2;
 		}
 	}
 
@@ -41,17 +47,32 @@ div.item-card.system-card {
 		div.header {
 			background-color: $color-red3;
 		}
+
+		div.body {
+			border: 0.2rem solid $color-red3;
+			background-color: $color-red4;
+		}
 	}
 
 	&.--protocol {
 		div.header {
 			background-color: $color-orange1;
 		}
+
+		div.body {
+			border: 0.2rem solid $color-orange1;
+			background-color: $color-orange2;
+		}
 	}
 
 	&.--tech {
 		div.header {
 			background-color: $color-purple1;
+		}
+
+		div.body {
+			border: 0.2rem solid $color-purple1;
+			background-color: $color-purple2;
 		}
 	}
 }

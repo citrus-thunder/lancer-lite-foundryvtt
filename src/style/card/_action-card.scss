@@ -24,22 +24,27 @@ div.item-card.action-card {
 	}
 
 	div.body {
+		border: 0.2rem solid $color-red1;
 		background-color: $color-text-white;
 		color: $color-text-black;
 
 		&.--action {
+			border: 0.2rem solid $color-green1;
 			background-color: $color-green2;
 		}
 
 		&.--reaction {
+			border: 0.2rem solid $color-teal1;
 			background-color: $color-teal2;
 		}
 
 		&.--tech-action {
+			border: 0.2rem solid $color-purple1;
 			background-color: $color-purple2;
 		}
 
 		&.--protocol {
+			border: 0.2rem solid $color-orange1;
 			background-color: $color-orange2;
 		}
 	}

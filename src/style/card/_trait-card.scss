@@ -18,12 +18,8 @@ div.item-card.trait-card {
 	}
 
 	div.body {
+		border: 0.2rem solid $color-red3;
 		background-color: $color-red4;
 		color: $color-text-black;
-
-		div.description p {
-			margin: 0;
-			padding: 0.2rem;
-		}
 	}
 }

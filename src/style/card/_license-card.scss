@@ -20,7 +20,19 @@ div.item-card.license-card {
 	}
 
 	div.body {
-		background-color: $color-text-white;
+		background-color: $color-red4;
 		color: $color-text-black;
+
+		&.--level-1 {
+			border: 0.2rem solid $color-red1;
+		}
+
+		&.--level-2 {
+			border: 0.2rem solid $color-red5;
+		}
+
+		&.--level-3 {
+			border: 0.2rem solid $color-red7;
+		}
 	}
 }
