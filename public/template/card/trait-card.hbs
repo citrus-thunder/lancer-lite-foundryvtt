@@ -1,7 +1,7 @@
 <div class="item-card trait-card" data-item-id="{{id}}">
 	<div class="header">
 		<div class="title-row">
-			{{name}}
+			<span class="toggle-body">{{name}}</span>
 			<div class="header-buttons">
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Trait" data-item-id="{{id}}"></i>
 			</div>
@@ -9,7 +9,7 @@
 	</div>
 	<div class="body">
 		{{#if system.description}}
-		<div class="description">
+		<div class="description --show">
 			{{{system.description}}}
 		</div>
 		{{/if}}

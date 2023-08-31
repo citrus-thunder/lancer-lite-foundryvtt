@@ -39,6 +39,11 @@ div.item-card {
 	div.body {
 		div.description {
 			font-family: $font-sans;
+			display: none;
+
+			&.--show {
+				display: inherit;
+			}
 		}
 	}
 

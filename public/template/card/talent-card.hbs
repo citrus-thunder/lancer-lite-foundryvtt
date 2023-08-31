@@ -1,7 +1,7 @@
 <div class="item-card talent-card" data-item-id="{{id}}">
 	<div class="header">
 		<div class="title-row">
-			{{name}} {{romanize system.rank}}
+			<span class="toggle-body">{{name}} {{romanize system.rank}}</span>
 			<div class="header-buttons">
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Talent" data-item-id="{{id}}"></i>
 			</div>
@@ -13,7 +13,7 @@
 	</div>
 	<div class="body">
 		<div class="description">
-			{{description}}
+			{{{system.description}}}
 		</div>
 	</div>
 </div>

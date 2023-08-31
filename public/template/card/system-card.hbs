@@ -1,7 +1,7 @@
 <div class="item-card system-card --{{system.type}}" data-item-id="{{id}}">
 	<div class="header">
 		<div class="title-row">
-			{{name}}
+			<span class="toggle-body">{{name}}</span>
 			<div class="header-buttons">
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Weapon" data-item-id="{{id}}"></i>
 			</div>
@@ -25,10 +25,19 @@
 		</div>
 	</div>
 	<div class="body">
+		{{#ifEquals system.type "core"}}
+		{{#if system.description}}
+		<div class="description --show">
+			{{{system.description}}}
+		</div>
+		{{/if}}
+		{{/ifEquals}}
+		{{#ifNotEquals system.type "core"}}
 		{{#if system.description}}
 		<div class="description">
 			{{{system.description}}}
 		</div>
 		{{/if}}
+		{{/ifNotEquals}}
 	</div>
 </div>
