@@ -12,7 +12,8 @@ $color-text-black: #030303;
 div.item-card {
 
 	// Common
-	.icon-button {
+	.icon-button,
+	.toggle-body {
 		cursor: pointer;
 	}
 

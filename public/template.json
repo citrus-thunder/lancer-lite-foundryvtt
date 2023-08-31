@@ -2,29 +2,9 @@
 	"Actor": {
 		"types": [
 			"pilot",
-			"mech",
-			"npc_pilot",
-			"npc_mech"
+			"mech"
 		],
 		"templates": {
-			"pilot_common": {
-				"callsign": "",
-				"biography": "",
-				"hp": {
-					"value": 10,
-					"max": 10,
-					"min": 0
-				},
-				"grit": 0,
-				"hull": 0,
-				"systems": 0,
-				"agility": 0,
-				"engineering": 0,
-				"armor": 0,
-				"e_defense": 0,
-				"evasion": 0,
-				"speed": 0
-			},
 			"mech_common": {
 				"name": "New Mech",
 				"description": "",
@@ -69,39 +49,81 @@
 			}
 		},
 		"pilot": {
-			"templates": [
-				"pilot_common"
-			],
+			"callsign": "",
+			"biography": "",
+			"hp": {
+				"value": 10,
+				"max": 10,
+				"min": 0
+			},
+			"grit": 0,
+			"hull": 0,
+			"systems": 0,
+			"agility": 0,
+			"engineering": 0,
+			"armor": 0,
+			"e_defense": 0,
+			"evasion": 0,
+			"speed": 0,
 			"license_level": 0
 		},
 		"mech": {
-			"templates": [
-				"mech_common"
-			],
+			"name": "New Mech",
+			"description": "",
+			"attack": 0,
+			"hull": 0,
+			"systems": 0,
+			"agility": 0,
+			"engineering": 0,
+			"size": 1,
+			"save_target": 0,
+			"armor": 0,
+			"sensors": 0,
+			"stress": {
+				"value": 0,
+				"max": 0,
+				"min": 0
+			},
+			"overshield": {
+				"value": 0,
+				"max": 0,
+				"min": 0
+			},
+			"hp": {
+				"value": 10,
+				"max": 10,
+				"min": 0
+			},
+			"e_defense": 0,
+			"tech_attack": 0,
+			"evasion": 0,
+			"speed": 0,
+			"heat": {
+				"value": 0,
+				"max": 0,
+				"min": 0
+			},
+			"structure": {
+				"value": 0,
+				"max": 0,
+				"min": 0
+			},
 			"frame": "",
-			"core_system": "",
 			"sp": {
 				"value": 0,
 				"min": 0,
 				"max": 0
 			},
-			"core_power": true,
+			"core_power": {
+				"value": 1,
+				"min": 0,
+				"max": 1
+			},
 			"repairs": {
 				"value": 0,
 				"max": 0,
 				"min": 0
 			}
-		},
-		"npc_pilot": {
-			"templates": [
-				"pilot_common"
-			]
-		},
-		"npc_mech": {
-			"templates": [
-				"mech_common"
-			],
-			"role": ""
 		}
 	},
 	"Item": {
