@@ -1,104 +1,76 @@
 {
 	"Actor": {
 		"types": [
-			"pilot",
-			"mech"
+			"mech",
+			"pilot"
 		],
-		"templates": {
-			"mech_common": {
-				"name": "New Mech",
-				"description": "",
-				"attack": 0,
-				"hull": 0,
-				"systems": 0,
-				"agility": 0,
-				"engineering": 0,
-				"size": 1,
-				"save_target": 0,
-				"armor": 0,
-				"sensors": 0,
-				"stress": {
-					"value": 0,
-					"max": 0,
-					"min": 0
-				},
-				"overshield": {
-					"value": 0,
-					"max": 0,
-					"min": 0
-				},
-				"hp": {
-					"value": 10,
-					"max": 10,
-					"min": 0
-				},
-				"e_defense": 0,
-				"tech_attack": 0,
-				"evasion": 0,
-				"speed": 0,
-				"heat": {
-					"value": 0,
-					"max": 0,
-					"min": 0
-				},
-				"structure": {
-					"value": 0,
-					"max": 0,
-					"min": 0
-				}
-			}
-		},
 		"pilot": {
+			"agility": 0,
+			"armor": 0,
+			"background": "",
 			"callsign": "",
-			"biography": "",
+			"e_defense": 0,
+			"engineering": 0,
+			"evasion": 0,
+			"grit": 0,
 			"hp": {
 				"value": 10,
 				"max": 10,
 				"min": 0
 			},
-			"grit": 0,
 			"hull": 0,
-			"systems": 0,
-			"agility": 0,
-			"engineering": 0,
-			"armor": 0,
-			"e_defense": 0,
-			"evasion": 0,
+			"license_level": 0,
+			"name": "New Pilot",
 			"speed": 0,
-			"license_level": 0
+			"systems": 0
 		},
 		"mech": {
-			"name": "New Mech",
-			"description": "",
-			"attack": 0,
-			"hull": 0,
-			"systems": 0,
 			"agility": 0,
-			"engineering": 0,
-			"size": 1,
-			"save_target": 0,
 			"armor": 0,
-			"sensors": 0,
-			"stress": {
+			"attack": 0,
+			"core_power": {
+				"value": 1,
+				"min": 0,
+				"max": 1
+			},
+			"description": "",
+			"e_defense": 0,
+			"engineering": 0,
+			"evasion": 0,
+			"frame": "",
+			"grit": 0,
+			"heat": {
 				"value": 0,
 				"max": 0,
 				"min": 0
 			},
+			"hp": {
+				"value": 10,
+				"max": 10,
+				"min": 0
+			},
+			"hull": 0,
+			"name": "New Mech",
 			"overshield": {
 				"value": 0,
 				"max": 0,
 				"min": 0
 			},
-			"hp": {
-				"value": 10,
-				"max": 10,
+			"repairs": {
+				"value": 0,
+				"max": 0,
 				"min": 0
 			},
-			"e_defense": 0,
-			"tech_attack": 0,
-			"evasion": 0,
+			"save_target": 0,
+			"sensors": 0,
+			"size": 1,
+			"sp": {
+				"value": 0,
+				"min": 0,
+				"max": 0
+			},
 			"speed": 0,
-			"heat": {
+			"stress": {
 				"value": 0,
 				"max": 0,
 				"min": 0
@@ -108,22 +80,8 @@
 				"max": 0,
 				"min": 0
 			},
-			"frame": "",
-			"sp": {
-				"value": 0,
-				"min": 0,
-				"max": 0
-			},
-			"core_power": {
-				"value": 1,
-				"min": 0,
-				"max": 1
-			},
-			"repairs": {
-				"value": 0,
-				"max": 0,
-				"min": 0
-			}
+			"systems": 0,
+			"tech_attack": 0
 		}
 	},
 	"Item": {
@@ -141,71 +99,71 @@
 			"weapon"
 		],
 		"armor": {
-			"name": "New Armor",
-			"description": "",
-			"tags": "",
-			"bonuses": "",
 			"armor": 0,
-			"evasion": 0,
+			"bonuses": "",
+			"description": "",
 			"e_defense": 0,
-			"speed": 0
+			"evasion": 0,
+			"name": "New Armor",
+			"speed": 0,
+			"tags": ""
 		},
 		"core_bonus": {
-			"name": "New Core Bonus",
-			"description": ""
+			"description": "",
+			"name": "New Core Bonus"
 		},
 		"gear": {
-			"name": "New Gear",
 			"description": "",
+			"name": "New Gear",
 			"tags": ""
 		},
 		"license": {
-			"name": "New License",
+			"description": "",
 			"level": 0,
-			"description": ""
+			"name": "New License"
 		},
 		"mount": {
 			"type": "",
 			"weapons": []
 		},
 		"reaction": {
-			"name": "New Rection",
-			"frequency": "1/round",
 			"description": "",
+			"frequency": "1/round",
+			"name": "New Rection",
 			"tags": ""
 		},
 		"system": {
-			"name": "New System",
-			"type": "",
 			"description": "",
+			"name": "New System",
 			"sp_cost": 0,
-			"tags": ""
+			"tags": "",
+			"type": ""
 		},
 		"talent": {
+			"description": "",
 			"name": "New Talent",
-			"rank": 1,
-			"description": ""
+			"rank": 1
 		},
 		"trait": {
-			"type": "",
+			"description": "",
 			"name": "New Trait",
-			"description": ""
+			"type": ""
 		},
 		"trigger": {
-			"name": "New Trigger",
 			"bonus": 2,
-			"description": ""
+			"description": "",
+			"name": "New Trigger"
 		},
 		"weapon": {
-			"name": "New Weapon",
-			"description": "",
 			"damage": "",
-			"roll_formula": "",
+			"description": "",
 			"destroyed": false,
+			"name": "New Weapon",
 			"range": "",
-			"threat": 0,
-			"tags": "",
+			"roll_formula": "",
 			"size": "",
+			"tags": "",
+			"threat": 0,
 			"type": ""
 		}
 	}
