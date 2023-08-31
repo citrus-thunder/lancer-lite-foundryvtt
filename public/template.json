@@ -36,6 +36,16 @@
 				"save_target": 0,
 				"armor": 0,
 				"sensors": 0,
+				"stress": {
+					"value": 0,
+					"max": 0,
+					"min": 0
+				},
+				"overshield": {
+					"value": 0,
+					"max": 0,
+					"min": 0
+				},
 				"hp": {
 					"value": 10,
 					"max": 10,

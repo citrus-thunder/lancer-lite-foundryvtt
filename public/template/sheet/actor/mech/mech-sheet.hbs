@@ -15,7 +15,7 @@
 							</div>
 						</div>
 						<!-- Bio -->
-						<div class="flexcol flex0 field-group pilot-bio pad-right --more">
+						<div class="flexcol flex0 field-group mech-bio pad-right --more">
 							<h2 class="section-title">Bio</h2>
 							<div class="field">
 								<label>
@@ -23,11 +23,19 @@
 									<input name="name" type="text" value="{{actor.name}}">
 								</label>
 							</div>
-							<div class="field">
-								<label>
-									FRAME
-									<input name="system.frame" type="text" value="{{actor.system.frame}}">
-								</label>
+							<div class="flexrow field-group">
+								<div class="field">
+									<label>
+										FRAME
+										<input name="system.frame" type="text" value="{{actor.system.frame}}">
+									</label>
+								</div>
+								<div class="field no-grow">
+									<label>
+										SIZE <br>
+										<input name="system.size" class="--small" type="text" value="{{actor.system.size}}" data-dType="Number">
+									</label>
+								</div>
 							</div>
 							<div class="field">
 								<label>
@@ -95,49 +103,70 @@
 						</div>
 						<div class="flexcol field-group pilot-stats">
 							<h2 class="section-title">Vitals</h2>
-							<div class="flexrow">
-								<label>
-									HP
-									<div class="flexrow flex0">
+							<div class="flexrow resource-row">
+								<div class="resource-field">
+									<label>STRUCTURE</label>
+									<div class="resources">
+										<input type="text" name="system.structure.value" value="{{actor.system.structure.value}}"
+											data-dtype="Number">
+										&nbsp;/&nbsp;
+										<input type="text" name="system.structure.max" value="{{actor.system.structure.max}}"
+											data-dtype="Number">
+									</div>
+								</div>
+								<div class="resource-field">
+									<label>HP</label>
+									<div class="resources">
 										<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
 										&nbsp;/&nbsp;
 										<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
 									</div>
-								</label>
+								</div>
 							</div>
-							<div class="flexrow">
-								<label>
-									ARMOR
-									<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
-								</label>
+							<div class="flexrow resource-row" <div class="flexrow">
+								<div class="resource-field">
+									<label>HEAT</label>
+									<div class="flexrow flex0 resources">
+										<input type="text" class="--small" name="system.heat.value" value="{{actor.system.heat.value}}"
+											data-dtype="Number">
+										&nbsp;/&nbsp;
+										<input type="text" class="--small" name="system.heat.max" value="{{actor.system.heat.max}}"
+											data-dtype="Number">
+									</div>
+								</div>
+								<div class="resource-field">
+									<label>STRESS</label>
+									<div class="flexrow flex0 resources">
+										<input type="text" class="--small" name="system.stress.value" value="{{actor.system.stress.value}}"
+											data-dtype="Number">
+										&nbsp;/&nbsp;
+										<input type="text" class="--small" name="system.stress.max" value="{{actor.system.stress.max}}"
+											data-dtype="Number">
+									</div>
+								</div>
 							</div>
-							<div class="flexrow">
-								<label>
-									E-DEF
-									<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dtype="Number">
-								</label>
-							</div>
-							<div class="flexrow">
-								<label>
-									EVASION
-									<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dtype="Number">
-								</label>
-							</div>
-							<div class="flexrow">
-								<label>
-									SPEED
-									<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dtype="Number">
-								</label>
+							<div class="flexrow resource-row">
+								<div class="resource-field no-grow">
+									<label>OVERSHIELD</label>
+									<div class="flexrow flex0 resources">
+										<input type="text" class="--small" name="system.overshield.value"
+											value="{{actor.system.overshield.value}}" data-dtype="Number">
+										&nbsp;/&nbsp;
+										<input type="text" class="--small" name="system.overshield.max"
+											value="{{actor.system.overshield.max}}" data-dtype="Number">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<hr>
 			<!-- Row: Stats -->
 			<div class="mech-stats flexrow pad-bottom">
 				<div class="field">
 					<label>
-						ATK BONUS
+						ATK
 						<input type="text">
 					</label>
 				</div>
@@ -179,18 +208,19 @@
 				</div>
 				<div class="field">
 					<label>
-						SIZE
-						<input type="text">
+						ARMOR
+						<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dtype="Number">
 					</label>
 				</div>
 			</div>
+			<hr>
 			<!-- Row 2: Tabs -->
 			<div class="flexrow pad-bottom --more">
 				<nav class="tabs" data-group="primary-tabs">
 					<a class="item" data-tab="traits" data-group="primary-tabs">TRAITS</a>
 					<a class="item" data-tab="systems" data-group="primary-tabs">SYSTEMS</a>
 					<a class="item" data-tab="weapons" data-group="primary-tabs">WEAPONS</a>
-					<a class="item" data-tab="equipment" data-group="primary-tabs">EQUIPMENT</a>
+					<a class="item" data-tab="equipment" data-group="primary-tabs">GEAR</a>
 				</nav>
 			</div>
 			<!-- Row 3: Content -->
@@ -287,7 +317,7 @@
 									<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
 										data-item-name="New Weapon">
 										<!-- TODO: default value inputs for mech weapon-->
-										</i>
+									</i>
 								</div>
 						</div>
 						<div class="flexcol">

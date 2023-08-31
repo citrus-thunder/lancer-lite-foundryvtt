@@ -8,6 +8,15 @@ $card-margin: 0.2rem;
 	padding: 1rem 2rem;
 	position: relative;
 
+	hr {
+		border: 0.1rem solid $color-red5;
+		width: 100%;
+	}
+
+	.no-grow {
+		flex-grow: 0;
+	}
+
 	.row-reverse {
 		flex-direction: row-reverse;
 	}
@@ -83,6 +92,7 @@ $card-margin: 0.2rem;
 	.section-title {
 		font-family: $font-sans;
 		font-weight: bold;
+		flex-grow: 0;
 	}
 
 	// todo: should this be a table at all?
@@ -144,10 +154,41 @@ $card-margin: 0.2rem;
 		max-width: 8rem;
 	}
 
+	div.resource-row {
+		div.resource-field {
+			border: 1px solid $color-grey2;
+			border-radius: 0.2rem;
+			padding: 0.2rem;
+
+			&:not(:last-child) {
+				margin-right: 0.2rem;
+			}
+
+			>label {
+				font-weight: bold;
+			}
+
+			>div.resources {
+				display: flex;
+				align-items: center;
+
+				input {
+					max-width: 1.5rem;
+				}
+			}
+		}
+	}
+
+	input.--small {
+		max-width: 2rem;
+	}
+
 	nav.tabs {
 		display: flex;
 		justify-content: initial;
-		padding: 0.2rem;
+		padding: 0.2rem 0.2rem 0 0;
+
+		border-bottom: 0.2rem solid $color-red;
 
 		>a.item {
 			font-family: $font-sans;
@@ -158,6 +199,9 @@ $card-margin: 0.2rem;
 			clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - calc(100% - 0.5rem)), calc(100% - 0.5rem) 0);
 			background-color: $color-grey1;
 			color: white;
+
+			margin-bottom: -1px;
+			z-index: 0;
 
 			&:hover {
 				text-shadow: none;
@@ -181,8 +225,6 @@ $card-margin: 0.2rem;
 
 	// Pilot Sheet
 	.pilot-bio {
-		//justify-content: flex-end;
-
 		div.field {
 			min-width: 15rem;
 			margin-bottom: 0.2rem;
@@ -194,6 +236,14 @@ $card-margin: 0.2rem;
 				textarea {
 					font-family: $font-serif;
 				}
+			}
+		}
+
+		div.field-group {
+			min-width: 15rem;
+			display: flex;
+			&>div.field {
+				min-width: initial;
 			}
 		}
 	}
@@ -222,5 +272,39 @@ $card-margin: 0.2rem;
 	.core-system-editor .editor {
 		min-height: 5rem;
 		padding-bottom: 2rem;
+	}
+
+	div.mech-stats {
+		div.field {
+			input {
+				max-width: 4rem;
+			}
+		}
+	}
+
+	div.mech-bio {
+		$field-width: 10rem;
+
+		div.field {
+			min-width: $field-width;
+			margin-bottom: 0.2rem;
+
+			>label {
+				font-weight: bold;
+
+				>input,
+				textarea {
+					font-family: $font-serif;
+				}
+			}
+		}
+
+		div.field-group {
+			min-width: $field-width;
+
+			&>div.field {
+				min-width: initial;
+			}
+		}
 	}
 }
