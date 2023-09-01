@@ -17,23 +17,46 @@
 						<!-- Bio -->
 						<div class="flexcol field-group info pad-right --more">
 							<h2 class="section-title">Info</h2>
-							<div class="field flex0 pad-bottom --more">
+							<div class="field flex0 pad-bottom">
 								<label>
 									NAME
 									<input name="name" type="text" value="{{actor.name}}">
 								</label>
 							</div>
-							<div class="flexrow field-group">
-								<div class="field">
-									<label>
-										FRAME
-										<input name="system.frame" type="text" value="{{actor.system.frame}}">
+							<div class="field flex0 pad-bottom">
+								<label>
+									FRAME
+									<input name="system.frame" type="text" value="{{actor.system.frame}}">
+								</label>
+							</div>
+							<div class="flexrow field-group pad-bottom">
+								<div class="field pad-right">
+									<label class="--small">
+										SIZE <br>
+										<input name="system.size" type="text" value="{{actor.system.size}}"
+											data-dType="Number">
 									</label>
 								</div>
-								<div class="field no-grow">
-									<label>
-										SIZE <br>
-										<input name="system.size" class="--small" type="text" value="{{actor.system.size}}"
+								<div class="field">
+									<label class="--small">
+										SAVE TARGET <br>
+										<input name="system.save_target" type="text" value="{{actor.system.save_target}}"
+											data-dType="Number">
+									</label>
+								</div>
+							</div>
+							<div class="flexrow field-group">
+								<div class="field pad-right">
+									<label class="--small">
+										ARMOR <br>
+										<input name="system.armor" type="text" value="{{actor.system.armor}}"
+											data-dType="Number">
+									</label>
+								</div>
+								<div class="field">
+									<label class="--small">
+										SENSORS <br>
+										<input name="system.sensors" type="text" value="{{actor.system.sensors}}"
 											data-dType="Number">
 									</label>
 								</div>
@@ -169,8 +192,8 @@
 												<input type="text" class="--small" name="system.repairs.value"
 													value="{{actor.system.repairs.value}}" data-dtype="Number">
 												&nbsp;/&nbsp;
-												<input type="text" class="--small" name="system.repairs.max" value="{{actor.system.repairs.max}}"
-													data-dtype="Number">
+												<input type="text" class="--small" name="system.repairs.max"
+													value="{{actor.system.repairs.max}}" data-dtype="Number">
 											</div>
 										</div>
 									</td>
@@ -183,7 +206,7 @@
 			<!-- Row 2: Tabs -->
 			<div class="flexrow pad-bottom --more">
 				<nav class="tabs" data-group="primary-tabs">
-					<a class="item" data-tab="traits" data-group="primary-tabs">TRAITS</a>
+					<a class="item" data-tab="stats" data-group="primary-tabs">STATS</a>
 					<a class="item" data-tab="loadout" data-group="primary-tabs">LOADOUT</a>
 					<a class="item" data-tab="gear" data-group="primary-tabs">GEAR</a>
 					<a class="item" data-tab="about" data-group="primary-tabs">ABOUT</a>
@@ -192,8 +215,8 @@
 			<!-- Row 3: Content -->
 			<div class="flexrow tab-content">
 				<section class="content">
-					<div class="tab" data-tab="traits" data-group="primary-tabs">
-						{{> "systems/lancer-lite/template/sheet/actor/mech/tab/mech-traits-tab.hbs"}}
+					<div class="tab" data-tab="stats" data-group="primary-tabs">
+						{{> "systems/lancer-lite/template/sheet/actor/mech/tab/mech-stats-tab.hbs"}}
 					</div>
 					<div class="tab" data-tab="loadout" data-group="primary-tabs">
 						{{> "systems/lancer-lite/template/sheet/actor/mech/tab/mech-loadout-tab.hbs"}}

@@ -31,6 +31,21 @@
 				{{/each}}
 			</div>
 		</div>
+		<!-- Reactions -->
+		<div class="flexcol">
+			<div class="header-group">
+				<h2 class="section-title header-text">Reactions</h2>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Reaction" data-item-type="reaction"
+						data-item-name="New Reaction"></i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each reactions}}
+				{{> "systems/lancer-lite/template/card/reaction-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
 	</div>
 	<!-- Right Col -->
 	<div class="flexcol">
@@ -41,7 +56,6 @@
 					<div class="header-options">
 						<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
 							data-item-name="New Weapon">
-							<!-- TODO: default value inputs for mech weapon-->
 							<input type="hidden" name="default.size" value="Main">
 							<input type="hidden" name="default.type" value="Cannon">
 						</i>

@@ -1,11 +1,16 @@
 @import '/src/style/global';
 
+// Main Sheet
+
 .sheet-container.mech-sheet {
 	div.info div.field-group div.field {
 		display: flex;
 		flex-direction: column;
 	}
 
+	label.--small {
+		font-size: 0.73rem;
+	}
 
 	div.skills {
 		label {
@@ -30,6 +35,27 @@
 
 			td {
 				padding: 0.2rem;
+			}
+		}
+	}
+
+	// Partials
+
+	// Mount Label
+	.card-row .item-card.mount-label {
+		// todo: move min height/width to .card-row.--col-3
+		min-width: 32%;
+		max-width: 32%;
+
+		clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - calc(100% - 0.5rem)), calc(100% - 0.5rem) 0);
+		background-color: $color-red3;
+		color: $color-text-white;
+
+		div.header div.title-row {
+			font-size: 0.8rem;
+
+			div.header-buttons {
+				align-self: center;
 			}
 		}
 	}

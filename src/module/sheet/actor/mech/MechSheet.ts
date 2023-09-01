@@ -182,7 +182,18 @@ export default class MechSheet extends LancerActorSheet {
 			'integrated': 'INTEGRATED MOUNT',
 		}
 
+		const shortLabels = {
+			'aux': 'AUX',
+			'aux_aux': 'AUX/AUX',
+			'flex': 'FLEX',
+			'main': 'MAIN',
+			'main_aux': 'MAIN/AUX',
+			'heavy': 'HEAVY',
+			'integrated': 'INT',
+		};
+
 		mountData.label = labels[mount.system.type] ?? 'NEW MOUNT';
+		mountData.shortLabel = shortLabels[mount.system.type] ?? 'NEW';
 
 		const weapons: any[] = [];
 		const missing: any[] = [];

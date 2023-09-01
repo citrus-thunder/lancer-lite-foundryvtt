@@ -1,7 +1,8 @@
 @import '/src/style/global';
 
 div.item-card.mount-card {
-	div.header {
+	> div.header {
+		clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - calc(100% - 1rem)), calc(100% - 1rem) 0);
 		background-color: $color-red3;
 		color: $color-text-white;
 	}
