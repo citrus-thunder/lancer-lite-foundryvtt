@@ -1,6 +1,12 @@
 @import '/src/style/global';
 
 .sheet-container.mech-sheet {
+	div.info div.field-group div.field {
+		display: flex;
+		flex-direction: column;
+	}
+
+
 	div.skills {
 		label {
 			font-weight: bold;

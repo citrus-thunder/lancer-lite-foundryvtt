@@ -1,13 +1,24 @@
 <div class="flexcol">
-	<h2 class="section-title">Notes</h2>
-	<div class="flexrow editor-container">
-		{{editor actor.system.notes target="system.notes" button=true}}
+	<div class="flexrow">
+		<div class="flexcol pad-right">
+			<h2 class="section-title">Notes</h2>
+			<div class="flexrow editor-container">
+				{{editor actor.system.notes target="system.notes" button=true}}
+			</div>
+		</div>
+		<div class="flexcol">
+			<h2 class="section-title">Description</h2>
+			<div class="flexrow editor-container">
+				{{editor actor.system.description target="system.description" button=true}}
+			</div>
+		</div>
 	</div>
-</div>
-<div class="flexcol">
-	<h2 class="section-title">Biography</h2>
-	<div class="flexrow editor-container">
-		{{editor actor.system.biography target="system.biography" button=true}}
+	<div class="flexrow">
+		<div class="flexcol">
+			<h2 class="section-title">Biography</h2>
+			<div class="flexrow editor-container">
+				{{editor actor.system.biography target="system.biography" button=true}}
+			</div>
+		</div>
 	</div>
-</div>
 </div>
