@@ -1,4 +1,4 @@
-import LancerItem from '../../item/LancerItem';
+import EditMechVitalsDialog from '../../../dialog/EditMechVitalsDialog';
 import LancerActorSheet from '../LancerActorSheet';
 
 export default class MechSheet extends LancerActorSheet {
@@ -41,6 +41,10 @@ export default class MechSheet extends LancerActorSheet {
 
 	activateListeners(html: JQuery<HTMLElement>): void {
 		super.activateListeners(html);
+
+		html.find('.edit-vitals').on('click', async (ev) => {
+			new EditMechVitalsDialog(this.actor).render(true);
+		});
 
 		const dragDrop = new DragDrop({
 			dragSelector: ".weapon-card",

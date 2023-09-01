@@ -1,5 +1,5 @@
-import SkillDialog from "../../dialog/skill-dialog/SkillDialog";
-import WeaponDialog from "../../dialog/weapon-dialog/WeaponDialog";
+import SkillDialog from "../../dialog/SkillDialog";
+import WeaponDialog from "../../dialog/WeaponDialog";
 
 export default class LancerActorSheet extends ActorSheet {
 

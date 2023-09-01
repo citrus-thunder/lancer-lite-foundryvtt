@@ -1,4 +1,4 @@
-import type LancerItem from '../../sheet/item/LancerItem';
+import type LancerItem from '../sheet/item/LancerItem';
 
 export default class WeaponDialog extends Dialog {
 

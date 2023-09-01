@@ -1,5 +1,5 @@
 import LancerActorSheet from '../LancerActorSheet';
-import SkillDialog from '../../../dialog/skill-dialog/SkillDialog';
+import SkillDialog from '../../../dialog/SkillDialog';
 
 export default class PilotSheet extends LancerActorSheet {
 	allowedItemTypes = [
