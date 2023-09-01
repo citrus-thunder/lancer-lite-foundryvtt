@@ -178,6 +178,13 @@ $card-margin: 0.2rem;
 		}
 	}
 
+	div.editor-container {
+		div.editor {
+			min-height: 10rem;
+			border: 0.1rem solid $color-red;
+		}
+	}
+
 	nav.tabs {
 		display: flex;
 		justify-content: initial;

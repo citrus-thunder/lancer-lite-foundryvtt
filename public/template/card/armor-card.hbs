@@ -9,10 +9,32 @@
 			</div>
 			{{/unless}}
 		</div>
-		{{#if tags}}
+		{{#if system.tags}}
 		<div class="tags">
+			{{system.tags}}
 		</div>
 		{{/if}}
+		{{#if system.bonuses}}
+		<div class="bonuses traits">
+			Bonuses: {{system.bonuses}}
+		</div>
+		{{/if}}
+		<div class="stats traits">
+			<table>
+				<tr class="table-header">
+					<td>Armor</td>
+					<td>Evasion</td>
+					<td>E-Defense</td>
+					<td>Speed</td>
+				</tr>
+				<tr class="table-body">
+					<td>{{system.armor}}</td>
+					<td>{{system.evasion}}</td>
+					<td>{{system.e_defense}}</td>
+					<td>{{system.speed}}</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	<div class="body">
 		<div class="description">

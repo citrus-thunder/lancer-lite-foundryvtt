@@ -29,6 +29,10 @@ $background-color: white;
 			color: white;
 		}
 
+		.icon-button.item-delete {
+			color: $color-red3;
+		}
+
 		div.icon-button-container {
 			display: flex;
 			flex-grow: 0;
@@ -104,6 +108,10 @@ $background-color: white;
 		.editor {
 			min-height: 10rem;
 			border: 1px solid $color-grey1;
+
+			.tox.tox-tinymce {
+				min-height: 10rem !important;
+			}
 		}
 	}
 }

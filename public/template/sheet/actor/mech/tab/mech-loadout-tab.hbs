@@ -9,7 +9,7 @@
 					<div class="header-field" style="margin-right:1rem">
 						<label>
 							SP
-							<input type="text" name="system.sp" value="{{actor.system.sp}}">
+							<input type="text" name="system.sp.value" value="{{actor.system.sp.value}}">
 						</label>
 					</div>
 					<i class="fa-solid fa-plus item-add icon-button" title="Add System" data-item-type="system"
@@ -20,13 +20,13 @@
 				{{#each passive_systems}}
 				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
 				{{/each}}
+				{{#each protocols}}
+				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+				{{/each}}
 				{{#each action_systems}}
 				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
 				{{/each}}
 				{{#each tech_systems}}
-				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
-				{{/each}}
-				{{#each protocols}}
 				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
 				{{/each}}
 			</div>
@@ -42,6 +42,8 @@
 						<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
 							data-item-name="New Weapon">
 							<!-- TODO: default value inputs for mech weapon-->
+							<input type="hidden" name="default.size" value="Main">
+							<input type="hidden" name="default.type" value="Cannon">
 						</i>
 					</div>
 			</div>

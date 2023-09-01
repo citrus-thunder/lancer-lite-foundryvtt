@@ -111,6 +111,23 @@ export default class MechSheet extends LancerActorSheet {
 		});
 
 		// todo: sort
+		const sortByName = (a: any, b: any) => {
+			if (a.name > b.name) {
+				return 1;
+			}
+			else if (b.name > a.name) {
+				return -1;
+			}
+			else {
+				return 0;
+			}
+		}
+
+		data.action_systems.sort(sortByName);
+		data.core_systems.sort(sortByName);
+		data.passive_systems.sort(sortByName);
+		data.protocols.sort(sortByName);
+		data.tech_systems.sort(sortByName);
 
 		// Populate nomount w/ unmounted weapons
 		data.weapons.forEach((w: any) => {

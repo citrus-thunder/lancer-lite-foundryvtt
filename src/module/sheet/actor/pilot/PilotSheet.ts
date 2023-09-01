@@ -25,8 +25,8 @@ export default class PilotSheet extends LancerActorSheet {
 			tabs: [
 				{
 					group: 'primary',
-					navSelector: '.tabs', 
-					contentSelector: '.content', 
+					navSelector: '.tabs',
+					contentSelector: '.content',
 					initial: 'traits'
 				}
 			],
@@ -43,8 +43,8 @@ export default class PilotSheet extends LancerActorSheet {
 
 		html.find('.trigger-roll').on('click', async (ev) => {
 			const trigger = this.actor.items.get($(ev.currentTarget).data('itemId'), { strict: true });
-			const t:any = trigger;
-			new SkillDialog({bonus: t.system.bonus, bonusSource: t.name}).render(true);
+			const t: any = trigger;
+			new SkillDialog({ bonus: t.system.bonus, bonusSource: t.name }).render(true);
 		});
 	}
 
@@ -53,7 +53,7 @@ export default class PilotSheet extends LancerActorSheet {
 		// todo: derived values?
 		//  - grit
 		//  - hp
-		
+
 		// todo: multiple armors aren't really a thing in this system.
 		data.armor = [];
 		data.core_bonuses = [];
@@ -89,22 +89,36 @@ export default class PilotSheet extends LancerActorSheet {
 			}
 		});
 
-		// todo: sort?
+		// sort talents by name then level
+		data.talents.sort((a: any, b: any) => {
+			const aVal = a.name + a.system.rank;
+			const bVal = b.name + b.system.rank;
+
+			if (aVal > bVal) {
+				return 1;
+			}
+			else if (aVal < bVal) {
+				return -1;
+			}
+			else {
+				return 0;
+			}
+		});
+
 		// sort licenses by name then level
 		data.licenses.sort((a: any, b: any) => {
 			const aVal = a.name + a.system.level;
 			const bVal = b.name + b.system.level;
-			
+
 			if (aVal > bVal) {
-				return 1
+				return 1;
 			}
 			else if (aVal < bVal) {
-				return -1
+				return -1;
 			}
-			else
-				{
+			else {
 				return 0;
-				}
+			}
 		});
 
 		return data;

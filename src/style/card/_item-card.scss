@@ -27,6 +27,20 @@ div.item-card {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+
+			div.header-buttons {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				align-items: center;
+				align-self: flex-start;
+
+				.icon-button {
+					&:not(:first-child) {
+						margin-left: 0.4rem;
+					}
+				}
+			}
 		}
 
 		div.type,

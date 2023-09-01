@@ -172,10 +172,10 @@
 										<div class="resource-field no-grow">
 											<label>REPAIR</label>
 											<div class="flexrow flex0 resources">
-												<input type="text" class="--small" name="system.repair.value"
-													value="{{actor.system.repair.value}}" data-dtype="Number">
+												<input type="text" class="--small" name="system.repairs.value"
+													value="{{actor.system.repairs.value}}" data-dtype="Number">
 												&nbsp;/&nbsp;
-												<input type="text" class="--small" name="system.repair.max" value="{{actor.system.repair.max}}"
+												<input type="text" class="--small" name="system.repairs.max" value="{{actor.system.repairs.max}}"
 													data-dtype="Number">
 											</div>
 										</div>
@@ -192,6 +192,7 @@
 					<a class="item" data-tab="traits" data-group="primary-tabs">TRAITS</a>
 					<a class="item" data-tab="loadout" data-group="primary-tabs">LOADOUT</a>
 					<a class="item" data-tab="gear" data-group="primary-tabs">GEAR</a>
+					<a class="item" data-tab="about" data-group="primary-tabs">ABOUT</a>
 				</nav>
 			</div>
 			<!-- Row 3: Content -->
@@ -205,6 +206,9 @@
 					</div>
 					<div class="tab" data-tab="gear" data-group="primary-tabs">
 						{{> "systems/lancer-lite/template/sheet/actor/mech/tab/mech-gear-tab.hbs"}}
+					</div>
+					<div class="tab" data-tab="about" data-group="primary-tabs">
+						{{> "systems/lancer-lite/template/sheet/actor/mech/tab/mech-about-tab.hbs"}}
 					</div>
 				</section>
 			</div>

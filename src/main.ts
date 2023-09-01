@@ -31,7 +31,8 @@ const SYSTEM_NAME = 'lancer-lite';
 Hooks.once('init', async () => {
 	game[SYSTEM_NAME] = { PilotSheet };
 
-	CONFIG.ChatMessage.documentClass = LancerChatMessage;
+	// temp disabled: template is not not currently in use
+	//CONFIG.ChatMessage.documentClass = LancerChatMessage;
 
 	CONFIG.Actor.documentClass = LancerActor;
 	Actors.unregisterSheet("core", ActorSheet);

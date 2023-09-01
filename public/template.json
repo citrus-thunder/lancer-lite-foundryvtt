@@ -8,6 +8,7 @@
 			"agility": 0,
 			"armor": 0,
 			"background": "",
+			"biography": "",
 			"callsign": "",
 			"e_defense": 0,
 			"engineering": 0,
@@ -21,6 +22,7 @@
 			"hull": 0,
 			"license_level": 0,
 			"name": "New Pilot",
+			"notes": "",
 			"speed": 0,
 			"systems": 0
 		},
@@ -28,7 +30,8 @@
 			"agility": 0,
 			"armor": 0,
 			"attack": 0,
-			"core_power": {
+			"biography": "",
+			"cp": {
 				"value": 1,
 				"min": 0,
 				"max": 1
@@ -51,6 +54,7 @@
 			},
 			"hull": 0,
 			"name": "New Mech",
+			"notes": "",
 			"overshield": {
 				"value": 0,
 				"max": 0,
@@ -71,13 +75,13 @@
 			},
 			"speed": 0,
 			"stress": {
-				"value": 0,
-				"max": 0,
+				"value": 4,
+				"max": 4,
 				"min": 0
 			},
 			"structure": {
-				"value": 0,
-				"max": 0,
+				"value": 4,
+				"max": 4,
 				"min": 0
 			},
 			"systems": 0,
