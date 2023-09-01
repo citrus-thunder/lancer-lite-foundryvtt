@@ -103,6 +103,21 @@
 				</div>
 			</div>
 		</div>
+		<!-- Traits -->
+		<div class="flexcol pad-bottom">
+			<div class="header-group">
+				<h2 class="section-title header-text">Traits</h2>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Trait" data-item-type="trait"
+						data-item-name="New Trait"></i>
+				</div>
+			</div>
+			<div class="card-col">
+				{{#each traits}}
+				{{> "systems/lancer-lite/template/card/trait-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
 		<!-- Mounts -->
 		<div class="flexcol no-grow">
 			<div class="header-group">
@@ -141,21 +156,6 @@
 			<div class="card-col">
 				{{#each core_systems}}
 				{{> "systems/lancer-lite/template/card/system-card.hbs"}}
-				{{/each}}
-			</div>
-		</div>
-		<!-- Traits -->
-		<div class="flexcol pad-bottom">
-			<div class="header-group">
-				<h2 class="section-title header-text">Traits</h2>
-				<div class="header-options">
-					<i class="fa-solid fa-plus item-add icon-button" title="Add Trait" data-item-type="trait"
-						data-item-name="New Trait"></i>
-				</div>
-			</div>
-			<div class="card-col">
-				{{#each traits}}
-				{{> "systems/lancer-lite/template/card/trait-card.hbs"}}
 				{{/each}}
 			</div>
 		</div>
