@@ -2,33 +2,33 @@
 	<!-- Left Col -->
 	<div class="flexcol pad-right">
 		<!-- Core Stats -->
-		<div class="flexcol stats no-grow pad-bottom">
+		<div class="flexcol stats no-grow pad-bottom --more">
 			<h2 class="section-title">Core Stats</h2>
 			<!-- Main Stats -->
 			<div class="flexrow">
 				<!-- Main Stats Left -->
-				<div class="flexcol stats-col">
+				<div class="flexcol stats-col pad-right --more">
 					<label>
-						Size
+						Size:
 						<input type="text" name="system.size" value="{{actor.system.size}}" data-dType="Number">
 					</label>
 					<label>
-						Armor
+						Armor:
 						<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dType="Number">
 					</label>
 					<label>
-						Attack Bonus
+						Attack Bonus:
 						<input type="text" name="system.attack" value="{{actor.system.attack}}" data-dType="Number">
 					</label>
 				</div>
 				<!-- Main Stats Right -->
 				<div class="flexcol stats-col">
 					<label>
-						Save Target
+						Save Target:
 						<input type="text" name="system.save_target" value="{{actor.system.save_target}}" data-dType="Number">
 					</label>
 					<label>
-						Sensors
+						Sensors:
 						<input type="text" name="system.sensors" value="{{actor.system.sensors}}" data-dType="Number">
 					</label>
 				</div>
@@ -36,33 +36,33 @@
 			<!-- Other Stats -->
 			<div class="flexrow">
 				<!-- Left Stat Col -->
-				<div class="flexcol stats-col">
+				<div class="flexcol stats-col pad-right --more">
 					<div class="stats-subsection">
 						<div class="stats-subsection-header">
-							HULL
+							<label>HULL</label>
 						</div>
-						<div class="stats-subsection-content">
+						<div class="stats-subsection-content flexcol">
 							<label>
-								HP
+								HP:
 								<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dType="Number">
 							</label>
 							<label>
-								Repair Cap
+								Repair Cap:
 								<input type="text" name="system.repairs.max" value="{{actor.system.repairs.max}}" data-dType="Number">
 							</label>
 						</div>
 					</div>
 					<div class="stats-subsection">
 						<div class="stats-subsection-header">
-							AGILITY
+							<label>AGILITY</label>
 						</div>
-						<div class="stats-subsection-content">
+						<div class="stats-subsection-content flexcol">
 							<label>
-								Evasion
+								Evasion:
 								<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dType="Number">
 							</label>
 							<label>
-								Speed
+								Speed:
 								<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dType="Number">
 							</label>
 						</div>
@@ -72,30 +72,30 @@
 				<div class="flexcol stats-col">
 					<div class="stats-subsection">
 						<div class="stats-subsection-header">
-							SYSTEMS
+							<label>SYSTEMS</label>
 						</div>
-						<div class="stats-subsection-content">
+						<div class="stats-subsection-content flexcol">
 							<label>
-								E-Defense
+								E-Defense:
 								<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dType="Number">
 							</label>
 							<label>
-								Tech Attack
+								Tech Attack:
 								<input type="text" name="system.tech_attack" value="{{actor.system.tech_attack}}" data-dType="Number">
 							</label>
 							<label>
-								SP
+								SP:
 								<input type="text" name="system.sp" value="{{actor.system.sp}}" data-dType="Number">
 							</label>
 						</div>
 					</div>
 					<div class="stats-subsection">
 						<div class="stats-subsection-header">
-							ENGINEERING
+							<label>ENGINEERING</label>
 						</div>
-						<div class="stats-subsection-content">
+						<div class="stats-subsection-content flexcol">
 							<label>
-								Heat Cap
+								Heat Cap:
 								<input type="text" name="system.heat.max" value="{{actor.system.heat.max}}" data-dType="Number">
 							</label>
 						</div>
@@ -106,7 +106,7 @@
 		<!-- Mounts -->
 		<div class="flexcol no-grow">
 			<div class="header-group">
-				<h3 class="section-title header-text">Mounts</h3>
+				<h2 class="section-title header-text">Mounts</h2>
 				<div class="header-options">
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Mount" data-item-type="mount"
 						data-item-name="New Mount"></i>
@@ -129,7 +129,7 @@
 					<div class="header-field" style="margin-right:1rem">
 						<label>
 							CP
-							<input type="text" name="system.cp.value" value="{{actor.system.cp.value}}">
+							<input type="text" class="--center" name="system.cp.value" value="{{actor.system.cp.value}}">
 						</label>
 					</div>
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Core System" data-item-type="system"

@@ -181,8 +181,10 @@ $card-margin: 0.2rem;
 		&.--center {
 			text-align: center;
 
-			>div.resources input {
-				text-align: center;
+			>div.resources {
+				input {
+					text-align: center;
+				}
 			}
 		}
 

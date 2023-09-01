@@ -16,8 +16,8 @@
 			"evasion": 0,
 			"grit": 0,
 			"hp": {
-				"value": 10,
-				"max": 10,
+				"value": 0,
+				"max": 0,
 				"min": 0
 			},
 			"hull": 0,
@@ -48,8 +48,8 @@
 				"min": 0
 			},
 			"hp": {
-				"value": 10,
-				"max": 10,
+				"value": 0,
+				"max": 0,
 				"min": 0
 			},
 			"hull": 0,
