@@ -22,7 +22,6 @@
 			},
 			"hull": 0,
 			"license_level": 0,
-			"name": "New Pilot",
 			"notes": "",
 			"speed": 0,
 			"systems": 0
@@ -54,7 +53,6 @@
 				"min": 0
 			},
 			"hull": 0,
-			"name": "New Mech",
 			"notes": "",
 			"overshield": {
 				"value": 0,
@@ -109,23 +107,19 @@
 			"description": "",
 			"e_defense": 0,
 			"evasion": 0,
-			"name": "New Armor",
 			"speed": 0,
 			"tags": ""
 		},
 		"core_bonus": {
-			"description": "",
-			"name": "New Core Bonus"
+			"description": ""
 		},
 		"gear": {
 			"description": "",
-			"name": "New Gear",
 			"tags": ""
 		},
 		"license": {
 			"description": "",
-			"level": 0,
-			"name": "New License"
+			"level": 0
 		},
 		"mount": {
 			"type": "",
@@ -134,36 +128,30 @@
 		"reaction": {
 			"description": "",
 			"frequency": "1/round",
-			"name": "New Rection",
 			"tags": ""
 		},
 		"system": {
 			"description": "",
-			"name": "New System",
 			"sp_cost": 0,
 			"tags": "",
 			"type": ""
 		},
 		"talent": {
 			"description": "",
-			"name": "New Talent",
 			"rank": 1
 		},
 		"trait": {
 			"description": "",
-			"name": "New Trait",
 			"type": ""
 		},
 		"trigger": {
 			"bonus": 2,
-			"description": "",
-			"name": "New Trigger"
+			"description": ""
 		},
 		"weapon": {
 			"damage": "",
 			"description": "",
 			"destroyed": false,
-			"name": "New Weapon",
 			"range": "",
 			"roll_formula": "",
 			"size": "",
