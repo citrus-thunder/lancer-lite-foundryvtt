@@ -55,11 +55,7 @@
 			"hull": 0,
 			"license_level": 0,
 			"notes": "",
-			"overshield": {
-				"value": 0,
-				"max": 0,
-				"min": 0
-			},
+			"overshield": 0,
 			"repairs": {
 				"value": 0,
 				"max": 0,
@@ -68,11 +64,7 @@
 			"save_target": 0,
 			"sensors": 0,
 			"size": 1,
-			"sp": {
-				"value": 0,
-				"min": 0,
-				"max": 0
-			},
+			"sp": 0,
 			"speed": 0,
 			"stress": {
 				"value": 4,

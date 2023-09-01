@@ -7,10 +7,7 @@
 				<h2 class="section-title header-text">Systems</h2>
 				<div class="header-options">
 					<div class="header-field" style="margin-right:1rem">
-						<label>
-							SP
-							<input type="text" name="system.sp.value" value="{{actor.system.sp.value}}">
-						</label>
+						SP: {{actor.system.sp}}
 					</div>
 					<i class="fa-solid fa-plus item-add icon-button" title="Add System" data-item-type="system"
 						data-item-name="New System"></i>
@@ -52,41 +49,32 @@
 		<!-- Weapons -->
 		<div class="flexcol pad-bottom">
 			<div class="header-group">
-				<h2 class="section-title header-text">Weapons</h3>
-					<div class="header-options">
-						<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
-							data-item-name="New Weapon">
-							<input type="hidden" name="default.size" value="Main">
-							<input type="hidden" name="default.type" value="Cannon">
-						</i>
-					</div>
-			</div>
-			<div class="flexcol">
-				<div class="header-group">
-					<h3 class="section-title header-text">Mounts</h3>
-					<div class="header-options">
-						<i class="fa-solid fa-plus item-add icon-button" title="Add Mount" data-item-type="mount"
-							data-item-name="New Mount"></i>
-					</div>
-				</div>
-				<div class="mounts card-col">
-					{{#each mounts}}
-					{{> "systems/lancer-lite/template/card/mount-card.hbs"}}
-					{{/each}}
+				<h2 class="section-title header-text">Weapons</h2>
+				<div class="header-options">
+					<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
+						data-item-name="New Weapon">
+						<input type="hidden" name="default.size" value="Main">
+						<input type="hidden" name="default.type" value="Rifle">
+					</i>
 				</div>
 			</div>
-			{{#if nomount}}
-			<div class="flexcol">
-				<div class="header-group">
-					<h3 class="section-title header-text">Unmounted</h3>
-				</div>
-				<div class="nomount card-col">
-					{{#each nomount}}
-					{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
-					{{/each}}
-				</div>
+			<div class="mounts card-col">
+				{{#each mounts}}
+				{{> "systems/lancer-lite/template/card/mount-card.hbs"}}
+				{{/each}}
 			</div>
-			{{/if}}
 		</div>
+		{{#if nomount}}
+		<div class="flexcol">
+			<div class="header-group">
+				<h3 class="section-title header-text">Unmounted</h3>
+			</div>
+			<div class="nomount card-col">
+				{{#each nomount}}
+				{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
+				{{/each}}
+			</div>
+		</div>
+		{{/if}}
 	</div>
 </div>

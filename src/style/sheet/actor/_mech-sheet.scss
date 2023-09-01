@@ -1,8 +1,12 @@
 @import '/src/style/global';
 
 // Main Sheet
-
 .sheet-container.mech-sheet {
+	div.portrait-frame {
+		width: 6rem;
+		height: 8rem;
+	}
+
 	div.info div.field-group div.field {
 		display: flex;
 		flex-direction: column;
@@ -23,7 +27,7 @@
 		}
 	}
 
-	div.stats {
+	div.vitals {
 		label {
 			font-size: 0.73rem;
 		}
@@ -34,7 +38,35 @@
 			background-color: inherit;
 
 			td {
-				padding: 0.2rem;
+				padding: 0.05rem;
+
+				div.resource-field {
+					min-width: 4rem;
+				}
+			}
+		}
+	}
+
+	div.stats {
+		div.stats-col {
+			justify-content: flex-start;
+
+			>label {
+				flex-grow: 0;
+			}
+
+			div.stats-subsection {
+				&:not(:last-child) {
+					margin-top: 0.2rem;
+				}
+
+				div.stats-subsection-header {
+					color: $color-red1;
+				}
+
+				div.stats-subsection-content {
+					padding-left: 2rem;
+				}
 			}
 		}
 	}

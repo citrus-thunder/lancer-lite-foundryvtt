@@ -4,8 +4,8 @@
 			<h1>MECH</h1>
 		</header>
 		<div class="flexcol">
-			<!-- Row 1: Portrait & Bio -->
-			<div class="flexrow pad-bottom --more">
+			<!-- Row: Portrait | Info | Vitals -->
+			<div class="flexrow pad-bottom">
 				<div class="flexcol flex2">
 					<div class="flexrow">
 						<!-- Portrait -->
@@ -14,7 +14,7 @@
 								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
 							</div>
 						</div>
-						<!-- Bio -->
+						<!-- Info -->
 						<div class="flexcol field-group info pad-right --more">
 							<h2 class="section-title">Info</h2>
 							<div class="field flex0 pad-bottom">
@@ -29,159 +29,68 @@
 									<input name="system.frame" type="text" value="{{actor.system.frame}}">
 								</label>
 							</div>
-							<div class="flexrow field-group pad-bottom">
-								<div class="field pad-right">
-									<label class="--small">
-										SIZE <br>
-										<input name="system.size" type="text" value="{{actor.system.size}}"
-											data-dType="Number">
-									</label>
-								</div>
-								<div class="field">
-									<label class="--small">
-										SAVE TARGET <br>
-										<input name="system.save_target" type="text" value="{{actor.system.save_target}}"
-											data-dType="Number">
-									</label>
-								</div>
-							</div>
-							<div class="flexrow field-group">
-								<div class="field pad-right">
-									<label class="--small">
-										ARMOR <br>
-										<input name="system.armor" type="text" value="{{actor.system.armor}}"
-											data-dType="Number">
-									</label>
-								</div>
-								<div class="field">
-									<label class="--small">
-										SENSORS <br>
-										<input name="system.sensors" type="text" value="{{actor.system.sensors}}"
-											data-dType="Number">
-									</label>
-								</div>
-							</div>
 						</div>
-						<div class="flexcol flex0 field-group skills pad-right --more">
-							<h2 class="section-title">Skills</h2>
-							<div class="flexrow">
-								<div class="pad-right --more">
-									<label>
-										LL
-									</label>
-									<input type="text" name="system.license_level" value="{{actor.system.license_level}}"
-										data-dtype="Number">
-								</div>
-								<div>
-									<label>
-										GRIT
-									</label>
-									<input type="text" name="system.grit" value="{{actor.system.grit}}" data-dtype="Number">
+						<!-- Vitals -->
+						<div class="flexcol field-group vitals">
+							<div class="header-group">
+								<h2 class="section-title header-text">Vitals</h2>
+								<div class="header-options">
+									<!-- todo: edit mech vitals dialog -->
+									<!-- Temp disable -->
+									<!--
+									<i class="fa-solid fa-gear edit-vitals icon-button" title="Configure Mech Vitals"></i>
+									-->
 								</div>
 							</div>
-							<div class="flexrow">
-								<div class="pad-right --more">
-									<label>
-										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="hull" data-stat-label="Hull"></i>
-										HULL
-									</label>
-									<input type="text" name="system.hull" value="{{actor.system.hull}}" data-dtype="Number">
-								</div>
-								<div>
-									<label>
-										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="systems" data-stat-label="Systems"></i>
-										SYS
-									</label>
-									<input type="text" name="system.systems" value="{{actor.system.systems}}" data-dtype="Number">
-								</div>
-							</div>
-							<div class="flexrow">
-								<div class="pad-right --more">
-									<label class="pad-right --more">
-										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="agility" data-stat-label="Agility"></i>
-										AGI
-									</label>
-									<input type="text" name="system.agility" value="{{actor.system.agility}}" data-dtype="Number">
-								</div>
-								<div>
-									<label>
-										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="engineering"
-											data-stat-label="Engineering"></i>
-										ENG
-									</label>
-									<input type="text" name="system.engineering" value="{{actor.system.engineering}}" data-dtype="Number">
-								</div>
-							</div>
-							<div class="flexrow pad-top --more">
-								<button class="skill-check quick-button">
-									<i class="fas fa-dice-d20"></i>
-									Skill Check
-								</button>
-							</div>
-						</div>
-						<div class="flexcol field-group stats">
-							<h2 class="section-title">Vitals</h2>
-							<table>
+							<table class="no-grow">
 								<tr>
 									<td>
-										<div class="resource-field">
+										<div class="resource-field --right">
 											<label>STRUCTURE</label>
 											<div class="resources">
 												<input type="text" name="system.structure.value" value="{{actor.system.structure.value}}"
-													data-dtype="Number">
-												&nbsp;/&nbsp;
-												<input type="text" name="system.structure.max" value="{{actor.system.structure.max}}"
 													data-dtype="Number">
 											</div>
 										</div>
 									</td>
 									<td>
-										<div class="resource-field">
+										<div class="resource-field --center">
 											<label>HP</label>
 											<div class="resources">
 												<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
 												&nbsp;/&nbsp;
-												<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dtype="Number">
+												{{actor.system.hp.max}}
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field no-grow">
+											<label style="font-size: 0.73rem">OVERSHIELD</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.overshield" value="{{actor.system.overshield}}"
+													data-dtype="Number">
 											</div>
 										</div>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<div class="resource-field">
+										<div class="resource-field --right">
+											<label>STRESS</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.stress.value"
+													value="{{actor.system.stress.value}}" data-dtype="Number">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field --center">
 											<label>HEAT</label>
 											<div class="flexrow flex0 resources">
 												<input type="text" class="--small" name="system.heat.value" value="{{actor.system.heat.value}}"
 													data-dtype="Number">
 												&nbsp;/&nbsp;
-												<input type="text" class="--small" name="system.heat.max" value="{{actor.system.heat.max}}"
-													data-dtype="Number">
-											</div>
-										</div>
-									</td>
-									<td>
-										<div class="resource-field">
-											<label>STRESS</label>
-											<div class="flexrow flex0 resources">
-												<input type="text" class="--small" name="system.stress.value"
-													value="{{actor.system.stress.value}}" data-dtype="Number">
-												&nbsp;/&nbsp;
-												<input type="text" class="--small" name="system.stress.max" value="{{actor.system.stress.max}}"
-													data-dtype="Number">
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="resource-field no-grow">
-											<label style="font-size: 0.73rem">OVERSHIELD</label>
-											<div class="flexrow flex0 resources">
-												<input type="text" class="--small" name="system.overshield.value"
-													value="{{actor.system.overshield.value}}" data-dtype="Number">
-												&nbsp;/&nbsp;
-												<input type="text" class="--small" name="system.overshield.max"
-													value="{{actor.system.overshield.max}}" data-dtype="Number">
+												{{actor.system.heat.max}}
 											</div>
 										</div>
 									</td>
@@ -192,8 +101,7 @@
 												<input type="text" class="--small" name="system.repairs.value"
 													value="{{actor.system.repairs.value}}" data-dtype="Number">
 												&nbsp;/&nbsp;
-												<input type="text" class="--small" name="system.repairs.max"
-													value="{{actor.system.repairs.max}}" data-dtype="Number">
+												{{actor.system.repairs.max}}
 											</div>
 										</div>
 									</td>
