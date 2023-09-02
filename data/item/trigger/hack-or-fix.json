@@ -1,0 +1,9 @@
+{
+  "name": "Hack or Fix",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Repair a device or faulty system; alternatively, hack it wide open, or totally wreck, disable or sabotage it. You're probably hacking or fixing when accessing or safeguarding secure electronic systems, including electronic door locks, computer systems, omninet servers, and so on.</em></p>"
+  }
+}

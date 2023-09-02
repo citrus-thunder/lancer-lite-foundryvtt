@@ -1,0 +1,9 @@
+{
+  "name": "Investigate",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Research a subject, or study something in great detail: learn about a subject of historical relevance, or become well-read on a particular issue; investigate a mystery or solve a puzzle; locate a person or object through research and detective work.</em></p>"
+  }
+}

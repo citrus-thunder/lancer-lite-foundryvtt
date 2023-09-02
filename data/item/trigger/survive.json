@@ -1,0 +1,9 @@
+{
+  "name": "Survive",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Persevere through harsh, hostile, or unforgiving environments: the vacuum of space, frozen tundra, a pirate enclave, a crime-ridden colony, untamed wilderness, or scorching desert. Survival often involves journeys through the wilderness, navigation, or avoiding natural hazards like carnivorous wildlife, rockfalls, thin ice, or lava fields. You might also try to survive in artificial environments by navigating safely through a city or avoiding dangerous sections of a space station.</em></p>"
+  }
+}

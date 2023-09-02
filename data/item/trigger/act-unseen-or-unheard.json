@@ -1,0 +1,9 @@
+{
+  "name": "Act Unseen or Unheard",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Get somewhere or do something without detection, but not necessarily quickly: hide, sneak, or move quietly; infiltrate a facility while avoiding patrols and cameras; perform sleight of hand without being seen or heard, including picking pockets, unholstering guns, and cheating at cards; wear a disguise.</em></p>"
+  }
+}

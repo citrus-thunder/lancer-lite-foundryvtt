@@ -1,0 +1,9 @@
+{
+  "name": "Apply Fists to Faces",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Punch someone in the face or fight in open, brutal unarmed combat, whether it's a fist fight, a martial arts duel, or a huge brawl. Never subtle, clean, or quiet.</em></p>"
+  }
+}

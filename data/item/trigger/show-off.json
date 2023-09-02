@@ -1,0 +1,9 @@
+{
+  "name": "Show Off",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Do something flashy, cool, or impressive, usually -- but not exclusively -- with your weapon: shoot a tiny or rapidly moving target, shoot someone's hat off or their weapon out of their hand, knock someone out by throwing a gun at them, perform an acrobatic flourish with a sword, throw a spear to pin a fleeing target to the ground.</em></p>"
+  }
+}

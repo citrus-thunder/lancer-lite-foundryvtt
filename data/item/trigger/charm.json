@@ -1,0 +1,9 @@
+{
+  "name": "Charm",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Convince a receptive audience or use leverage (money, power, personal benefit) to get your way: smooth-talk your way past guards, get people on your side, sway potential benefactors, talk someone down, mediate between two parties, or blatantly lie to someone. You can also use it when trying to impersonate someone.</em></p>"
+  }
+}

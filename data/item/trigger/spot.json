@@ -1,0 +1,9 @@
+{
+  "name": "Spot",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Spot details, objects, or people that are hidden or difficult to make out: notice ambushes, hidden compartments, or disguised individuals; spy on targets from a distance; make out the details, shape, and quantity of objects, vehicles, mechs, or people in the distance; track people or vehicles.</em></p>"
+  }
+}

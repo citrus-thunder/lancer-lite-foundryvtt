@@ -1,0 +1,9 @@
+{
+  "name": "Pull Rank",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Pull rank on a subordinate: get information, resources, or aid from them, maybe against their will. Any time you are trying to coerce or convince someone who might respect your authority (military or otherwise), you might be pulling rank.</em></p>"
+  }
+}

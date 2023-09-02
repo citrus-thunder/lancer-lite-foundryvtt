@@ -1,0 +1,9 @@
+{
+  "name": "Lead or Inspire",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Give an inspiring speech, or motivate a group of people into action; efficiently and effectively administer organizations like companies, ship crews, groups of colonists or mining ventures; effectively command a platoon of soldiers in battle, or maybe an entire army</em></p>"
+  }
+}

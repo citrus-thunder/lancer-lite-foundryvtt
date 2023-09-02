@@ -1,0 +1,9 @@
+{
+  "name": "Get a Hold of Something",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Acquire temporary or permanent allies, assets, or connections through wealth or social influence; obtain information, food, materials, or soldiers.</em></p>"
+  }
+}

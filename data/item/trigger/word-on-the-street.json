@@ -1,0 +1,9 @@
+{
+  "name": "Word on the Street",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Get gossip, news, or hearsay from the streets, or from a particular social scene</em></p>"
+  }
+}

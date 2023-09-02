@@ -1,0 +1,9 @@
+{
+  "name": "Get Somewhere Quickly",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Get somewhere quickly and without complications, but not necessarily quietly: climb, drive, pilot, swim, or perform acrobatic maneuvers to take a more dangerous shortcut; fall safely from a great height; move gracefully in zero-g; chase, flee, outrun, or outpace a target; get somewhere faster than anyone else.</em></p>"
+  }
+}

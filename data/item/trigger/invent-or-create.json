@@ -1,0 +1,9 @@
+{
+  "name": "Invent or Create",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Use tools and supplies to design or build something, either on the fly or over time; invent new devices, tools, or approaches to problems.</em></p>"
+  }
+}

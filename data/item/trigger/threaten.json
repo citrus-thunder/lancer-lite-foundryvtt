@@ -1,0 +1,9 @@
+{
+  "name": "Threaten",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Use force or threats to make someone do what you want; name what you want someone to do and what you're going to do to them if they don't listen to you. Threatening someone could also involve blackmail, leverage, or something similarly nasty. Whatever form it takes, there's probably no chance of repairing the relationship after you've threatened someone.</em></p>"
+  }
+}

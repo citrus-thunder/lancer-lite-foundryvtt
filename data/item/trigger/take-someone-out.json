@@ -1,0 +1,9 @@
+{
+  "name": "Take Someone Out",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Kill or disable someone quickly and quietly, up close and personal or from a distance -- probably before they even notice you're there. If you're looking down a sniper scope at a target, preparing to knock out a guard with a strategic nerve-pinch, quick-drawing during a gun duel, or dropping from a ceiling to slit a throat, you're trying to take someone out</em></p>"
+  }
+}

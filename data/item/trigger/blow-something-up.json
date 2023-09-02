@@ -1,0 +1,9 @@
+{
+  "name": "Blow Something Up",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Use explosives (improvised or otherwise), weapons, or good old-fashioned brawn to totally wreck something or turn it into an enormous fireball.</em></p>"
+  }
+}
