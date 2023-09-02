@@ -167,7 +167,7 @@
 	"gridDistance": 10,
 	"gridUnits": "ft",
 	"url": "https://github.com/citrus-thunder/lancer-lite-foundryvtt",
-	"background": "systems/mysystem/assets/splash.webp",
+	"background": "systems/lancer-lite/assets/lancer-splash.jpg",
 	"manifest": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/releases/latest/download/system.json",
 	"download": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/releases/latest/download/lancer-lite.zip",
 	"readme": "https://github.com/citrus-thunder/lancer-lite-foundryvtt/blob/release/ReadMe.md",
