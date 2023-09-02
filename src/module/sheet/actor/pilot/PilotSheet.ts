@@ -144,6 +144,7 @@ export default class PilotSheet extends LancerActorSheet {
 		}
 
 		if (!this.allowedItemTypes.includes(item.type)) {
+			ui.notifications?.error('Pilots cannot use this item!');
 			console.log("Preventing addition of new item: Invalid item type for this actor type! " + '(' + this.actor.type + '/' + item.type + ')');
 			event.preventDefault();
 			return;

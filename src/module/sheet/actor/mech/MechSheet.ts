@@ -48,6 +48,29 @@ export default class MechSheet extends LancerActorSheet {
 
 		html.find('.roll-structure').on('click', this.rollStructure.bind(this));
 		html.find('.roll-stress').on('click', this.rollStress.bind(this));
+		html.find('.full-repair').on('click', () => {
+			const content =
+				`
+			<p>
+				Perform a Full Repair? A full repair will will:
+				<ul>
+					<li>Restore Mech to full <strong>HP</strong> <strong>STRESS</strong> and <strong>STRUCTURE</strong></li>
+					<li>Clear all Conditions</li>
+					<li>Repair destroyed Weapons and Systems</li>
+					<li>Recover CP</li>
+					<li>Regain all <strong>REPAIRS</strong> and uses of <strong>LIMITED</strong> Weapons and Systems</li>
+				</ul>
+			</p>
+			`;
+
+			Dialog.confirm({
+				title: 'Confirm Full Repair',
+				content: content,
+				yes: this.fullRepair.bind(this),
+				no: () => { },
+				defaultYes: false
+			});
+		});
 
 		const dragDrop = new DragDrop({
 			dragSelector: ".weapon-card",
@@ -159,6 +182,7 @@ export default class MechSheet extends LancerActorSheet {
 		}
 
 		if (!this.allowedItemTypes.includes(item.type)) {
+			ui.notifications?.error('Mechs cannot use this item!');
 			console.log("Preventing addition of new item: Invalid item type for this actor type! " + '(' + this.actor.type + '/' + item.type + ')');
 			event.preventDefault();
 			return;
@@ -413,12 +437,53 @@ export default class MechSheet extends LancerActorSheet {
 		}
 
 		const messageContent = await renderTemplate("/systems/lancer-lite/template/chat/stress-roll.hbs", data);
-		
+
 		const messageData = {
 			content: messageContent,
 			sound: 'sounds/dice.wav'
 		};
 
 		CONFIG.ChatMessage.documentClass.create(messageData);
+	}
+
+	private async fullRepair() {
+		const actor: any = this.actor;
+
+		await actor.update({
+			// Restore Resources
+			'system.hp.value': actor.system.hp.max,
+			'system.stress.value': actor.system.stress.max,
+			'system.structure.value': actor.system.structure.max,
+			'system.cp.value': actor.system.cp.max,
+			'system.repairs.value': 0,
+
+			// Clear Conditions
+			'system.conditions.exposed': false,
+			'system.conditions.hidden': false,
+			'system.conditions.immobilized': false,
+			'system.conditions.impaired': false,
+			'system.conditions.invisible': false,
+			'system.conditions.jammed': false,
+			'system.conditions.lock_on': false,
+			'system.conditions.prone': false,
+			'system.conditions.shredded': false,
+			'system.conditions.slowed': false,
+			'system.conditions.stunned': false
+		});
+
+		// Update Weapons & Systems; clear Destroyed and restore Limited
+		actor.items.forEach(async (item: any) => {
+			switch (item.type) {
+				case 'weapon':
+				case 'system':
+					await item.update({
+						'system.limited.value': item.system.limited.max,
+						'system.destroyed': false
+					});
+					break;
+			}
+		});
+
+		CONFIG.ChatMessage.documentClass.create({ content: `${this.actor.name} has been fully repaired!` });
 	}
 }

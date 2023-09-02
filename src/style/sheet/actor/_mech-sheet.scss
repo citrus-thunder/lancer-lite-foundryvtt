@@ -127,6 +127,16 @@
 				text-align: center;
 			}
 		}
+
+		div.quick-buttons {
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			button {
+				max-height: 2rem;
+				max-width: 6.5rem;
+			}
+		}
 	}
 
 	// Partials
