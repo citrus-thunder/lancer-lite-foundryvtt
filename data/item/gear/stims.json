@@ -1,0 +1,14 @@
+{
+  "name": "Stims",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>These chemical stimulants are sometimes administered automatically by injectors built into a pilot's suit, or even implanted within their body. Uncontrolled use can be addictive and dangerous to health in the long-term and is a problem for some pilots.</em></p>\n<p>Expend a charge for one of the following effects:</p>\n<ul>\n<li><strong>KICK</strong>: Keeps a pilot awake and alert for up to 30 hours.</li>\n<li><strong>FREEZE</strong>: Keeps a pilot calm and emotionally stable; deadens fear and other strong reactions.</li>\n<li><strong>JUICE</strong>: Heighten senses and alertness, reduce fatigue, and shorten reaction times. Juice occasionally provokes rage in some users.</li>\n</ul>",
+    "limited": {
+      "isLimited": true,
+      "value": 3,
+      "max": 3
+    },
+    "tags": "Limited 3, Quick Action"
+  }
+}

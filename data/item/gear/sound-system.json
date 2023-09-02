@@ -1,0 +1,14 @@
+{
+  "name": "Sound System",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>Though their tactical utility is questionable, many pilots set up internal speaker systems in their cockpits. This gives them a clear line to their compatriots during combat, along with the ability to play music.</em></p>",
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "tags": ""
+  }
+}

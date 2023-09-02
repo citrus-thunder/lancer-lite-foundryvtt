@@ -1,0 +1,14 @@
+{
+  "name": "Patch",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>\"Patch\" is pilot slang for any kind of modern first aid gear, including sprayable medi-gel and instant-acting medical patches.</em></p>\n<p>Expend a charge to apply a patch to either yourself or an adjacent pilot, restoring half their maximum <strong>HP</strong>. Patches have no effect on <strong>DOWN AND OUT</strong> pilots.</p>",
+    "limited": {
+      "isLimited": true,
+      "value": 1,
+      "max": 1
+    },
+    "tags": "Limited 1, Full Action"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Omnihook",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>A portable -- if bulky -- omninet terminal that allows for communication, data transfer, and limited hotspotting. Omnihooks are extremely valuable, although most mech squads have at least one. Tuning an omnihook requires a high level of skill, so they are usually mounted or carried by designated operators.</em></p>",
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "tags": ""
+  }
+}

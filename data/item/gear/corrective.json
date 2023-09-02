@@ -1,0 +1,14 @@
+{
+  "name": "Corrective",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>This clear, plastic-like sheet can be placed over the wounds of severely injured pilots. It instantly begins to stabilize them, injecting medicine and deploying nanites to stitch wounds shut.</em></p>\n<p><br>Expend a charge to apply correctives to <strong>DOWN AND OUT</strong> pilots, immediately bringing them back to consciousness at <strong>1 HP</strong>.</p>",
+    "limited": {
+      "isLimited": true,
+      "value": 1,
+      "max": 1
+    },
+    "tags": "Limited 1, Full Action"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Wilderness Survival Kit",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>This kit contains many essentials for surviving in hostile environments: a rebreather, water filters, hardsuit patches, backup thermals, a bivouac kit, and so on</em></p>",
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "tags": ""
+  }
+}
