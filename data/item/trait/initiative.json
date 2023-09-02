@@ -1,0 +1,9 @@
+{
+  "folder": "wRYNEdp1elGrhIlz",
+  "name": "Initiative",
+  "type": "trait",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>1/scene</strong> your mech may take any <strong>quick action</strong> as a <strong>free action</strong>.</p>"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Power Up",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>For the rest of this scene, you gain <strong>+1 ACCURACY</strong> on all attacks, checks, and saves; additionally, <strong>1/turn</strong>, you can <strong>BOOST</strong> as a <strong>free action</strong>.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 0,
+    "tags": "Active (1CP)",
+    "type": "protocol"
+  }
+}

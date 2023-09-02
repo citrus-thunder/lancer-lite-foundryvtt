@@ -1,0 +1,17 @@
+{
+  "name": "Hyperspec Fuel Injector",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Grants the&nbsp;<strong>Power Up</strong> protocol.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 0,
+    "tags": "",
+    "type": "core"
+  }
+}

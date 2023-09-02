@@ -1,0 +1,8 @@
+{
+  "name": "Replaceable Parts",
+  "type": "trait",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>While resting, this mech can be repaired at a rate of <strong>1 REPAIR</strong> per 1 structure damage, instead of <strong>2 REPAIRS</strong>.</p>"
+  }
+}
