@@ -1,0 +1,8 @@
+{
+  "name": "Mount Retrofitting",
+  "type": "core_bonus",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>By re-fabricating certain components and hardpoints on your chassis for more efficient distribution, you can increase your mech's firepower.</em></p>\n<p>Replace one mount with a <strong>MAIN/AUX</strong> mount.</p>"
+  }
+}

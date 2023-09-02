@@ -1,0 +1,8 @@
+{
+  "name": "Overpower Caliber",
+  "type": "core_bonus",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>Instead of the standardized option, you requisition multiple racks of \"hot\" ammunition -- same-bore slugs, with a higher grade of accelerant.</em></p>\n<p>Choose one weapon. 1/round, when you hit with an attack, you can cause it to deal +1d6 bonus damage.</p>"
+  }
+}

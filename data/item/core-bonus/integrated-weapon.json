@@ -1,0 +1,8 @@
+{
+  "name": "Integrated Weapon",
+  "type": "core_bonus",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>The empty spaces in your mech's chassis -- inside fists, chest plates, anywhere there's room -- are filled with integrated weapons, ready to fire on reflex.</em></p>\n<p>Your mech gains a new integrated mount with capacity for one <strong>AUXILIARY</strong> weapon. This weapon can be fired 1/round as a <strong>free action</strong> when you fire any other weapon on your mech. It can't be modified</p>"
+  }
+}

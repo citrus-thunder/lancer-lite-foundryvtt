@@ -1,0 +1,8 @@
+{
+  "name": "Auto-Stabilizing Hardpoints",
+  "type": "core_bonus",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>Using the best in shock-absorption and steadytech, you can retain accuracy across longer, sustained periods of fire.</em></p>\n<p>Choose one mount. Weapons attached to this mount gain +1 <strong>ACCURACY</strong>.</p>"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Universal Compatibility",
+  "type": "core_bonus",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>The Everest is everywhere: so are the parts you need for a field repair.</em></p>\n<p>Any time you spend <strong>CP</strong> to activate a <strong>CORE SYSTEM</strong>, you may also take a free action to restore all <strong>HP</strong>, cool all <strong>HEAT</strong>, and roll 1d20: on 20, regain <strong>1 CP</strong>.</p>"
+  }
+}

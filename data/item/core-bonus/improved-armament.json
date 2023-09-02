@@ -1,0 +1,8 @@
+{
+  "name": "Improved Armament",
+  "type": "core_bonus",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>By rerouting power and strengthening systems, you can mount additional weapons beyond the factory recommendations.</em></p>\n<p>If your mech has fewer than three mounts (excluding integrated mounts), it gains an additional <strong>FLEXIBLE</strong> mount.</p>"
+  }
+}
