@@ -1,0 +1,17 @@
+{
+  "name": "Expanded Compartment",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Your mech has space for one additional non-<strong>MECH</strong> character or object of Size 1/2 to ride as a passenger in the cockpit. While inside the mech, they cannot suffer any effect from outside or be targeted by attacks, as if they were a pilot. You can hand over or take back control to or from them as a protocol (following the same rules as pilot and AIs), but if they take over the controls from you, the mech becomes <strong>IMPAIRED</strong> and <strong>SLOWED</strong> to reflect the lack of appropriate licenses and integration.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 1,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}

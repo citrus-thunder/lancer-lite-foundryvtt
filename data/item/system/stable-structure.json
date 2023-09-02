@@ -1,0 +1,17 @@
+{
+  "name": "Stable Structure",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You gain <strong>+1 ACCURACY</strong> on saves to avoid <strong>PRONE</strong> or <strong>KNOCKBACK</strong>.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 2,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}

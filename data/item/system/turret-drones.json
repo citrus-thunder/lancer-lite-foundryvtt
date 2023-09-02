@@ -1,0 +1,17 @@
+{
+  "name": "Turret Drones",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>Turret drone (SIZE 1/2, 5 HP, 10 E-DEFENSE, 10 EVASION, TAGS: DRONE)</strong></p>\n<p>Expend a charge to deploy a turret drone that attaches to any object or surface within <strong>SENSORS</strong> and line of sight. Gain the <strong>TURRET ATTACK</strong> reaction, which can be taken once for each deployed turret drone. Turret drones cannot be recalled and expire at the end of the scene.</p>\n<hr>\n<p><em>The use of turret drones is a rather traditional form of force multiplication -- one that has remained the backbone of defense in many theaters.</em></p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": true,
+      "value": 3,
+      "max": 3
+    },
+    "sp_cost": 2,
+    "tags": "Limited 3, Unique, Quick Action",
+    "type": "action"
+  }
+}

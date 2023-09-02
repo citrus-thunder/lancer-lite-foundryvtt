@@ -1,0 +1,17 @@
+{
+  "name": "Personalizations",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Your mech gains <strong>+2 HP</strong> and, in consultation with the GM, you may establish a minor modification you have made to your mech.</p>\n<p>This mod has no numerical benefit beyond the additional <strong>HP</strong> it grants, but could provide other useful effects. If the GM agrees that this mod would help with either a pilot or mech skill check, you gain +1 <strong>ACCURACY </strong>for that check.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 1,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}

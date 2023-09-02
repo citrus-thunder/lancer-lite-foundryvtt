@@ -1,0 +1,17 @@
+{
+  "name": "Type-3 Projected Shield",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Nominate a character within line of sight: all ranged or melee attacks that they make against you or that you make against them gain <strong>+2 DIFFICULTY</strong> until the start of your next turn.</p>\n<hr>\n<p>The GMS Type-3 Projected Shield traps and denies incoming projectiles by projecting an aggressive, superpositional antiballistic barrier.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 2,
+    "tags": "Shield, Unique, 1 Heat (Self)",
+    "type": "protocol"
+  }
+}

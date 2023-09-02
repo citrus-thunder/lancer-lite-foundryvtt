@@ -1,0 +1,17 @@
+{
+  "name": "Type-I Flight System",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You may choose to count any and all of your movement as flying; however, you take <strong>SIZE +1</strong> <strong>HEAT</strong> at the end of any of your turns in which you fly this way.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 3,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Pattern-A Smoke Charges",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Expend a charge for one of the following effects:</p>\n<ul>\n<li>Smoke Grenade (Grenade, <strong>RANGE 5</strong>, <strong>BLAST 2</strong>): All characters and objects within the blast area benefit from soft cover until the end of your next turn, at which point the smoke disperses.</li>\n<li>Smoke Mine (Mine, <strong>BURST 3</strong>): This mine detonates when any allied character moves over or adjacent to it. All characters and objects within the burst area benefit from soft cover until the end of the detonating character's next turn, at which point the smoke disperses.</li>\n</ul>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": true,
+      "value": 3,
+      "max": 3
+    },
+    "sp_cost": 2,
+    "tags": "Limited 3, Unique",
+    "type": "action"
+  }
+}

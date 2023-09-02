@@ -1,0 +1,17 @@
+{
+  "name": "Rapid Burst Jump Jet System",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You can fly when you <strong>BOOST</strong>; however, you must end the movement on the ground or another solid surface, or else immediately begin falling.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 2,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}

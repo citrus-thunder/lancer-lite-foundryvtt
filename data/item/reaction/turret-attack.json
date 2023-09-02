@@ -1,0 +1,10 @@
+{
+  "name": "Turret Attack",
+  "type": "reaction",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>Trigger:</strong> An allied character within&nbsp;<strong>RANGE 10</strong> of a turrent drone makes a successful attack.</p>\n<p><strong>Effect:</strong> The turrent drone deals&nbsp;<strong>3 KINETIC</strong> damage to their target, as long as it has line of sight to their target.</p>",
+    "frequency": "1/round per turret",
+    "tags": ""
+  }
+}

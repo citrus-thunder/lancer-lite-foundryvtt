@@ -1,0 +1,17 @@
+{
+  "name": "Manipulators",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Your mech has an extra set of limbs. They are too small to have any combat benefit, but allow the mech to interact with objects that would otherwise be too small or sensitive (e.g., pilot-sized touch pads).</p>\n<hr>\n<p><em>Precise interaction with built and natural environments, soft targets, and hazardous materials is part of the daily routine for support-class mechs. This is made possible by manipulators -- added multi-digit \"hands\" with haptic sensors.</em></p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 1,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}

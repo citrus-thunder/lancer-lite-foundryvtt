@@ -1,0 +1,17 @@
+{
+  "name": "Pattern-A Jericho Deployable Cover",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Deploy two sections of <strong>SIZE 1</strong> <strong>hard cover</strong> in free spaces adjacent to you and to each other. Each section is an object with <strong>5 EVASION</strong> and <strong>10 HP</strong> that can be targeted and destroyed individually. Both sections of cover can be picked up again as a full action.</p>\n<p>Repairing the system restores both sections.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 2,
+    "tags": "Deployable, Unique, Quick Action",
+    "type": "action"
+  }
+}

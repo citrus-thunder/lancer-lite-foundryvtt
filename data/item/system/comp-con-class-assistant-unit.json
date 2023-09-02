@@ -1,0 +1,17 @@
+{
+  "name": "Comp/Con-Class Assistant Unit",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Your mech has a basic comp/con unit, granting it the <strong>AI</strong> tag. The comp/con can speak to you and has a personality, but, unlike an NHP, is not truly capable of independent thought. It is obedient to you alone.</p>\n<p>You can give control of your mech to its comp/con as a protocol, allowing your mech to act independently on your turn with its own set of actions. Unlike other AIs, a mech controlled by a comp/con has no independent initiative and requires direct input. Your mech will follow basic courses of action (defend this area, attack this enemy, protect me, etc.) to the best of its ability, or will act to defend itself if its instructions are complete or it receives no further guidance. You can issue new commands at the start of your turn as long as you are within <strong>RANGE 50</strong> and have the means to communicate with your mech. Comp/con units are not true NHPs and thus cannot enter <strong>cascade</strong>.</p>\n<hr>\n<p><em>The GMS Companion/Concierge-Class Assistant Unit conforms to all galaxywide standards. These virtual assistants pass even the most rigid Turing-Null assessment criteria and are cleared to operate even in the absence of a pilot.</em></p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 2,
+    "tags": "AI, Unique",
+    "type": "passive"
+  }
+}

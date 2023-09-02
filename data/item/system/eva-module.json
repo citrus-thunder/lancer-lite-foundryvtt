@@ -1,0 +1,17 @@
+{
+  "name": "EVA Module",
+  "type": "system",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Your mech has a propulsion system suitable for use in low or zero gravity and underwater environments. In those environments, you can <strong>fly</strong> and are not <strong>SLOWED</strong>.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "sp_cost": 1,
+    "tags": "Unique",
+    "type": "passive"
+  }
+}
