@@ -3,7 +3,7 @@
   "type": "system",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "<p>When you take structure damage, roll 1d6. On a 6, you return to <strong>1 HP</strong> and ignore the damage -- the hit simply 'scratched your paint'.</p>\n<p><br>This system can only be used once before each <strong>FULL REPAIR</strong>, and is not a valid target for system destruction</p>",
+    "description": "<p>When you take structure damage, roll 1d6. On a 6, you return to <strong>1 HP</strong> and ignore the damage -- the hit simply 'scratched your paint'.</p>\n<p>This system can only be used once before each <strong>FULL REPAIR</strong>, and is not a valid target for system destruction</p>",
     "destroyed": false,
     "limited": {
       "isLimited": false,
