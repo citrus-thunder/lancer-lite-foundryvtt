@@ -4,8 +4,13 @@
 			<span class="toggle-body">{{name}}</span>
 			{{#unless hideButtons}}
 			<div class="header-buttons">
+				{{#if system.destroyed}}
+				<i class="destroyed-icon fas fa-triangle-exclamation" title="Destroyed"></i>
+				{{/if}}
 				<i class="fa-regular fa-message item-post icon-button" title="Post Weapon to Chat" data-item-id="{{id}}"></i>
+				{{#unless system.destroyed}}
 				<i class="fa-solid fa-dice-d20 weapon-roll icon-button" title="Roll Weapon" data-item-id="{{id}}"></i>
+				{{/unless}}
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Weapon" data-item-id="{{id}}"></i>
 			</div>
 			{{/unless}}
@@ -19,7 +24,8 @@
 		</div>
 		{{/if}}
 		<div class="traits">
-			{{#if system.range}}[Range: {{system.range}}]{{/if}} {{#if system.threat}}[Threat: {{system.threat}}]{{/if}} {{#if system.damage}}[Damage: {{system.damage}}]{{/if}}
+			{{#if system.range}}[Range: {{system.range}}]{{/if}} {{#if system.threat}}[Threat: {{system.threat}}]{{/if}} {{#if
+			system.damage}}[Damage: {{system.damage}}]{{/if}}
 		</div>
 	</div>
 	<div class="body">
