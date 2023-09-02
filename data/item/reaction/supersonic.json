@@ -1,0 +1,11 @@
+{
+  "folder": "V8m4knwhtW8WS9QW",
+  "name": "Supersonic",
+  "type": "reaction",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>Trigger:</strong> Your target's turn ends.</p>\n<p><strong>Effect:</strong> You fly to a space free and adjacent to them. There must be a path to do so but you can move even if the nominated character is no longer within your movement range or line of sight. This ignores engagement and does not provoke reactions.</p>",
+    "frequency": "1/round",
+    "tags": ""
+  }
+}

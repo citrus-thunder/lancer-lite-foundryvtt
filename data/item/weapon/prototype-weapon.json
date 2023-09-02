@@ -1,0 +1,21 @@
+{
+  "name": "Prototype Weapon",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d6 + 2 (Kinetic, Explosive, or Energy)",
+    "description": "<p>This weapon is an experimental prototype, customized according to your specific requirements.</p>\n<p>When you install it, or during a <strong>FULL REPAIR</strong>, you may choose a new weapon type, damage type, and either <strong>THREAT 1</strong> (melee) or <strong>RANGE 10</strong> (all other types). Additionally, each time you perform a FULL REPAIR, reroll 1d6+2 to determine this weapon's<strong> LIMITED</strong> uses.</p>\n<p><strong>Damage</strong>: <strong>1d6+2</strong> <strong>KINETIC</strong>, <strong>EXPLOSIVE</strong>, or <strong>ENERGY</strong>.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": true,
+      "value": 0,
+      "max": 0
+    },
+    "range": "10",
+    "roll_formula": "1d6 + 2",
+    "size": "Main",
+    "tags": "Limited [1d6+2], Overkill",
+    "threat": 0,
+    "type": "Rifle"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Fuel Rod Gun",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d3 + 2 (Energy)",
+    "description": "<p><strong>On Attack</strong>: Clear&nbsp;<strong>4 HEAT</strong></p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": true,
+      "value": 3,
+      "max": 3
+    },
+    "range": "3",
+    "roll_formula": "1d3 + 2",
+    "size": "Main",
+    "tags": "Limited 3, Unique",
+    "threat": 3,
+    "type": "CQB"
+  }
+}

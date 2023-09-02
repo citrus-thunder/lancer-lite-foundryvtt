@@ -1,0 +1,10 @@
+{
+  "name": "Overwatch",
+  "type": "reaction",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>Trigger:</strong> A hostile character starts any movement (including <strong>BOOST</strong> and other actions) inside one of your weapons' <strong>THREAT</strong>.</p>\n<p><strong>Effect:</strong> Trigger <strong>OVERWATCH</strong>, immediately using that weapon to <strong>SKIRMISH</strong> against that character as a reaction, before they move.</p>",
+    "frequency": "1/round",
+    "tags": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Valiant Aid",
+  "type": "reaction",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>Trigger</strong>: Ally attacks your mark and misses.</p>\n<p><strong>Effect</strong>: They may reroll the attack. They must use the second result, even if it's worse.</p>",
+    "frequency": "1/round",
+    "tags": ""
+  }
+}

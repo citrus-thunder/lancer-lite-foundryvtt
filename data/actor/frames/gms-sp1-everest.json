@@ -1,0 +1,213 @@
+{
+	"name": "GMS-SP1 Everest",
+	"type": "mech",
+	"img": "icons/svg/mystery-man.svg",
+	"system": {
+		"biography": "",
+		"conditions": {
+			"exposed": false,
+			"hidden": false,
+			"immobilized": false,
+			"impaired": false,
+			"invisible": false,
+			"jammed": false,
+			"lock_on": false,
+			"prone": false,
+			"shredded": false,
+			"slowed": false,
+			"stunned": false
+		},
+		"cp": {
+			"value": "1",
+			"min": 0,
+			"max": 1
+		},
+		"description": "",
+		"frame": "GMS-SP1 Everest",
+		"heat": {
+			"value": 0,
+			"max": 6,
+			"min": 0
+		},
+		"hp": {
+			"value": 0,
+			"max": 10,
+			"min": 0
+		},
+		"notes": "",
+		"overshield": 0,
+		"repairs": {
+			"value": 0,
+			"max": 5,
+			"min": 0
+		},
+		"sp": 6,
+		"stats": {
+			"armor": 0,
+			"attack": 0,
+			"e_defense": 8,
+			"evasion": 8,
+			"save_target": 10,
+			"sensors": 10,
+			"size": 1,
+			"speed": 4,
+			"tech_attack": 0
+		},
+		"stress": {
+			"value": 4,
+			"max": 4,
+			"min": 0
+		},
+		"structure": {
+			"value": 4,
+			"max": 4,
+			"min": 0
+		}
+	},
+	"prototypeToken": {
+		"name": "GMS Everest",
+		"displayName": 0,
+		"actorLink": false,
+		"appendNumber": false,
+		"prependAdjective": false,
+		"texture": {
+			"src": "icons/svg/mystery-man.svg",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": -1,
+		"displayBars": 0,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": 0,
+			"angle": 360,
+			"visionMode": "basic",
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"folder": null,
+			"name": "Initiative",
+			"type": "trait",
+			"img": "icons/svg/item-bag.svg",
+			"system": {
+				"description": "<p><strong>1/scene</strong> your mech may take any <strong>quick action</strong> as a <strong>free action</strong>.</p>"
+			}
+		},
+		{
+			"folder": null,
+			"name": "Replaceable Parts",
+			"type": "trait",
+			"img": "icons/svg/item-bag.svg",
+			"system": {
+				"description": "<p>While resting, this mech can be repaired at a rate of <strong>1 REPAIR</strong> per 1 structure damage, instead of <strong>2 REPAIRS</strong>.</p>"
+			}
+		},
+		{
+			"folder": null,
+			"name": "Hyperspec Fuel Injector",
+			"type": "system",
+			"img": "icons/svg/item-bag.svg",
+			"system": {
+				"description": "<p>Grants the&nbsp;<strong>Power Up</strong> protocol.</p>",
+				"destroyed": false,
+				"limited": {
+					"isLimited": false,
+					"value": 0,
+					"max": 0
+				},
+				"sp_cost": 0,
+				"tags": "",
+				"type": "core"
+			}
+		},
+		{
+			"folder": null,
+			"name": "Power Up",
+			"type": "system",
+			"img": "icons/svg/item-bag.svg",
+			"system": {
+				"description": "<p>For the rest of this scene, you gain <strong>+1 ACCURACY</strong> on all attacks, checks, and saves; additionally, <strong>1/turn</strong>, you can <strong>BOOST</strong> as a <strong>free action</strong>.</p>",
+				"destroyed": false,
+				"limited": {
+					"isLimited": false,
+					"value": 0,
+					"max": 0
+				},
+				"sp_cost": 0,
+				"tags": "Active (1CP)",
+				"type": "protocol"
+			}
+		},
+		{
+			"type": "mount",
+			"name": "New Mount",
+			"system": {
+				"type": "main",
+				"weapons": []
+			},
+			"img": "icons/svg/item-bag.svg"
+		},
+		{
+			"type": "mount",
+			"name": "New Mount",
+			"system": {
+				"type": "flex",
+				"weapons": []
+			},
+			"img": "icons/svg/item-bag.svg"
+		},
+		{
+			"type": "mount",
+			"name": "New Mount",
+			"system": {
+				"type": "heavy",
+				"weapons": []
+			},
+			"img": "icons/svg/item-bag.svg"
+		}
+	]
+}

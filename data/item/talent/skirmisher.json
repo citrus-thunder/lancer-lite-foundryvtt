@@ -1,0 +1,9 @@
+{
+  "name": "Skirmisher",
+  "type": "talent",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>What is the best defense? Armor? No. The key to avoiding a messy death in the field, as you learned early, is to stay low, stay mobile, and stay fast. Your mech reflects this philosophy: light, quick, bristling with force-multiplying weapons. You live to push your machine beyond expected parameters, shaking target locks and incoming fire while keeping your own targeting true.</em></p>\n<h2>Rank I: Integrated Chaff Launchers</h2>\n<p>At the start of your turn, you gain <strong>soft cover</strong>. You lose this cover if you attack or force another character to make a save.</p>\n<h2>Rank II: Lockbreaker</h2>\n<p>Before or after you <strong>SKIRMISH</strong> (including as a reaction, e.g. from <strong>OVERWATCH</strong>), you may move <strong>2 spaces</strong>. This movement ignores engagement and doesn't provoke reactions.</p>\n<h2>Rank III: Weave</h2>\n<p>The first attack taken as a <strong>reaction</strong> against you in any round automatically misses.</p>",
+    "rank": "1"
+  }
+}

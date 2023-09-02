@@ -1,0 +1,10 @@
+{
+  "name": "Brace",
+  "type": "reaction",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><strong>Trigger:</strong> You are hit by an attack and damage has been rolled.</p>\n<p><strong>Effect</strong><strong>:</strong> You count as having <strong>RESISTANCE</strong> to all damage, <strong>BURN</strong>, and <strong>HEAT</strong> from the triggering attack, and until the end of your next turn, all other attacks against you are made at <strong>+1 DIFFICULTY</strong>.</p>\n<p>Due to the stress of bracing, you cannot take reactions until the end of your next turn and on that turn, you can only take one quick action -- you cannot <strong>OVERCHARGE</strong>, move normally, take full actions, or take free actions</p>",
+    "frequency": "1/round",
+    "tags": ""
+  }
+}

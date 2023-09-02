@@ -1,0 +1,9 @@
+{
+  "name": "Nuclear Cavalier",
+  "type": "talent",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>Shortly after becoming a pilot, you realized something: that machine you pilot is powered by a series of cascading nuclear reactions. Why not open that compartment up and see what sort of damage it can do?</em></p>\n<h2>Rank I: Aggressive Heat Bleed</h2>\n<p>The first attack you make on your turn while in the <strong>DANGER ZONE</strong> deals <strong>+2 HEAT</strong> on a hit.</p>\n<p><strong>If you enter the DANGER ZONE during your turn, this talent takes effect on your next attack.</strong></p>\n<h2>Rank II: Fusion Hemorrhage</h2>\n<p>The first ranged or melee attack roll you make on your turn while in the <strong>DANGER ZONE</strong> deals <strong>ENERGY </strong>damage instead of <strong>KINETIC</strong> or <strong>EXPLOSIVE</strong> and additionally deals <strong>+1d6 ENERGY</strong> bonus damage on a hit.</p>\n<h2>Rank III: Here, Catch!</h2>\n<p>You've modified your mech to launch its superheated fuel rods at enemies. Gain the <strong>Fuel Rod Gun</strong> weapon as an integrated mount.</p>",
+    "rank": "1"
+  }
+}

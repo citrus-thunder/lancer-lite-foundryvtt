@@ -1,0 +1,9 @@
+{
+  "name": "Ace",
+  "type": "talent",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>Every pilot brags about their abilities; occasionally, some even have the reputation to back it up. Harmonious Domesticity is one of these pilots. As an ace, they aren';t just ranked among the most qualified of pilots -- they're among the most qualified of lancers.</em></p>\n<p><em>Whether you're a talented rookie or a grizzled veteran, you're one of these aces. Your skills as a pilot are notorious enough that your callsign is known throughout the system.</em></p>\n<h2>Rank I: Acrobatics</h2>\n<p>While <strong>flying</strong>, you get the following benefits:</p>\n<ul>\n<li>You make all <strong>AGILITY</strong> checks and saves with <strong>+1 ACCURACY</strong></li>\n<li>Any time an attack misses you, you may fly up to <strong>2 spaces</strong> in any direction as a <strong>reaction</strong></li>\n</ul>\n<h2>Rank II: Afterburners</h2>\n<p>When you <strong>BOOST</strong> while <strong>flying</strong>, you may move an additional <strong>1d6 spaces</strong>, but take <strong>heat equal to half that amount</strong>.</p>\n<h2>Rank III: Supersonic</h2>\n<p>As a <strong>quick action</strong> on your turn, you may spin up your thrusters. If you end your turn <strong>flying</strong>, you may nominate a character within a <strong>RANGE</strong> equal to your <strong>SPEED</strong> and line of sight, and gain the <strong>Supersonic</strong> reaction.</p>",
+    "rank": "1"
+  }
+}
