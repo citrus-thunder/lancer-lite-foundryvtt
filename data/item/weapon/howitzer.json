@@ -1,0 +1,21 @@
+{
+  "name": "Howitzer",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "2d6 (Explosive)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "20 (Blast 2)",
+    "roll_formula": "2d6",
+    "size": "Heavy",
+    "tags": "Arcing, Inaccurate, Loading, Ordnance",
+    "threat": 0,
+    "type": "Cannon"
+  }
+}

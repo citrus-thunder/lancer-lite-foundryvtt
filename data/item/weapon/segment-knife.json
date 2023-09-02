@@ -1,0 +1,21 @@
+{
+  "name": "Segment Knife",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d3 + 1 (Energy)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "",
+    "roll_formula": "1d3 + 1",
+    "size": "Auxiliary",
+    "tags": "Overkill",
+    "threat": 1,
+    "type": "Melee"
+  }
+}

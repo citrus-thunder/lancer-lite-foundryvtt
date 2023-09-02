@@ -1,0 +1,21 @@
+{
+  "name": "Mortar",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d6 + 1 (Explosive)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "15 (Blast 1)",
+    "roll_formula": "1d6 + 1",
+    "size": "Main",
+    "tags": "Arcing, Inaccurate",
+    "threat": 0,
+    "type": "Cannon"
+  }
+}

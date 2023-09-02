@@ -1,0 +1,21 @@
+{
+  "name": "Thermal Lance",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d6 + 3 (Energy)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "10 (Line)",
+    "roll_formula": "1d6 + 3",
+    "size": "Heavy",
+    "tags": "2 Heat (Self)",
+    "threat": 0,
+    "type": "Cannon"
+  }
+}

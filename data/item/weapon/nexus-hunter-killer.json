@@ -1,0 +1,21 @@
+{
+  "name": "Nexus (Hunter-Killer)",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d6 (Kinetic)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "10",
+    "roll_formula": "1d6",
+    "size": "Main",
+    "tags": "Smart",
+    "threat": 0,
+    "type": "Nexus"
+  }
+}

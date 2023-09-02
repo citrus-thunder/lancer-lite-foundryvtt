@@ -1,0 +1,21 @@
+{
+  "name": "Thermal Pistol",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "2 (Energy)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "5 (Line)",
+    "roll_formula": "2",
+    "size": "Auxiliary",
+    "tags": "",
+    "threat": 0,
+    "type": "CQB"
+  }
+}

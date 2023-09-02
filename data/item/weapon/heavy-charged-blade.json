@@ -1,0 +1,21 @@
+{
+  "name": "Heavy Charged Blade",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1d6 + 3 (Energy)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "",
+    "roll_formula": "1d6 + 3",
+    "size": "Heavy",
+    "tags": "AP",
+    "threat": 1,
+    "type": "Melee"
+  }
+}

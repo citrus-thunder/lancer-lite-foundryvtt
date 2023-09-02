@@ -1,0 +1,21 @@
+{
+  "name": "Cyclone Pulse Rifle",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "3d6 + 3 (Kinetic)",
+    "description": "",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "15",
+    "roll_formula": "3d6 + 3",
+    "size": "Superheavy",
+    "tags": "Accurate, Loading, Reliable 5",
+    "threat": 0,
+    "type": "Rifle"
+  }
+}
