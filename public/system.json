@@ -29,6 +29,139 @@
 	"styles": [
 		"style.css"
 	],
+	"packs": [
+		{
+			"name": "frame",
+			"label": "Mech Frames",
+			"path": "packs/frame",
+			"type": "Actor"
+		},
+		{
+			"name": "npc_mech",
+			"label": "NPC Mechs",
+			"path": "packs/npc_mech",
+			"type": "Actor"
+		},
+		{
+			"name": "armor",
+			"label": "Pilot Armor",
+			"path": "packs/armor",
+			"type": "Item"
+		},
+		{
+			"name": "core_bonus",
+			"label": "Core Bonuses",
+			"path": "packs/core_bonus",
+			"type": "Item"
+		},
+		{
+			"name": "pilot_gear",
+			"label": "Pilot Gear",
+			"path": "packs/pilot_gear",
+			"type": "Item"
+		},
+		{
+			"name": "mech_gear",
+			"label": "Mech Gear",
+			"path": "packs/mech_gear",
+			"type": "Item"
+		},
+		{
+			"name": "license",
+			"label": "Licenses",
+			"path": "packs/license",
+			"type": "Item"
+		},
+		{
+			"name": "reaction",
+			"label": "Reactions",
+			"path": "packs/reaction",
+			"type": "Item"
+		},
+		{
+			"name": "core_system",
+			"label": "Core Systems",
+			"path": "packs/core_system",
+			"type": "Item"
+		},
+		{
+			"name": "system",
+			"label": "Systems",
+			"path": "packs/system",
+			"type": "Item"
+		},
+		{
+			"name": "talent",
+			"label": "Talents",
+			"path": "packs/talent",
+			"type": "Item"
+		},
+		{
+			"name": "trait",
+			"label": "Traits",
+			"path": "packs/trait",
+			"type": "Item"
+		},
+		{
+			"name": "trigger",
+			"label": "Triggers",
+			"path": "packs/trigger",
+			"type": "Item"
+		},
+		{
+			"name": "pilot_weapon",
+			"label": "Pilot Weapons",
+			"path": "packs/pilot_weapon",
+			"type": "Item"
+		},
+		{
+			"name": "mech_weapon",
+			"label": "Mech Weapons",
+			"path": "packs/mech_weapon",
+			"type": "Item"
+		}
+	],
+	"packFolders": [
+		{
+			"name": "Lancer",
+			"sorting": "m",
+			"folders": [
+				{
+					"name": "Mech Frames",
+					"sorting": "m",
+					"packs": [
+						"frame",
+						"npc_mech"
+					]
+				},
+				{
+					"name": "Mech Equipment",
+					"sorting": "m",
+					"packs": [
+						"core_system",
+						"trait",
+						"system",
+						"mech_weapon",
+						"reaction",
+						"mech_gear"
+					]
+				},
+				{
+					"name": "Pilot Equipment",
+					"sorting": "m",
+					"packs": [
+						"core_bonus",
+						"license",
+						"talent",
+						"trigger",
+						"pilot_weapon",
+						"armor",
+						"pilot_gear"
+					]
+				}
+			]
+		}
+	],
 	"socket": false,
 	"initiative": "1d20",
 	"gridDistance": 10,

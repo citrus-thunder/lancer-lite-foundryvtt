@@ -7,7 +7,7 @@ export default defineConfig({
 	build: {
 		outDir: "lancer-lite",
 		minify: process.env.DEBUG == 'true' ? false : 'esbuild',
-		emptyOutDir: true,
+		emptyOutDir: false,
 		lib: {
 			name: "lancerlite",
 			entry: "src/main.ts",
