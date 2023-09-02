@@ -141,6 +141,7 @@
 		},
 		"system": {
 			"description": "",
+			"destroyed": false,
 			"limited": {
 				"isLimited": false,
 				"value": 0,
