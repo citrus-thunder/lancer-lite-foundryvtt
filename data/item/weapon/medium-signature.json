@@ -1,0 +1,21 @@
+{
+  "name": "Medium Signature",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "2 (Energy, Explosive, or Kinetic)",
+    "description": "<p>A pilot's signature weapon is their iconic weapon, the one they almost always carry into combat.</p>\n<p><strong>Medium </strong>signature weapons are assault rifles, shotguns, pack-fed lasers, or disruption guns.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "5",
+    "roll_formula": "2",
+    "size": "Pilot",
+    "tags": "",
+    "threat": 0,
+    "type": "Medium Signature"
+  }
+}

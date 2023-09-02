@@ -1,0 +1,9 @@
+{
+  "name": "Grease Monkey",
+  "type": "talent",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>To see all; to divide each object you perceive from its </em><em>unit or cohesion, pulled apart like individual fibers in a vast sheet; to count them as individuals; to make human and fragile the force you face -- this is to know how to beat them.</em></p>\n<p><em>Break apart the monolith. See the grains that make the stone. Crush them all into yet smaller dust.</em></p>\n<h2>Rank I: Particularize</h2>\n<p>When an allied character adjacent to you attacks a target and consumes&nbsp;<strong>LOCK ON</strong>, they may roll twice and choose either result.</p>\n<h2>Rank II: Panopticon</h2>\n<p>At the end of your turn, if you did not move and took the&nbsp;<strong>LOCK ON QUICK TECH</strong> action, you may&nbsp;<strong>LOCK ON</strong> once as a&nbsp;<strong>free action</strong>. Additionally, when you&nbsp;<strong>LOCK ON</strong>, you learn your target's&nbsp;<strong>ARMOR, SPEED, EVASION, E-DEFENSE, MECH SKILLS,</strong> and current&nbsp;<strong>HP</strong>, and can share this information with allies.</p>\n<h2>Rank III: Bentham/Foucault Elimination</h2>\n<p>As a&nbsp;<strong>quick action</strong> when you&nbsp;<strong>LOCK ON</strong>, you may nominate an allied character adjacent to you: they may immediately make any&nbsp;<strong>quick action</strong> as a&nbsp;<strong>reaction</strong>, consuming your target's&nbsp;<strong>LOCK ON</strong> condition. Their action does not need to be an attack, but they benefit from consuming the&nbsp;<strong>LOCK ON</strong> condition if they do choose to attack.</p>",
+    "rank": "1"
+	}
+}

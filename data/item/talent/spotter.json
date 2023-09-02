@@ -1,0 +1,9 @@
+{
+  "name": "Spotter",
+  "type": "talent",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><em>Eel knows more about the inner workings of a mech </em><em>than most mechanics. To them, the beast they pilot is more than a machine: it's a living thing, in need of tender care given by a wise and steady hand. Eel maintains their own house and keeps their own mech in line, both on the battlefield and off. The mechanics back at base come to them with questions, but usually prefer to stay away -- there's something spooky about how Eel's beast runs</em>.</p>\n<h2>Rank I: Unsanctioned Capacity Upgrade</h2>\n<p>While resting, you can spend <strong>2</strong> <strong>Repairs</strong> to replenish&nbsp;<strong>1 use</strong> of all <strong>LIMITED</strong> weapons and systems.</p>\n<h2>Rank II: Machine Bond</h2>\n<p>When you <strong>STABILIZE</strong>, you clear all <strong>IMPAIRED</strong>, <strong>JAMMED</strong>, <strong>IMMOBILIZED</strong>, <strong>SLOWED</strong>, and <strong>LOCK ON </strong>conditions that weren't caused by your own systems, talents, etc.</p>\n<h2>Rank III: Friends in High Places</h2>\n<p>Once per mission while resting, you can call in a supply drop. You and your allies may replenish <strong>1 use</strong> of all <strong>LIMITED</strong> weapons and systems and restore <strong>1</strong> <strong>STRUCTURE</strong>. This doesn't require any <strong>REPAIRS</strong> and can be used even if you have reached your <strong>REPAIR CAP</strong>.</p>",
+    "rank": "1"
+	}
+}

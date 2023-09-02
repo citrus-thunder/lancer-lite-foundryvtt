@@ -1,0 +1,21 @@
+{
+  "name": "Archaic Melee",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1 (Kinetic)",
+    "description": "<p>These weapons were made using pre-Union alloys and technology, and might be anything from industrial-era steel swords through to stone axes. While they remain widely used on some worlds, archaic weapons used by pilots are usually relics, heirlooms, or ceremonial weapons</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "0",
+    "roll_formula": "1",
+    "size": "Pilot",
+    "tags": "Archaic",
+    "threat": 1,
+    "type": "Archaic Melee"
+  }
+}

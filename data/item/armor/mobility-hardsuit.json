@@ -1,0 +1,14 @@
+{
+  "name": "Mobility Hardsuit",
+  "type": "armor",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "armor": 0,
+    "bonuses": "Flight",
+    "description": "<p>These hardsuits have integrated flight systems, allowing pilots to fly when they move or <strong>BOOST</strong>. Flying pilots must end their turn on the ground (or another surface) or begin falling</p>",
+    "e_defense": 10,
+    "evasion": 10,
+    "speed": 5,
+    "tags": "Personal Armor"
+  }
+}

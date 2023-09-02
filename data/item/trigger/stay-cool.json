@@ -1,0 +1,9 @@
+{
+  "name": "Stay Cool",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Perform a task that requires concentration, dexterity, speed, or precision under pressure: pick a lock while your squad trades fire with encroaching guards, carefully disarm an explosive, or unjam a gun under fire.</em></p>"
+  }
+}

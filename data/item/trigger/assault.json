@@ -1,0 +1,9 @@
+{
+  "name": "Assault",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Take part in direct and overt combat: fight your way through a building packed with hostile mercenaries, trade shots over rain-slick trenches, fight in chaotic microgravity as part of a boarding action, or engage an enemy in the smoking urban rubble of a city under orbital bombardment. Loud, direct action.</em></p>"
+  }
+}

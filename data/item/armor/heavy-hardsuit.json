@@ -1,0 +1,14 @@
+{
+  "name": "Heavy Hardsuit",
+  "type": "armor",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "armor": 2,
+    "bonuses": "+3 HP",
+    "description": "<p>The heaviest hardsuits. They are always powered and up-armored with thick, composite armor. Heavy hardsuits often feature integrated weapons, powerful mobility suites, and -- by augmenting their user's strength -- allow their user to field much heavier weapons than normal infantry can typically carry. Heavy hardsuits are in decline now that half-size chassis are popular, but they are still common among private militaries and middle-tier Diasporan armed forces.</p>",
+    "e_defense": 8,
+    "evasion": 6,
+    "speed": 3,
+    "tags": "Personal Armor"
+  }
+}

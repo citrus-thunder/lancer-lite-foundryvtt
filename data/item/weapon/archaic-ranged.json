@@ -1,0 +1,21 @@
+{
+  "name": "Archaic Ranged",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1 (Kinetic)",
+    "description": "<p>These weapons are pre-modern devices like muskets and bows, all of which are still used in some societies.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "5",
+    "roll_formula": "1",
+    "size": "Pilot",
+    "tags": "Archaic",
+    "threat": 0,
+    "type": "Archaic Ranged"
+  }
+}

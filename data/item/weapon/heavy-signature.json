@@ -1,0 +1,21 @@
+{
+  "name": "Heavy Signature",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "4 (Energy, Explosive, or Kinetic)",
+    "description": "<p>A pilot's signature weapon is their iconic weapon, the one they almost always carry into combat.</p>\n<p><strong>Heavy</strong> signature weapons are missile tubes, heavy lasers, light machine guns, or exotic rifles.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "10",
+    "roll_formula": "4",
+    "size": "Pilot",
+    "tags": "Ordnance, Loading",
+    "threat": 0,
+    "type": "Heavy Signature"
+  }
+}

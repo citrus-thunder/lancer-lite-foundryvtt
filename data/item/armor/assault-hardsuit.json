@@ -1,0 +1,14 @@
+{
+  "name": "Assault Hardsuit",
+  "type": "armor",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "armor": 1,
+    "bonuses": "+3 HP",
+    "description": "<p>These hardsuits, common among military units, feature heavier plating than light hardsuits but more mobility than heavy hardsuits. They are powered, augmenting the user's strength, and typically feature an onboard computer, sensor suite, integrated air, burst EVA system, and waste recycling systems.</p>",
+    "e_defense": 8,
+    "evasion": 8,
+    "speed": 4,
+    "tags": "Personal Armor"
+  }
+}

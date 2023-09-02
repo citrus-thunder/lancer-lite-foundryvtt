@@ -1,0 +1,14 @@
+{
+  "name": "Light Hardsuit",
+  "type": "armor",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "armor": 0,
+    "bonuses": "+3 HP",
+    "description": "<p>Light hardsuits are usually made from reactive, cloth-like weaves, with limited plating and few powered components to maximize mobility. Like other hardsuits, they can be sealed against vacuum, and protect against a decent amount of radiation and other harmful particles.</p>",
+    "e_defense": 10,
+    "evasion": 10,
+    "speed": 4,
+    "tags": "Personal Armor"
+  }
+}

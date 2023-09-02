@@ -1,0 +1,14 @@
+{
+  "name": "Stealth Hardsuit",
+  "type": "armor",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "armor": 0,
+    "bonuses": "Invisibility",
+    "description": "<p>As a quick action, pilots wearing stealth hardsuits can become <strong>Invisible</strong>. They cease to be <strong>Invisible</strong> if they take any damage.</p>",
+    "e_defense": 8,
+    "evasion": 8,
+    "speed": 4,
+    "tags": "Personal Armor"
+  }
+}

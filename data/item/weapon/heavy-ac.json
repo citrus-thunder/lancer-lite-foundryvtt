@@ -1,0 +1,21 @@
+{
+  "name": "Heavy A/C",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "3 (Kinetic)",
+    "description": "<p>Most melee weapons are forged from advanced, nonreactive alloys, composite materials, or GMS standard fabrication tech, allowing for durable and reliable weaponry in survival situations and encounters where kinetic shielding reduces the effectiveness of ballistics. These weapons are called <strong>alloy/composite</strong> (A/C) weapons</p>\n<p><strong>Heavy A/C</strong> weapons are designed with the augmented strength of hardsuits in mind and include warhammers, mallets, rams, pikes, and heavy two-handed assault swords.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "",
+    "roll_formula": "3",
+    "size": "Pilot",
+    "tags": "Inaccurate",
+    "threat": 1,
+    "type": "Heavy A/C"
+  }
+}

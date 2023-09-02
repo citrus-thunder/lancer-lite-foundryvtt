@@ -1,0 +1,9 @@
+{
+  "name": "Read a Situation",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Look for subtext, motives, or threats in a situation or person: use intuition to discern someone's motivations, learn who is really in charge, or find out who's about to do something rash or stupid; get a gut feeling about a situation or person; sense if someone is lying to you</em></p>"
+  }
+}

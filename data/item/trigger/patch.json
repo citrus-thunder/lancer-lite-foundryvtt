@@ -1,0 +1,9 @@
+{
+  "name": "Patch",
+  "type": "trigger",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "bonus": "2",
+    "description": "<p><em>Apply medical knowledge to medicate, bandage a wound, staunch bleeding, suture, cauterize, neutralize poison, or resuscitate; alternately, diagnose or study disease, pathogens, or symptoms.</em></p>"
+  }
+}

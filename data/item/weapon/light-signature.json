@@ -1,0 +1,21 @@
+{
+  "name": "Light Signature",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1 (Energy, Explosive, or Kinetic)",
+    "description": "<p>A pilot's signature weapon is their iconic weapon, the one they almost always carry into combat.</p>\n<p><strong>Light </strong>signature weapons might be oversized revolvers, braces of pistols, and submachine guns</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "3",
+    "roll_formula": "1",
+    "size": "Pilot",
+    "tags": "Sidearm",
+    "threat": 0,
+    "type": "Light Signature"
+  }
+}

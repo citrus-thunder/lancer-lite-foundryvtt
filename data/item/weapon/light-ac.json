@@ -1,0 +1,21 @@
+{
+  "name": "Light A/C",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "damage": "1 (Kinetic)",
+    "description": "<p>Most melee weapons are forged from advanced, nonreactive alloys, composite materials, or GMS standard fabrication tech, allowing for durable and reliable weaponry in survival situations and encounters where kinetic shielding reduces the effectiveness of ballistics. These weapons are called <strong>alloy/composite</strong> (A/C) weapons</p>\n<p><strong>Light A/C</strong> weapons might be knives, bayonets, punching daggers, and short swords.</p>",
+    "destroyed": false,
+    "limited": {
+      "isLimited": false,
+      "value": 0,
+      "max": 0
+    },
+    "range": "",
+    "roll_formula": "1",
+    "size": "Pilot",
+    "tags": "Sidearm",
+    "threat": 1,
+    "type": "Light A/C"
+  }
+}
