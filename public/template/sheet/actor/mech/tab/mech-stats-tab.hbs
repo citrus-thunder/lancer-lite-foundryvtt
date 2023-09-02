@@ -1,108 +1,174 @@
-<div class="flexrow">
-	<!-- Left Col -->
-	<div class="flexcol pad-right">
-		<!-- Core Stats -->
-		<div class="flexcol stats no-grow pad-bottom --more">
-			<h2 class="section-title">Core Stats</h2>
-			<!-- Main Stats -->
-			<div class="flexrow">
-				<!-- Main Stats Left -->
-				<div class="flexcol stats-col pad-right --more">
-					<label>
-						Size:
-						<input type="text" name="system.size" value="{{actor.system.size}}" data-dType="Number">
-					</label>
-					<label>
-						Armor:
-						<input type="text" name="system.armor" value="{{actor.system.armor}}" data-dType="Number">
-					</label>
-					<label>
-						Attack Bonus:
-						<input type="text" name="system.attack" value="{{actor.system.attack}}" data-dType="Number">
-					</label>
+<!-- Stats & Conditions -->
+<div class="flexrow pad-bottom --more">
+	<!-- Stats -->
+	<div class="flexcol stats pad-right">
+		<h2 class="section-title">Core Stats</h2>
+		<!-- Main Stats -->
+		<div class="flexrow">
+			<!-- Main Stats Left -->
+			<div class="flexcol stats-col pad-right --more">
+				<label>
+					Size:
+					<input type="text" name="system.stats.size" value="{{actor.system.stats.size}}" data-dType="Number">
+				</label>
+				<label>
+					Armor:
+					<input type="text" name="system.stats.armor" value="{{actor.system.stats.armor}}" data-dType="Number">
+				</label>
+				<label>
+					Attack Bonus:
+					<input type="text" name="system.stats.attack" value="{{actor.system.stats.attack}}" data-dType="Number">
+				</label>
+			</div>
+			<!-- Main Stats Right -->
+			<div class="flexcol stats-col">
+				<label>
+					Save Target:
+					<input type="text" name="system.stats.save_target" value="{{actor.system.stats.save_target}}" data-dType="Number">
+				</label>
+				<label>
+					Sensors:
+					<input type="text" name="system.stats.sensors" value="{{actor.system.stats.sensors}}" data-dType="Number">
+				</label>
+			</div>
+		</div>
+		<!-- Other Stats -->
+		<div class="flexrow">
+			<!-- Left Stat Col -->
+			<div class="flexcol stats-col pad-right --more">
+				<div class="stats-subsection">
+					<div class="stats-subsection-header">
+						<label>HULL</label>
+					</div>
+					<div class="stats-subsection-content flexcol">
+						<label>
+							HP:
+							<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dType="Number">
+						</label>
+						<label>
+							Repair Cap:
+							<input type="text" name="system.repairs.max" value="{{actor.system.repairs.max}}" data-dType="Number">
+						</label>
+					</div>
 				</div>
-				<!-- Main Stats Right -->
-				<div class="flexcol stats-col">
-					<label>
-						Save Target:
-						<input type="text" name="system.save_target" value="{{actor.system.save_target}}" data-dType="Number">
-					</label>
-					<label>
-						Sensors:
-						<input type="text" name="system.sensors" value="{{actor.system.sensors}}" data-dType="Number">
-					</label>
+				<div class="stats-subsection">
+					<div class="stats-subsection-header">
+						<label>AGILITY</label>
+					</div>
+					<div class="stats-subsection-content flexcol">
+						<label>
+							Evasion:
+							<input type="text" name="system.stats.evasion" value="{{actor.system.stats.evasion}}" data-dType="Number">
+						</label>
+						<label>
+							Speed:
+							<input type="text" name="system.stats.speed" value="{{actor.system.stats.speed}}" data-dType="Number">
+						</label>
+					</div>
 				</div>
 			</div>
-			<!-- Other Stats -->
-			<div class="flexrow">
-				<!-- Left Stat Col -->
-				<div class="flexcol stats-col pad-right --more">
-					<div class="stats-subsection">
-						<div class="stats-subsection-header">
-							<label>HULL</label>
-						</div>
-						<div class="stats-subsection-content flexcol">
-							<label>
-								HP:
-								<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dType="Number">
-							</label>
-							<label>
-								Repair Cap:
-								<input type="text" name="system.repairs.max" value="{{actor.system.repairs.max}}" data-dType="Number">
-							</label>
-						</div>
+			<!-- Right Stat Col -->
+			<div class="flexcol stats-col">
+				<div class="stats-subsection">
+					<div class="stats-subsection-header">
+						<label>SYSTEMS</label>
 					</div>
-					<div class="stats-subsection">
-						<div class="stats-subsection-header">
-							<label>AGILITY</label>
-						</div>
-						<div class="stats-subsection-content flexcol">
-							<label>
-								Evasion:
-								<input type="text" name="system.evasion" value="{{actor.system.evasion}}" data-dType="Number">
-							</label>
-							<label>
-								Speed:
-								<input type="text" name="system.speed" value="{{actor.system.speed}}" data-dType="Number">
-							</label>
-						</div>
+					<div class="stats-subsection-content flexcol">
+						<label>
+							E-Defense:
+							<input type="text" name="system.stats.e_defense" value="{{actor.system.stats.e_defense}}" data-dType="Number">
+						</label>
+						<label>
+							Tech Attack:
+							<input type="text" name="system.stats.tech_attack" value="{{actor.system.stats.tech_attack}}" data-dType="Number">
+						</label>
+						<label>
+							SP:
+							<input type="text" name="system.sp" value="{{actor.system.sp}}" data-dType="Number">
+						</label>
 					</div>
 				</div>
-				<!-- Right Stat Col -->
-				<div class="flexcol stats-col">
-					<div class="stats-subsection">
-						<div class="stats-subsection-header">
-							<label>SYSTEMS</label>
-						</div>
-						<div class="stats-subsection-content flexcol">
-							<label>
-								E-Defense:
-								<input type="text" name="system.e_defense" value="{{actor.system.e_defense}}" data-dType="Number">
-							</label>
-							<label>
-								Tech Attack:
-								<input type="text" name="system.tech_attack" value="{{actor.system.tech_attack}}" data-dType="Number">
-							</label>
-							<label>
-								SP:
-								<input type="text" name="system.sp" value="{{actor.system.sp}}" data-dType="Number">
-							</label>
-						</div>
+				<div class="stats-subsection">
+					<div class="stats-subsection-header">
+						<label>ENGINEERING</label>
 					</div>
-					<div class="stats-subsection">
-						<div class="stats-subsection-header">
-							<label>ENGINEERING</label>
-						</div>
-						<div class="stats-subsection-content flexcol">
-							<label>
-								Heat Cap:
-								<input type="text" name="system.heat.max" value="{{actor.system.heat.max}}" data-dType="Number">
-							</label>
-						</div>
+					<div class="stats-subsection-content flexcol">
+						<label>
+							Heat Cap:
+							<input type="text" name="system.heat.max" value="{{actor.system.heat.max}}" data-dType="Number">
+						</label>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- Conditions -->
+	<div class="flexcol conditions pad-bottom">
+		<h2 class="section-title">Conditions</h2>
+		<div class="flexrow">
+			<!-- Left Conditions Col -->
+			<div class="flexcol conditions-col">
+				<!-- Lock On, Exposed, Shredded, Jammed-->
+				<label>
+					<input type="checkbox" name="system.conditions.lock_on" {{checked actor.system.conditions.lock_on}}>
+					LOCK ON
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.exposed" {{checked actor.system.conditions.exposed}}>
+					EXPOSED
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.shredded" {{checked actor.system.conditions.shredded}}>
+					SHREDDED
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.jammed" {{checked actor.system.conditions.jammed}}>
+					JAMMED
+				</label>
+			</div>
+			<!-- Center Conditions Col -->
+			<div class="flexcol conditions-col">
+				<!-- Slowed, Impaired, Immobilized, Stunned -->
+				<label>
+					<input type="checkbox" name="system.conditions.slowed" {{checked actor.system.conditions.slowed}}>
+					SLOWED
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.impaired" {{checked actor.system.conditions.impaired}}>
+					IMPAIRED
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.immobilized" {{checked actor.system.conditions.immobilized}}>
+					IMMOBILIZED
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.stunned" {{checked actor.system.conditions.stunned}}>
+					STUNNED
+				</label>
+			</div>
+			<!-- Right Conditions Col -->
+			<div class="flexcol conditions-col">
+				<!-- Hidden, Invisible, Prone -->
+				<label>
+					<input type="checkbox" name="system.conditions.hidden" {{checked actor.system.conditions.hidden}}>
+					HIDDEN
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.invisible" {{checked actor.system.conditions.invisible}}>
+					INVISIBLE
+				</label>
+				<label>
+					<input type="checkbox" name="system.conditions.prone" {{checked actor.system.conditions.prone}}>
+					PRONE
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Traits, Mounts, Core System -->
+<div class="flexrow">
+	<!-- Left Col -->
+	<div class="flexcol pad-right">
 		<!-- Traits -->
 		<div class="flexcol pad-bottom">
 			<div class="header-group">
@@ -137,7 +203,7 @@
 	<!-- Right Col -->
 	<div class="flexcol">
 		<!-- Core System -->
-		<div class="flexcol no-grow pad-bottom">
+		<div class="flexcol no-grow">
 			<div class="header-group">
 				<h2 class="section-title header-text">Core System</h2>
 				<div class="header-options">

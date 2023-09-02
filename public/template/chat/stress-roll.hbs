@@ -1,0 +1,47 @@
+<section class="structure-roll">
+	<section class="content">
+		<div class="flexcol result">
+			<div class="title">
+				Stress Damage Roll: {{result}}
+			</div>
+			<div class="description flexcol">
+				{{#ifEquals result 'Emergency Shunt'}}
+				<p>
+					Your mech's cooling systems manage to contain the increasing heat; however, your mech
+					becomes <strong>IMPAIRED</strong> until the end of your next turn.
+				</p>
+				{{/ifEquals}}
+				{{#ifEquals result 'Destabilized Power Plant'}}
+				<p>
+					The power plant becomes unstable, beginning to eject jets of plasma. Your mech
+					becomes <strong>EXPOSED</strong>, taking double Kinetic, Explosive, and Energy
+					damage until the status is cleared.
+				</p>
+				{{/ifEquals}}
+				{{#ifEquals result 'Meltdown'}}
+				<p>
+					{{#ifEquals meltdownResult 3}}
+					<strong>STRESS 3+</strong>: Your mech becomes <strong>EXPOSED</strong> until the end of your next turn
+					{{/ifEquals}}
+					{{#ifEquals meltdownResult 2}}
+					<strong>STRESS 2</strong>: Roll an <strong>ENGINEERING</strong> check. On a success, your mech is <strong>EXPOSED</strong>;
+					on a failure, it suffers a <strong>reactor meltdown</strong> after 1d6 of your turns (rolled by the GM). A reactor meltdown
+					can be prevented by retrying the <strong>ENGINEERING</strong> check as a free action.
+					{{/ifEquals}}
+					{{#ifEquals meltdownResult 1}}
+					<strong>STRESS 1</strong>: Your mech suffers a <strong>reactor meltdown</strong> at the end of your next turn.
+					{{/ifEquals}}
+				</p>
+				{{/ifEquals}}
+				{{#ifEquals result 'Irreversible Meltdown'}}
+				<p>
+					The reactor goes critical -- your mech suffers a <strong>reactor meltdown</strong> at the end of your next turn.
+				</p>
+				{{/ifEquals}}
+			</div>
+		</div>
+	</section>
+	<section>
+		{{{rolls}}}
+	</section>
+</section>

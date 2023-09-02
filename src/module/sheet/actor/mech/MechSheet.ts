@@ -46,6 +46,9 @@ export default class MechSheet extends LancerActorSheet {
 			new EditMechVitalsDialog(this.actor).render(true);
 		});
 
+		html.find('.roll-structure').on('click', this.rollStructure.bind(this));
+		html.find('.roll-stress').on('click', this.rollStress.bind(this));
+
 		const dragDrop = new DragDrop({
 			dragSelector: ".weapon-card",
 			dropSelector: ".mount-card",
@@ -61,6 +64,8 @@ export default class MechSheet extends LancerActorSheet {
 	override async getData() {
 		const data: any = super.getData();
 		const actor: any = this.actor;
+
+		this.mountedWeaponIds = [];
 
 		data.action_systems = [];
 		data.core_systems = [];
@@ -221,9 +226,9 @@ export default class MechSheet extends LancerActorSheet {
 			await mount.update({ 'system.weapons': mount.system.weapons.filter((w: any) => { return !missing.includes(w) }) });
 			console.info(`Removed ${missing.length} errant IDs from mount data`);
 		}
-		
+
 		// Sort weapons by size (desc), followed by name (asc)
-		weapons.sort((a: any, b:any) => {
+		weapons.sort((a: any, b: any) => {
 			const sizePriority = {
 				'Superheavy': 1,
 				'Heavy': 2,
@@ -290,7 +295,7 @@ export default class MechSheet extends LancerActorSheet {
 			if (m.id == mountId) {
 				if (!m.system.weapons.includes(weaponId)) {
 					m.system.weapons.push(weaponId);
-					await m.update({ 'system.weapons': m.system.weapons});
+					await m.update({ 'system.weapons': m.system.weapons });
 				}
 			}
 			else {
@@ -299,5 +304,121 @@ export default class MechSheet extends LancerActorSheet {
 				}
 			}
 		});
+	}
+
+	private async rollStructure() {
+		const actor: any = this.actor;
+		const dieCount = actor.system.structure.max - actor.system.structure.value;
+
+		if (dieCount < 1) {
+			ui.notifications?.warn("This mech has taken no Structure damage. Skipping roll.");
+			return;
+		}
+
+		let formula = `${dieCount}d6kl`;
+		const r = new Roll(formula);
+		await r.evaluate();
+		const rollHtml = await r.render();
+
+		let oneCount = 0;
+		//@ts-expect-error
+		r.terms[0].results.forEach((res) => {
+			if (res.result == 1) {
+				oneCount++;
+			}
+		});
+
+		const data = {
+			result: '',
+			directHitResult: Math.min(actor.system.structure.value, 3),
+			rolls: rollHtml,
+		};
+
+		if (oneCount > 1) {
+			data.result = 'Crushing Hit';
+		}
+		else {
+			switch (r.total) {
+				case 6:
+				case 5:
+					data.result = 'Glancing Blow';
+					break;
+				case 4:
+				case 3:
+				case 2:
+					data.result = 'System Trauma'
+					break;
+				case 1:
+					data.result = 'Direct Hit'
+					break;
+			}
+		}
+
+		const messageContent = await renderTemplate("/systems/lancer-lite/template/chat/structure-roll.hbs", data);
+
+		const messageData = {
+			content: messageContent,
+			sound: 'sounds/dice.wav'
+		};
+
+		CONFIG.ChatMessage.documentClass.create(messageData);
+	}
+
+	private async rollStress() {
+		const actor: any = this.actor;
+		const dieCount = actor.system.stress.max - actor.system.stress.value;
+
+		if (dieCount < 1) {
+			ui.notifications?.warn("This mech has taken no Stress damage. Skipping roll.");
+			return;
+		}
+
+		let formula = `${dieCount}d6kl`;
+		const r = new Roll(formula);
+		await r.evaluate();
+		const rollHtml = await r.render();
+
+		let oneCount = 0;
+		//@ts-expect-error
+		r.terms[0].results.forEach((res) => {
+			if (res.result == 1) {
+				oneCount++;
+			}
+		});
+
+		const data = {
+			result: '',
+			meltdownResult: Math.min(actor.system.stress.value, 3),
+			rolls: rollHtml,
+		};
+
+		if (oneCount > 1) {
+			data.result = 'Irreversible Meltdown';
+		}
+		else {
+			switch (r.total) {
+				case 6:
+				case 5:
+					data.result = 'Emergency Shunt';
+					break;
+				case 4:
+				case 3:
+				case 2:
+					data.result = 'Destabilized Power Plant';
+					break;
+				case 1:
+					data.result = 'Meltdown';
+					break;
+			}
+		}
+
+		const messageContent = await renderTemplate("/systems/lancer-lite/template/chat/stress-roll.hbs", data);
+		
+		const messageData = {
+			content: messageContent,
+			sound: 'sounds/dice.wav'
+		};
+
+		CONFIG.ChatMessage.documentClass.create(messageData);
 	}
 }

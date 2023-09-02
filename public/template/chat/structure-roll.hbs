@@ -1,0 +1,47 @@
+<section class="structure-roll">
+	<section class="content">
+		<div class="flexcol result">
+			<div class="title">
+				Structure Damage Roll: {{result}}
+			</div>
+			<div class="description flexcol">
+				{{#ifEquals result 'Glancing Blow'}}
+				<p>
+					Emergency systems kick in and stabilize your mech, but it's <strong>IMPAIRED</strong> until the end
+					of your next turn.
+				</p>
+				{{/ifEquals}}
+				{{#ifEquals result 'System Trauma'}}
+				<p>
+					Parts of your mech are torn off by the damage. Roll to determine details.
+				</p>
+				<div class="flexrow button-row">
+					<button class="roll-system-trauma"><i class="fas fa-dice-d20"></i>Roll System Trauma</button>
+				</div>
+				{{/ifEquals}}
+				{{#ifEquals result 'Direct Hit'}}
+				<p>
+					{{#ifEquals directHitResult 3}}
+					<strong>STRUCTURE 3+</strong>: Your mech is <strong>STUNNED</strong> until the end of your next turn
+					{{/ifEquals}}
+					{{#ifEquals directHitResult 2}}
+					<strong>STRUCTURE 2</strong>: Roll a <strong>HULL</strong> check. On a success, your mech is <strong>STUNNED</strong> until the
+					end of your next turn. On a failure, your mech is destroyed.
+					{{/ifEquals}}
+					{{#ifEquals directHitResult 1}}
+					<strong>STRUCTURE 1</strong>: Your mech is destroyed.
+					{{/ifEquals}}
+				</p>
+				{{/ifEquals}}
+				{{#ifEquals result 'Crushing Hit'}}
+				<p>
+					Your mech is damaged beyond repair -- it is destroyed. You may still exit it as normal
+				</p>
+				{{/ifEquals}}
+			</div>
+		</div>
+	</section>
+	<section>
+		{{{rolls}}}
+	</section>
+</section>

@@ -16,7 +16,7 @@
 					</div>
 				</div>
 				<div class="flexcol field-group">
-					<!-- Name / Type-->
+					<!-- Row: Name -->
 					<div class="flexrow field-group">
 						<div class="field">
 							<label>
@@ -25,6 +25,7 @@
 							</label>
 						</div>
 					</div>
+					<!-- Row: Type / SP Cost -->
 					<div class="flexrow">
 						<div class="field">
 							<label>
@@ -47,6 +48,28 @@
 							</label>
 						</div>
 					</div>
+					<!-- Row: Limit -->
+					<div class="flexrow">
+						<div class="field no-grow pad-right --more">
+							<label>LIMITED</label>
+							<div class="input-container">
+								<input type="checkbox" name="system.limited.isLimited" {{checked item.system.limited.isLimited}}>
+							</div>
+						</div>
+						{{#if item.system.limited.isLimited}}
+						<div class="field">
+							<label>LIMIT</label>
+							<div class="flexrow input-container">
+								<input type="text" class="--small" name="system.limited.value" value="{{item.system.limited.value}}"
+									data-dType="Number">
+								&nbsp;/&nbsp;
+								<input type="text" class="--small" name="system.limited.max" value="{{item.system.limited.max}}"
+									data-dType="Number">
+							</div>
+						</div>
+						{{/if}}
+					</div>
+					<!-- Row: Tags -->
 					<div class="flexrow">
 						<div class="field">
 							<label>

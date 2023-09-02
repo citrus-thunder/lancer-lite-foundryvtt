@@ -12,6 +12,10 @@ $background-color: white;
 		flex-grow: 0;
 	}
 
+	input.--small {
+		max-width: 2rem;
+	}
+
 	header.sheet-header {
 		justify-content: space-between;
 

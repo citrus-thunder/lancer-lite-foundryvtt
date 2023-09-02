@@ -1,3 +1,4 @@
+// note: not currently in use, but saved in case we want to extend chatmessages in the future
 export default class LancerChatMessage extends ChatMessage {
 
 	protected override async _renderRollContent(messageData: ChatMessage.MessageData): Promise<void> {

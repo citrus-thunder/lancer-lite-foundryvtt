@@ -17,17 +17,43 @@
 				</div>
 				<div class="flexcol field-grup">
 					<!-- Name -->
-					<div class="field">
-						<label>
-							NAME
-							<input type="text" name="name" value="{{item.name}}">
-						</label>
+					<div class="flexrow">
+						<div class="field">
+							<label>
+								NAME
+								<input type="text" name="name" value="{{item.name}}">
+							</label>
+						</div>
 					</div>
-					<div class="field">
-						<label>
-							TAGS
-							<input type="text" name="system.tags" value="{{item.system.tags}}">
-						</label>
+					<!-- Limited -->
+					<div class="flexrow">
+						<div class="field no-grow pad-right --more">
+							<label>LIMITED</label>
+							<div class="input-container">
+								<input type="checkbox" name="system.limited.isLimited" {{checked item.system.limited.isLimited}}>
+							</div>
+						</div>
+						{{#if item.system.limited.isLimited}}
+						<div class="field">
+							<label>LIMIT</label>
+							<div class="flexrow input-container">
+								<input type="text" class="--small" name="system.limited.value" value="{{item.system.limited.value}}"
+									data-dType="Number">
+								&nbsp;/&nbsp;
+								<input type="text" class="--small" name="system.limited.max" value="{{item.system.limited.max}}"
+									data-dType="Number">
+							</div>
+						</div>
+						{{/if}}
+					</div>
+					<!-- Tags -->
+					<div class="flexrow">
+						<div class="field">
+							<label>
+								TAGS
+								<input type="text" name="system.tags" value="{{item.system.tags}}">
+							</label>
+						</div>
 					</div>
 				</div>
 			</div>

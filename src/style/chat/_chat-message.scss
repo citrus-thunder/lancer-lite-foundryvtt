@@ -1,0 +1,26 @@
+@import '/src/style/global';
+
+.chat-message {
+	div.title {
+		font-weight: bold;
+	}
+
+	div.button-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		padding: 0.2rem;
+
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			min-height: 2rem;
+
+			min-width: 2rem;
+			max-width: 10rem;
+		}
+	}
+}

@@ -68,19 +68,6 @@ export default class LancerActorSheet extends ActorSheet {
 			d.render(true);
 		});
 
-		html.find('.skill-check').on('click', async (ev) => {
-			new SkillDialog().render(true);
-		});
-
-		html.find('.stat-roll').on('click', async (ev) => {
-			const statName: string = $(ev.currentTarget).data('stat') ?? '';
-			const statLabel: string = $(ev.currentTarget).data('statLabel') ?? '';
-
-			const a: any = this.actor;
-			const stat: number = a.system[statName];
-			new SkillDialog({ bonus: stat, bonusSource: statLabel }).render(true);
-		});
-
 		html.find('.item-card .toggle-body').on('click', (ev) => {
 			$(ev.currentTarget).closest('.item-card').find('.body .description').slideToggle();
 		});

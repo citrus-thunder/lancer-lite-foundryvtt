@@ -46,15 +46,24 @@ export default class PilotSheet extends LancerActorSheet {
 			const t: any = trigger;
 			new SkillDialog({ bonus: t.system.bonus, bonusSource: t.name }).render(true);
 		});
+
+		html.find('.skill-check').on('click', async (ev) => {
+			new SkillDialog().render(true);
+		});
+
+		html.find('.stat-roll').on('click', async (ev) => {
+			const statName: string = $(ev.currentTarget).data('stat') ?? '';
+			const statLabel: string = $(ev.currentTarget).data('statLabel') ?? '';
+
+			const a: any = this.actor;
+			const stat: number = a.system.stats[statName];
+			new SkillDialog({ bonus: stat, bonusSource: statLabel }).render(true);
+		});
 	}
 
 	getData(): any {
 		const data: any = super.getData();
-		// todo: derived values?
-		//  - grit
-		//  - hp
 
-		// todo: multiple armors aren't really a thing in this system.
 		data.armor = [];
 		data.core_bonuses = [];
 		data.gear = [];

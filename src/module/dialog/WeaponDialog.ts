@@ -18,9 +18,12 @@ export default class WeaponDialog extends Dialog {
 			let actor: any = weapon.parent;
 			let accuracy = parseInt(html.find('#input-accuracy').val() as string);
 			let difficulty = parseInt(html.find('#input-difficulty').val() as string);
-			let grit = actor.system.grit ?? 0;
-			let flavor = `Attack Roll | Grit ${grit}`;
-			let formula = `1d20 + ${grit}`;
+
+			let bonus = actor.type == 'mech' ? actor.system.stats.attack : actor.system.stats.grit;
+			let bonusLabel = actor.type == 'pilot' ? 'Grit' : 'Attack Bonus';
+
+			let flavor = `Attack Roll | ${bonusLabel} ${bonus}`;
+			let formula = `1d20 + ${bonus}`;
 
 			if (accuracy > 0) {
 				flavor += ` | Accuracy ${accuracy}`;
@@ -96,9 +99,26 @@ export default class WeaponDialog extends Dialog {
 
 	protected override async _injectHTML(html: JQuery<HTMLElement>): Promise<void> {
 		super._injectHTML(html);
+
+		let accuracy = 0;
+		let difficulty = 0;
+
+		const w: any = this.weapon;
+
+		// todo: this should eventually be moved to a more appropriate function
+		const tags = w.system?.tags ?? false;
+		if (tags) {
+			const match = tags.match(/[Ii]naccurate$|[Ii]naccurate(?:\s)*(?=,)/)
+			if (match) {
+				difficulty++;
+			}
+		}
+
 		const data = {
 			weapon: this.weapon,
 			actor: this.weapon.parent,
+			accuracy: accuracy,
+			difficulty: difficulty
 		};
 
 		const content = await renderTemplate('systems/lancer-lite/template/dialog/weapon-dialog.hbs', data);
