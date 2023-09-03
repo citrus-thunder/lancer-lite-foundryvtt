@@ -1,0 +1,351 @@
+<div class="{{cssClass}} flexcol sheet-container mech-sheet">
+	<form autocomplete="off">
+		<header class="sheet-header" style="white-space: nowrap;">
+			<h1>NPC MECH</h1>
+		</header>
+		<div class="flexcol">
+			<!-- Row: Portrait | Info | Vitals -->
+			<div class="flexrow pad-bottom">
+				<div class="flexcol flex2">
+					<div class="flexrow">
+						<!-- Portrait -->
+						<div class="flexcol flex0 pad-right">
+							<div class="portrait-frame">
+								<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+							</div>
+						</div>
+						<!-- Info -->
+						<div class="flexcol field-group info pad-right --more">
+							<h2 class="section-title">Info</h2>
+							<div class="field flex0 pad-bottom">
+								<label>
+									NAME
+									<input name="name" type="text" value="{{actor.name}}">
+								</label>
+							</div>
+							<div class="field flex0 pad-bottom">
+								<label>
+									TEMPLATE
+									<input name="system.frame" type="text" value="{{actor.system.frame}}">
+								</label>
+							</div>
+						</div>
+						<!-- Vitals -->
+						<div class="flexcol field-group vitals">
+							<div class="header-group">
+								<h2 class="section-title header-text">Vitals</h2>
+								<div class="header-options">
+									{{#if owner}}
+									<i class="fa-solid fa-gear edit-vitals icon-button" title="Configure Mech Vitals"></i>
+									{{/if}}
+								</div>
+							</div>
+							<table class="no-grow">
+								<tr>
+									<td>
+										<div class="resource-field --right">
+											<label {{#if owner}}class="roll-label roll-structure" {{/if}}>STRUCTURE</label>
+											<div class="resources">
+												<input type="text" name="system.structure.value" value="{{actor.system.structure.value}}"
+													data-dtype="Number">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field --center">
+											<label>HP</label>
+											<div class="resources">
+												<input type="text" name="system.hp.value" value="{{actor.system.hp.value}}" data-dtype="Number">
+												&nbsp;/&nbsp;
+												{{actor.system.hp.max}}
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field no-grow">
+											<label style="font-size: 0.73rem">OVERSHIELD</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.overshield" value="{{actor.system.overshield}}"
+													data-dtype="Number">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="resource-field --right">
+											<label {{#if owner}}class="roll-label roll-stress" {{/if}}>STRESS</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.stress.value"
+													value="{{actor.system.stress.value}}" data-dtype="Number">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field --center">
+											<label>HEAT</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.heat.value" value="{{actor.system.heat.value}}"
+													data-dtype="Number">
+												&nbsp;/&nbsp;
+												{{actor.system.heat.max}}
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="resource-field no-grow">
+											<label>REPAIR</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.repairs.value"
+													value="{{actor.system.repairs.value}}" data-dtype="Number">
+												&nbsp;/&nbsp;
+												{{actor.system.repairs.max}}
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Content -->
+			<div class="flexrow">
+				<!-- Left Col: Skills, Stats, Traits, Reactions -->
+				<div class="flexcol pad-right">
+					<h2 class="section-title">Mech Skills</h2>
+					<!-- Skills -->
+					<div class="flexrow skills no-grow pad-bottom">
+						<!-- Skills Left -->
+						<div class="flexcol skills-col pad-right --more">
+							<label>
+								Hull
+								<input type="text" name="system.skills.hull" value="{{actor.system.skills.hull}}">
+							</label>
+							<label>
+								Agility
+								<input type="text" name="system.skills.agility" value="{{actor.system.skills.agility}}">
+							</label>
+						</div>
+						<!-- Skills Right -->
+						<div class="flexcol skills-col">
+							<label>
+								Systems
+								<input type="text" name="system.skills.systems" value="{{actor.system.skills.systems}}">
+							</label>
+							<label>
+								Engineering
+								<input type="text" name="system.skills.engineering" value="{{actor.system.skills.engineering}}">
+							</label>
+						</div>
+					</div>
+					<!-- Stats -->
+					<h2 class="section-title">Core Stats</h2>
+					<div class="flexrow pad-bottom no-grow npc-stats">
+						<!-- Stats Left -->
+						<div class="flexcol stats-col pad-right">
+							<label>
+								HP:
+								<input type="text" name="system.hp.max" value="{{actor.system.hp.max}}" data-dType="Number">
+							</label>
+							<label>
+								Evasion:
+								<input type="text" name="system.stats.evasion" value="{{actor.system.stats.evasion}}"
+									data-dType="Number">
+							</label>
+							<label>
+								Speed:
+								<input type="text" name="system.stats.speed" value="{{actor.system.stats.speed}}" data-dType="Number">
+							</label>
+							<label>
+								Heat Cap:
+								<input type="text" name="system.heat.max" value="{{actor.system.heat.max}}" data-dType="Number">
+							</label>
+							<label>
+								Sensors:
+								<input type="text" name="system.stats.sensors" value="{{actor.system.stats.sensors}}"
+									data-dType="Number">
+							</label>
+						</div>
+						<!-- Stats Right -->
+						<div class="flexcol stats-col">
+							<label>
+								Armor:
+								<input type="text" name="system.stats.armor" value="{{actor.system.stats.armor}}" data-dType="Number">
+							</label>
+							<label>
+								E-Defense:
+								<input type="text" name="system.stats.e_defense" value="{{actor.system.stats.e_defense}}"
+									data-dType="Number">
+							</label>
+							<label>
+								Size:
+								<input type="text" name="system.stats.size" value="{{actor.system.stats.size}}" data-dType="Number">
+							</label>
+							<label>
+								Save Target:
+								<input type="text" name="system.stats.save_target" value="{{actor.system.stats.save_target}}"
+									data-dType="Number">
+							</label>
+						</div>
+					</div>
+					<!-- Traits -->
+					<div class="flexcol pad-bottom no-grow">
+						<div class="header-group">
+							<h2 class="section-title header-text">Traits</h2>
+							<div class="header-options">
+								{{#if owner}}
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Trait" data-item-type="trait"
+									data-item-name="New Trait"></i>
+								{{/if}}
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each traits}}
+							{{> "systems/lancer-lite/template/card/trait-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+					<!-- Reactions -->
+					<div class="flexcol">
+						<div class="header-group">
+							<h2 class="section-title header-text">Reactions</h2>
+							<div class="header-options">
+								{{#if owner}}
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Reaction" data-item-type="reaction"
+									data-item-name="New Reaction"></i>
+								{{/if}}
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each reactions}}
+							{{> "systems/lancer-lite/template/card/reaction-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+				<!-- Right Col: Conditions, Weapons, Systems -->
+				<div class="flexcol">
+					<!-- Conditions -->
+					<div class="flexcol conditions no-grow pad-bottom">
+						<h2 class="section-title">Conditions</h2>
+						<div class="flexrow">
+							<!-- Left Conditions Col -->
+							<div class="flexcol conditions-col">
+								<!-- Lock On, Exposed, Shredded, Jammed-->
+								<label>
+									<input type="checkbox" name="system.conditions.lock_on" {{checked actor.system.conditions.lock_on}}>
+									LOCK ON
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.exposed" {{checked actor.system.conditions.exposed}}>
+									EXPOSED
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.shredded" {{checked actor.system.conditions.shredded}}>
+									SHREDDED
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.jammed" {{checked actor.system.conditions.jammed}}>
+									JAMMED
+								</label>
+							</div>
+							<!-- Center Conditions Col -->
+							<div class="flexcol conditions-col">
+								<!-- Slowed, Impaired, Immobilized, Stunned -->
+								<label>
+									<input type="checkbox" name="system.conditions.slowed" {{checked actor.system.conditions.slowed}}>
+									SLOWED
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.impaired" {{checked actor.system.conditions.impaired}}>
+									IMPAIRED
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.immobilized" {{checked
+										actor.system.conditions.immobilized}}>
+									IMMOBILIZED
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.stunned" {{checked actor.system.conditions.stunned}}>
+									STUNNED
+								</label>
+							</div>
+							<!-- Right Conditions Col -->
+							<div class="flexcol conditions-col">
+								<!-- Hidden, Invisible, Prone -->
+								<label>
+									<input type="checkbox" name="system.conditions.hidden" {{checked actor.system.conditions.hidden}}>
+									HIDDEN
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.invisible" {{checked
+										actor.system.conditions.invisible}}>
+									INVISIBLE
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.prone" {{checked actor.system.conditions.prone}}>
+									PRONE
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- Weapons -->
+					<div class="flexcol pad-bottom no-grow">
+						<div class="header-group">
+							<h2 class="section-title header-text">Weapons</h2>
+							<div class="header-options">
+								{{#if owner}}
+								<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
+									data-item-name="New Weapon">
+									<input type="hidden" name="default.size" value="Main">
+									<input type="hidden" name="default.type" value="Rifle">
+								</i>
+								{{/if}}
+							</div>
+						</div>
+						<div class="mounts card-col">
+							{{#each weapons}}
+							{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
+							{{/each}}
+							<!--
+							{{#each mounts}}
+							{{> "systems/lancer-lite/template/card/mount-card.hbs"}}
+							{{/each}}
+							-->
+						</div>
+					</div>
+					<!-- Systems -->
+					<div class="flexcol no-grow pad-bottom">
+						<div class="header-group">
+							<h2 class="section-title header-text">Systems</h2>
+							<div class="header-options">
+								<div class="header-field" style="margin-right:1rem">
+									SP: {{actor.system.sp}}
+								</div>
+								{{#if owner}}
+								<i class="fa-solid fa-plus item-add icon-button" title="Add System" data-item-type="system"
+									data-item-name="New System"></i>
+								{{/if}}
+							</div>
+						</div>
+						<div class="card-col">
+							{{#each passive_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+							{{#each protocols}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+							{{#each action_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+							{{#each tech_systems}}
+							{{> "systems/lancer-lite/template/card/system-card.hbs"}}
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

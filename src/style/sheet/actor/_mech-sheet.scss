@@ -23,15 +23,28 @@
 	label.--small {
 		font-size: 0.73rem;
 	}
-
+	div.npc-stats,
 	div.skills {
-		label {
-			font-weight: bold;
-		}
+		div.stats-col,
+		div.skills-col {
+			label {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
 
-		.flexrow {
-			min-width: 8rem;
-			flex-grow: 0;
+				flex-grow: 0;
+
+				font-family: $font-serif;
+				font-weight: bold;
+			}
+
+			input {
+				font-family: $font-serif;
+				height: 1rem;
+				width: 1.5rem;
+
+				text-align: center;
+			}
 		}
 	}
 
