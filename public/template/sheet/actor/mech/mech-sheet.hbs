@@ -35,14 +35,16 @@
 							<div class="header-group">
 								<h2 class="section-title header-text">Vitals</h2>
 								<div class="header-options">
+									{{#if owner}}
 									<i class="fa-solid fa-gear edit-vitals icon-button" title="Configure Mech Vitals"></i>
+									{{/if}}
 								</div>
 							</div>
 							<table class="no-grow">
 								<tr>
 									<td>
 										<div class="resource-field --right">
-											<label class="roll-label roll-structure">STRUCTURE</label>
+											<label {{#if owner}}class="roll-label roll-structure"{{/if}}>STRUCTURE</label>
 											<div class="resources">
 												<input type="text" name="system.structure.value" value="{{actor.system.structure.value}}"
 													data-dtype="Number">
@@ -72,7 +74,7 @@
 								<tr>
 									<td>
 										<div class="resource-field --right">
-											<label class="roll-label roll-stress">STRESS</label>
+											<label {{#if owner}}class="roll-label roll-stress"{{/if}}>STRESS</label>
 											<div class="flexrow flex0 resources">
 												<input type="text" class="--small" name="system.stress.value"
 													value="{{actor.system.stress.value}}" data-dtype="Number">

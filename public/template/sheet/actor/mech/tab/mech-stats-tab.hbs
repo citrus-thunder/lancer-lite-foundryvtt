@@ -165,7 +165,9 @@
 		</div>
 		<!-- Quick Buttons -->
 		<div class="flexrow quick-buttons">
+			{{#if owner}}
 			<div class="quick-button full-repair"><i class="button-icon fas fa-wrench"></i>Full Repair</div>
+			{{/if}}
 		</div>
 	</div>
 </div>
@@ -178,8 +180,10 @@
 			<div class="header-group">
 				<h2 class="section-title header-text">Traits</h2>
 				<div class="header-options">
+					{{#if owner}}
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Trait" data-item-type="trait"
 						data-item-name="New Trait"></i>
+					{{/if}}
 				</div>
 			</div>
 			<div class="card-col">
@@ -193,8 +197,10 @@
 			<div class="header-group">
 				<h2 class="section-title header-text">Mounts</h2>
 				<div class="header-options">
+					{{#if owner}}
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Mount" data-item-type="mount"
 						data-item-name="New Mount"></i>
+					{{/if}}
 				</div>
 			</div>
 			<div class="flexrow mount-labels card-row">
@@ -217,10 +223,12 @@
 							<input type="text" class="--center" name="system.cp.value" value="{{actor.system.cp.value}}">
 						</label>
 					</div>
+					{{#if owner}}
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Core System" data-item-type="system"
 						data-item-name="New Core System">
 						<input type="hidden" name="default.type" value="core">
 					</i>
+					{{/if}}
 				</div>
 			</div>
 			<div class="card-col">

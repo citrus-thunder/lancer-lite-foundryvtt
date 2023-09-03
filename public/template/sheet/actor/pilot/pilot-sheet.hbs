@@ -56,34 +56,45 @@
 							<div class="flexrow">
 								<div class="pad-right --more">
 									<label>
+										{{#if owner}}
 										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="hull" data-stat-label="Hull"></i>
+										{{/if}}
 										HULL
 									</label>
 									<input type="text" name="system.stats.hull" value="{{actor.system.stats.hull}}" data-dtype="Number">
 								</div>
 								<div>
 									<label>
+										{{#if owner}}
 										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="systems" data-stat-label="Systems"></i>
+										{{/if}}
 										SYS
 									</label>
-									<input type="text" name="system.stats.systems" value="{{actor.system.stats.systems}}" data-dtype="Number">
+									<input type="text" name="system.stats.systems" value="{{actor.system.stats.systems}}"
+										data-dtype="Number">
 								</div>
 							</div>
 							<div class="flexrow">
 								<div class="pad-right --more">
 									<label class="pad-right --more">
+										{{#if owner}}
 										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="agility" data-stat-label="Agility"></i>
+										{{/if}}
 										AGI
 									</label>
-									<input type="text" name="system.stats.agility" value="{{actor.system.stats.agility}}" data-dtype="Number">
+									<input type="text" name="system.stats.agility" value="{{actor.system.stats.agility}}"
+										data-dtype="Number">
 								</div>
 								<div>
 									<label>
+										{{#if owner}}
 										<i class="fas fa-dice-d20 icon-button stat-roll" data-stat="engineering"
 											data-stat-label="Engineering"></i>
+										{{/if}}
 										ENG
 									</label>
-									<input type="text" name="system.stats.engineering" value="{{actor.system.stats.engineering}}" data-dtype="Number">
+									<input type="text" name="system.stats.engineering" value="{{actor.system.stats.engineering}}"
+										data-dtype="Number">
 								</div>
 							</div>
 							<div class="flexrow pad-top --more">
@@ -114,13 +125,15 @@
 							<div class="flexrow">
 								<label>
 									E-DEF
-									<input type="text" name="system.stats.e_defense" value="{{actor.system.stats.e_defense}}" data-dtype="Number">
+									<input type="text" name="system.stats.e_defense" value="{{actor.system.stats.e_defense}}"
+										data-dtype="Number">
 								</label>
 							</div>
 							<div class="flexrow">
 								<label>
 									EVASION
-									<input type="text" name="system.stats.evasion" value="{{actor.system.stats.evasion}}" data-dtype="Number">
+									<input type="text" name="system.stats.evasion" value="{{actor.system.stats.evasion}}"
+										data-dtype="Number">
 								</label>
 							</div>
 							<div class="flexrow">

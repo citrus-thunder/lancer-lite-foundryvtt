@@ -2,12 +2,14 @@
 	<div class="header --level-{{system.level}}">
 		<div class="title-row">
 			<span class="toggle-body">{{name}} {{romanize system.level}}</span>
+			{{#if isOwner}}
 			{{#unless hideButtons}}
 			<div class="header-buttons">
 				<i class="fa-regular fa-message item-post icon-button" title="Post License to Chat" data-item-id="{{id}}"></i>
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit License" data-item-id="{{id}}"></i>
 			</div>
 			{{/unless}}
+			{{/if}}
 		</div>
 		{{#if tags}}
 		<div class="tags">

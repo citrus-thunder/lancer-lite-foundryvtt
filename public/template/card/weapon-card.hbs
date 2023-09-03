@@ -2,6 +2,7 @@
 	<div class="header">
 		<div class="title-row">
 			<span class="toggle-body">{{name}}</span>
+			{{#if isOwner}}
 			{{#unless hideButtons}}
 			<div class="header-buttons">
 				{{#if system.destroyed}}
@@ -14,6 +15,7 @@
 				<i class="fa-solid fa-pen-to-square item-edit icon-button" title="Edit Weapon" data-item-id="{{id}}"></i>
 			</div>
 			{{/unless}}
+			{{/if}}
 		</div>
 		<div class="type">
 			{{system.size}} {{system.type}}

@@ -9,8 +9,10 @@
 					<div class="header-field" style="margin-right:1rem">
 						SP: {{actor.system.sp}}
 					</div>
+					{{#if owner}}
 					<i class="fa-solid fa-plus item-add icon-button" title="Add System" data-item-type="system"
 						data-item-name="New System"></i>
+					{{/if}}
 				</div>
 			</div>
 			<div class="card-col">
@@ -33,8 +35,10 @@
 			<div class="header-group">
 				<h2 class="section-title header-text">Reactions</h2>
 				<div class="header-options">
+					{{#if owner}}
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Reaction" data-item-type="reaction"
 						data-item-name="New Reaction"></i>
+					{{/if}}
 				</div>
 			</div>
 			<div class="card-col">
@@ -51,11 +55,13 @@
 			<div class="header-group">
 				<h2 class="section-title header-text">Weapons</h2>
 				<div class="header-options">
+					{{#if owner}}
 					<i class="fa-solid fa-plus item-add icon-button" title="Add Weapon" data-item-type="weapon"
 						data-item-name="New Weapon">
 						<input type="hidden" name="default.size" value="Main">
 						<input type="hidden" name="default.type" value="Rifle">
 					</i>
+					{{/if}}
 				</div>
 			</div>
 			<div class="mounts card-col">
