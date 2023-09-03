@@ -118,14 +118,15 @@ export default class WeaponDialog extends Dialog {
 			flavor += ' (CRIT)';
 		}
 		let formula = w.system.roll_formula;
-		
+
 		if (!formula) {
 			console.error("Error rolling weapon damage: No roll formula provided");
 		}
 
-		if (crit) {
+		// Only need to parse crit if formula includes a roll
+		if (crit && formula.includes('d')) {
 			const critMatch = formula.match(/(?<formula>(?<count>\d+)d(?<size>\d+))(?<remainder>[\s\S]*)/);
-			formula = `${critMatch.groups.count * 2}d${critMatch.groups.size}kh${critMatch.groups.count}${critMatch.groups.remainder??''}`;
+			formula = `${critMatch.groups.count * 2}d${critMatch.groups.size}kh${critMatch.groups.count}${critMatch.groups.remainder ?? ''}`;
 		}
 
 		const tags = w.system?.tags ?? false;
