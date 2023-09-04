@@ -1,5 +1,5 @@
 <div class="item-card trait-card" data-item-id="{{id}}">
-	<div class="header">
+	<div class="header {{#if system.tags}}--tags{{/if}}">
 		<div class="title-row">
 			<span class="toggle-body">{{name}}</span>
 			{{#if isOwner}}
@@ -11,6 +11,11 @@
 			{{/unless}}
 			{{/if}}
 		</div>
+		{{#if system.tags}}
+		<div class="tags">
+			{{system.tags}}
+		</div>
+		{{/if}}
 	</div>
 	<div class="body">
 		{{#if system.description}}

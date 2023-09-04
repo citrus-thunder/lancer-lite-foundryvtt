@@ -6,6 +6,10 @@ div.item-card.trait-card {
 		color: $color-text-white;
 		clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - 0.4rem), calc(100% - 2rem) 0);
 
+		&.--tags {
+			clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 0);
+		}
+
 		div.title-row {
 			font-size: 1rem;
 			align-items: center;
