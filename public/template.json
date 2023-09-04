@@ -2,8 +2,50 @@
 	"Actor": {
 		"types": [
 			"mech",
-			"pilot"
+			"pilot",
+			"npc_mech"
 		],
+		"templates": {
+			"mech_common": {
+				"conditions": {
+					"exposed": false,
+					"hidden": false,
+					"immobilized": false,
+					"impaired": false,
+					"invisible": false,
+					"jammed": false,
+					"lock_on": false,
+					"prone": false,
+					"shredded": false,
+					"slowed": false,
+					"stunned": false
+				},
+				"description": "",
+				"heat": {
+					"value": 0,
+					"max": 0,
+					"min": 0
+				},
+				"hp": {
+					"value": 0,
+					"max": 0,
+					"min": 0
+				},
+				"notes": "",
+				"overshield": 0,
+				"stats": {
+					"armor": 0,
+					"attack": 0,
+					"e_defense": 0,
+					"evasion": 0,
+					"save_target": 0,
+					"sensors": 0,
+					"size": 0,
+					"speed": 0,
+					"tech_attack": 0
+				}
+			}
+		},
 		"pilot": {
 			"background": "",
 			"biography": "",
@@ -29,55 +71,19 @@
 			}
 		},
 		"mech": {
+			"templates": ["mech_common"],
 			"biography": "",
-			"conditions": {
-				"exposed": false,
-				"hidden": false,
-				"immobilized": false,
-				"impaired": false,
-				"invisible": false,
-				"jammed": false,
-				"lock_on": false,
-				"prone": false,
-				"shredded": false,
-				"slowed": false,
-				"stunned": false
-			},
 			"cp": {
 				"value": 1,
 				"min": 0,
 				"max": 1
 			},
-			"description": "",
 			"frame": "",
-			"heat": {
-				"value": 0,
-				"max": 0,
-				"min": 0
-			},
-			"hp": {
-				"value": 0,
-				"max": 0,
-				"min": 0
-			},
-			"notes": "",
-			"overshield": 0,
+			"sp": 0,
 			"repairs": {
 				"value": 0,
 				"max": 0,
 				"min": 0
-			},
-			"sp": 0,
-			"stats": {
-				"armor": 0,
-				"attack": 0,
-				"e_defense": 0,
-				"evasion": 0,
-				"save_target": 0,
-				"sensors": 0,
-				"size": 0,
-				"speed": 0,
-				"tech_attack": 0
 			},
 			"stress": {
 				"value": 4,
@@ -87,6 +93,26 @@
 			"structure": {
 				"value": 4,
 				"max": 4,
+				"min": 0
+			}
+		},
+		"npc_mech": {
+			"templates": ["mech_common"],
+			"class": "",
+			"skills": {
+				"agility": 0,
+				"engineering": 0,
+				"hull": 0,
+				"systems": 0
+			},
+			"stress": {
+				"value": 1,
+				"max": 1,
+				"min": 0
+			},
+			"structure": {
+				"value": 1,
+				"max": 1,
 				"min": 0
 			}
 		}

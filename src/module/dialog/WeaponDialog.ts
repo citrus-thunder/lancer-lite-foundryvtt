@@ -79,7 +79,7 @@ export default class WeaponDialog extends Dialog {
 		let accuracy = parseInt(html.find('#input-accuracy').val() as string);
 		let difficulty = parseInt(html.find('#input-difficulty').val() as string);
 
-		let bonus = actor.type == 'mech' ? actor.system.stats.attack : actor.system.stats.grit;
+		let bonus = ['mech', 'npc_mech'].includes(actor.type) ? actor.system.stats.attack : actor.system.stats.grit;
 		let bonusLabel = actor.type == 'pilot' ? 'Grit' : 'Attack Bonus';
 
 		let flavor = `Attack Roll | ${bonusLabel} ${bonus}`;

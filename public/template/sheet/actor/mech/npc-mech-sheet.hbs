@@ -25,8 +25,8 @@
 							</div>
 							<div class="field flex0 pad-bottom">
 								<label>
-									TEMPLATE
-									<input name="system.frame" type="text" value="{{actor.system.frame}}">
+									CLASS
+									<input name="system.class" type="text" value="{{actor.system.class}}">
 								</label>
 							</div>
 						</div>
@@ -93,15 +93,7 @@
 										</div>
 									</td>
 									<td>
-										<div class="resource-field no-grow">
-											<label>REPAIR</label>
-											<div class="flexrow flex0 resources">
-												<input type="text" class="--small" name="system.repairs.value"
-													value="{{actor.system.repairs.value}}" data-dtype="Number">
-												&nbsp;/&nbsp;
-												{{actor.system.repairs.max}}
-											</div>
-										</div>
+										<!-- Intentionally left empty -->
 									</td>
 								</tr>
 							</table>
@@ -186,6 +178,10 @@
 								Save Target:
 								<input type="text" name="system.stats.save_target" value="{{actor.system.stats.save_target}}"
 									data-dType="Number">
+							</label>
+							<label>
+								Attack Bonus:
+								<input type="text" name="system.stats.attack" value="{{actor.system.stats.attack}}" data-dType="Number">
 							</label>
 						</div>
 					</div>
@@ -308,11 +304,6 @@
 							{{#each weapons}}
 							{{> "systems/lancer-lite/template/card/weapon-card.hbs"}}
 							{{/each}}
-							<!--
-							{{#each mounts}}
-							{{> "systems/lancer-lite/template/card/mount-card.hbs"}}
-							{{/each}}
-							-->
 						</div>
 					</div>
 					<!-- Systems -->
@@ -320,9 +311,6 @@
 						<div class="header-group">
 							<h2 class="section-title header-text">Systems</h2>
 							<div class="header-options">
-								<div class="header-field" style="margin-right:1rem">
-									SP: {{actor.system.sp}}
-								</div>
 								{{#if owner}}
 								<i class="fa-solid fa-plus item-add icon-button" title="Add System" data-item-type="system"
 									data-item-name="New System"></i>

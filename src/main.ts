@@ -4,8 +4,8 @@ import LancerChatMessage from "./module/chat/LancerChatMessage";
 
 // Actor Sheets
 import PilotSheet from "./module/sheet/actor/pilot/PilotSheet";
-import MechSheet from "./module/sheet/actor/mech/MechSheet";
-import NPCMechSheet from "./module/sheet/actor/mech/NPCMechSheet";
+import PlayerMechSheet from "./module/sheet/actor/mech/PlayerMechSheet";
+import NPCMechSheet from "./module/sheet/actor/npc-mech/NPCMechSheet";
 
 // Item Sheets
 import ArmorSheet from "./module/sheet/item/armor/ArmorSheet";
@@ -38,8 +38,8 @@ Hooks.once('init', async () => {
 	CONFIG.Actor.documentClass = LancerActor;
 	Actors.unregisterSheet("core", ActorSheet);
 	Actors.registerSheet(SYSTEM_NAME, PilotSheet, {label: 'Pilot', types: ['pilot'], makeDefault: true});
-	Actors.registerSheet(SYSTEM_NAME, MechSheet, {label: 'Mech', types: ['mech'], makeDefault: true});
-	Actors.registerSheet(SYSTEM_NAME, NPCMechSheet, {label: 'NPC Mech', types: ['mech'], makeDefault: false});
+	Actors.registerSheet(SYSTEM_NAME, PlayerMechSheet, {label: 'Mech', types: ['mech'], makeDefault: true});
+	Actors.registerSheet(SYSTEM_NAME, NPCMechSheet, {label: 'NPC Mech', types: ['npc_mech'], makeDefault: true});
 
 	CONFIG.Item.documentClass = LancerItem;
 	Items.unregisterSheet("core", ItemSheet);
