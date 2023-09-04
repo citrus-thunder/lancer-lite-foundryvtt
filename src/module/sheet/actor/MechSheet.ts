@@ -1,5 +1,7 @@
-import EditMechVitalsDialog from '../../dialog/EditMechVitalsDialog';
 import LancerActorSheet from "./LancerActorSheet";
+
+import EditMechVitalsDialog from '../../dialog/EditMechVitalsDialog';
+import SkillDialog from '../../dialog/SkillDialog';
 
 export default class MechSheet extends LancerActorSheet {
 	/** @override */
@@ -21,6 +23,15 @@ export default class MechSheet extends LancerActorSheet {
 
 		html.find('.roll-structure').on('click', this.rollStructure.bind(this));
 		html.find('.roll-stress').on('click', this.rollStress.bind(this));
+
+		html.find('.roll-skill').on('click', async (ev) => {
+			const skillName: string = $(ev.currentTarget).data('skill') ?? '';
+			const skillLabel: string = $(ev.currentTarget).data('skillLabel') ?? '';
+
+			const a: any = this.actor;
+			const skill: number = a.system.skills[skillName];
+			new SkillDialog({ bonus: skill, bonusSource: skillLabel }).render(true);
+		});
 	}
 
 	private async rollStructure() {

@@ -2,6 +2,32 @@
 <div class="flexrow pad-bottom --more">
 	<!-- Stats -->
 	<div class="flexcol stats pad-right">
+		<h2 class="section-title">Mech Skills</h2>
+		<!-- Skills -->
+		<div class="flexrow skills no-grow pad-bottom">
+			<!-- Skills Left -->
+			<div class="flexcol skills-col pad-right --more">
+				<label>
+					<span class="roll-skill" data-skill="hull" data-skill-label="Hull">Hull</span>
+					<input type="text" name="system.skills.hull" value="{{actor.system.skills.hull}}">
+				</label>
+				<label>
+					<span class="roll-skill" data-skill="agility" data-skill-label="Agility">Agility</span>
+					<input type="text" name="system.skills.agility" value="{{actor.system.skills.agility}}">
+				</label>
+			</div>
+			<!-- Skills Right -->
+			<div class="flexcol skills-col">
+				<label>
+					<span class="roll-skill" data-skill="systems" data-skill-label="Systems">Systems</span>
+					<input type="text" name="system.skills.systems" value="{{actor.system.skills.systems}}">
+				</label>
+				<label>
+					<span class="roll-skill" data-skill="engineering" data-skill-label="Engineering">Engineering</span>
+					<input type="text" name="system.skills.engineering" value="{{actor.system.skills.engineering}}">
+				</label>
+			</div>
+		</div>
 		<h2 class="section-title">Core Stats</h2>
 		<!-- Main Stats -->
 		<div class="flexrow">
@@ -24,7 +50,8 @@
 			<div class="flexcol stats-col">
 				<label>
 					Save Target:
-					<input type="text" name="system.stats.save_target" value="{{actor.system.stats.save_target}}" data-dType="Number">
+					<input type="text" name="system.stats.save_target" value="{{actor.system.stats.save_target}}"
+						data-dType="Number">
 				</label>
 				<label>
 					Sensors:
@@ -76,11 +103,13 @@
 					<div class="stats-subsection-content flexcol">
 						<label>
 							E-Defense:
-							<input type="text" name="system.stats.e_defense" value="{{actor.system.stats.e_defense}}" data-dType="Number">
+							<input type="text" name="system.stats.e_defense" value="{{actor.system.stats.e_defense}}"
+								data-dType="Number">
 						</label>
 						<label>
 							Tech Attack:
-							<input type="text" name="system.stats.tech_attack" value="{{actor.system.stats.tech_attack}}" data-dType="Number">
+							<input type="text" name="system.stats.tech_attack" value="{{actor.system.stats.tech_attack}}"
+								data-dType="Number">
 						</label>
 						<label>
 							SP:

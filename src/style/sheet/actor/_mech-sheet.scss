@@ -41,6 +41,13 @@
 
 				font-family: $font-serif;
 				font-weight: bold;
+
+				.roll-skill {
+					text-decoration: underline;
+					color: $color-red3;
+					font-weight: bold;
+					cursor: pointer;
+				}
 			}
 
 			input {

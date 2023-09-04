@@ -33,6 +33,12 @@
 				},
 				"notes": "",
 				"overshield": 0,
+				"skills": {
+					"agility": 0,
+					"engineering": 0,
+					"hull": 0,
+					"systems": 0
+				},
 				"stats": {
 					"armor": 0,
 					"attack": 0,
@@ -99,12 +105,6 @@
 		"npc_mech": {
 			"templates": ["mech_common"],
 			"class": "",
-			"skills": {
-				"agility": 0,
-				"engineering": 0,
-				"hull": 0,
-				"systems": 0
-			},
 			"stress": {
 				"value": 1,
 				"max": 1,
