@@ -16,19 +16,19 @@
 		</div>
 		<div class="tags">
 			{{#ifEquals system.type "action"}}
-			{{system.sp_cost}} SP, Action{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Action{{#if system.limited.isLimited}}, Limited ({{system.limited.value}}/{{system.limited.max}}){{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "core"}}
 			Core System{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "passive"}}
-			{{system.sp_cost}} SP{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Passive{{#if system.limited.isLimited}}, Limited ({{system.limited.value}}/{{system.limited.max}}){{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "protocol"}}
-			{{system.sp_cost}} SP, Protocol{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Protocol{{#if system.limited.isLimited}}, Limited ({{system.limited.value}}/{{system.limited.max}}){{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 			{{#ifEquals system.type "tech"}}
-			{{system.sp_cost}} SP{{#if system.tags}}, {{system.tags}}{{/if}}
+			{{#if system.sp_cost}}{{system.sp_cost}} SP, {{/if}}Tech{{#if system.limited.isLimited}}, Limited ({{system.limited.value}}/{{system.limited.max}}){{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
 			{{/ifEquals}}
 		</div>
 	</div>

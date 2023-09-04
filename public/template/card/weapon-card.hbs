@@ -22,7 +22,7 @@
 		</div>
 		{{#if system.tags}}
 		<div class="tags">
-			{{system.tags}}
+			{{#if system.limited.isLimited}}Limited ({{system.limited.value}}/{{system.limited.max}}){{#if system.tags}}, {{/if}}{{/if}}{{#if system.tags}}{{system.tags}}{{/if}}
 		</div>
 		{{/if}}
 		<div class="traits">

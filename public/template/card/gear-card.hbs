@@ -12,7 +12,7 @@
 			{{/if}}
 		</div>
 		<div class="tags">
-			Gear{{#if system.tags}}, {{system.tags}}{{/if}}
+			Gear{{#if system.limited.isLimited}}, Limited ({{system.limited.value}}/{{system.limited.max}}){{/if}}{{#if system.tags}}, {{system.tags}}{{/if}}
 		</div>
 	</div>
 	<div class="body">
