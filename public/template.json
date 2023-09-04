@@ -40,7 +40,7 @@
 					"evasion": 0,
 					"save_target": 0,
 					"sensors": 0,
-					"size": 0,
+					"size": "1",
 					"speed": 0,
 					"tech_attack": 0
 				}

@@ -5,6 +5,10 @@
 	div.portrait-frame {
 		width: 6rem;
 		height: 8rem;
+
+		img {
+			object-fit: cover;
+		}
 	}
 
 	input.--center {
@@ -23,6 +27,7 @@
 	label.--small {
 		font-size: 0.73rem;
 	}
+
 	div.npc-stats,
 	div.skills {
 		div.stats-col,
@@ -41,7 +46,7 @@
 			input {
 				font-family: $font-serif;
 				height: 1rem;
-				width: 1.5rem;
+				width: 1.8rem;
 
 				text-align: center;
 			}
@@ -95,7 +100,7 @@
 			input {
 				font-family: $font-serif;
 				height: 1rem;
-				width: 1.5rem;
+				width: 1.8rem;
 
 				text-align: center;
 			}
