@@ -332,6 +332,7 @@ export default class PlayerMechSheet extends MechSheet {
 			'system.repairs.value': 0,
 
 			// Clear Conditions
+			'system.conditions.burn': 0,
 			'system.conditions.exposed': false,
 			'system.conditions.hidden': false,
 			'system.conditions.immobilized': false,
