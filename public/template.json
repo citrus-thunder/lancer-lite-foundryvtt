@@ -8,6 +8,7 @@
 		"templates": {
 			"mech_common": {
 				"conditions": {
+					"bolstered": false,
 					"burn": 0,
 					"exposed": false,
 					"hidden": false,

@@ -96,7 +96,8 @@
 										<div class="resource-field no-grow">
 											<label>BURN</label>
 											<div class="flexrow flex0 resources">
-												<input type="text" class="--small" name="system.conditions.burn" value="{{actor.system.conditions.burn}}">
+												<input type="text" class="--small" name="system.conditions.burn"
+													value="{{actor.system.conditions.burn}}">
 											</div>
 										</div>
 									</td>
@@ -283,6 +284,11 @@
 									<input type="checkbox" name="system.conditions.invisible" {{checked
 										actor.system.conditions.invisible}}>
 									INVISIBLE
+								</label>
+								<label>
+									<input type="checkbox" name="system.conditions.bolstered" {{checked
+										actor.system.conditions.bolstered}}>
+									BOLSTERED
 								</label>
 								<label>
 									<input type="checkbox" name="system.conditions.prone" {{checked actor.system.conditions.prone}}>
