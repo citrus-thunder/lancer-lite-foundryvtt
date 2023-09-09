@@ -98,6 +98,12 @@
 
 				font-family: $font-serif;
 				font-weight: bold;
+
+				.roll-stat {
+					text-decoration: underline;
+					font-weight: bold;
+					cursor: pointer;
+				}
 			}
 
 			input {

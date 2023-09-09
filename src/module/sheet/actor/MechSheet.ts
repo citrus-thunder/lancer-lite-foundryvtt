@@ -32,6 +32,15 @@ export default class MechSheet extends LancerActorSheet {
 			const skill: number = a.system.skills[skillName];
 			new SkillDialog({ bonus: skill, bonusSource: skillLabel }).render(true);
 		});
+
+		html.find('.roll-stat').on('click', async (ev) => {
+			const statName: string = $(ev.currentTarget).data('stat') ?? '';
+			const statLabel: string = $(ev.currentTarget).data('statLabel') ?? '';
+
+			const a: any = this.actor;
+			const stat: number = a.system.stats[statName];
+			new SkillDialog({ bonus: stat, bonusSource: statLabel }).render(true);
+		})
 	}
 
 	private async rollStructure() {
