@@ -52,12 +52,12 @@ export default class WeaponDialog extends Dialog {
 		// todo: this should eventually be moved to a more appropriate function
 		const tags = w.system?.tags ?? false;
 		if (tags) {
-			const accMatch = tags.match(/[Aa]ccurate$|[Aa]ccurate(?:\s)*(?=,)/);
+			const accMatch = tags.match(/(?:\W|^)[Aa]ccurate$|(\W|^)[Aa]ccurate(?:\s)*(?=,)/);
 			if (accMatch) {
 				accuracy++;
 			}
 
-			const diffMatch = tags.match(/[Ii]naccurate$|[Ii]naccurate(?:\s)*(?=,)/);
+			const diffMatch = tags.match(/(?:\W|^)[Ii]naccurate$|(\W|^)[Ii]naccurate(?:\s)*(?=,)/);
 			if (diffMatch) {
 				difficulty++;
 			}
