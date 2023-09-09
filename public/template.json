@@ -17,6 +17,7 @@
 					"invisible": false,
 					"jammed": false,
 					"lock_on": false,
+					"overcharge": 0,
 					"prone": false,
 					"shredded": false,
 					"slowed": false,

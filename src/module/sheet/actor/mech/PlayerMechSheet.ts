@@ -41,23 +41,70 @@ export default class PlayerMechSheet extends MechSheet {
 
 		html.find('.full-repair').on('click', () => {
 			const content =
-				`
-			<p>
-				Perform a Full Repair? A full repair will will:
-				<ul>
-					<li>Restore Mech to full <strong>HP</strong> <strong>STRESS</strong> and <strong>STRUCTURE</strong></li>
-					<li>Clear all Conditions</li>
-					<li>Repair destroyed Weapons and Systems</li>
-					<li>Recover CP</li>
-					<li>Regain all <strong>REPAIRS</strong> and uses of <strong>LIMITED</strong> Weapons and Systems</li>
-				</ul>
-			</p>
-			`;
+				`<p>
+					Perform a Full Repair? A full repair will will:
+					<ul>
+						<li>Restore Mech to full <strong>HP</strong> <strong>STRESS</strong> and <strong>STRUCTURE</strong></li>
+						<li>Clear all Conditions</li>
+						<li>Repair destroyed Weapons and Systems</li>
+						<li>Recover CP</li>
+						<li>Regain all <strong>REPAIRS</strong> and uses of <strong>LIMITED</strong> Weapons and Systems</li>
+					</ul>
+				</p>`;
 
 			Dialog.confirm({
 				title: 'Confirm Full Repair',
 				content: content,
 				yes: this.fullRepair.bind(this),
+				no: () => { },
+				defaultYes: false
+			});
+		});
+
+		html.find('.roll-overcharge').on('click', () => {
+			const a: any = this.actor;
+			let formula = '1';
+			switch (a.system.conditions.overcharge) {
+				case 0:
+					formula = '1';
+					break;
+				case 1:
+					formula = '1d3';
+					break;
+				case 2:
+					formula = '1d6';
+					break;
+				default:
+					formula = '1d6 + 4';
+					break;
+			}
+
+			const content =
+				`<p>
+					Overcharging allows you to make any <strong>quick action</strong>
+					as a <strong>free action</strong>, at the cost of <strong>heat</strong>
+				</p>
+				<p>
+					Overcharging will cause you to take <strong>${formula} Heat</strong>.
+				</p>`;
+
+			const overcharge = async () => {
+				const r = new Roll(formula);
+				let m: any = await r.toMessage({ content: '' }, { create: false });
+				m.flavor = 'Overcharge Heat Roll';
+
+				await a.update({
+					'system.conditions.overcharge': a.system.conditions.overcharge + 1,
+					'system.heat.value': a.system.heat.value + r.total,
+				});
+				console.log(r.result);
+				CONFIG.ChatMessage.documentClass.create(m);
+			}
+
+			Dialog.confirm({
+				title: 'Confirm Overcharge',
+				content: content,
+				yes: overcharge,
 				no: () => { },
 				defaultYes: false
 			});
@@ -330,8 +377,10 @@ export default class PlayerMechSheet extends MechSheet {
 			'system.structure.value': actor.system.structure.max,
 			'system.cp.value': actor.system.cp.max,
 			'system.repairs.value': 0,
+			'system.heat.value': 0,
 
 			// Clear Conditions
+			'system.conditions.bolstered': false,
 			'system.conditions.burn': 0,
 			'system.conditions.exposed': false,
 			'system.conditions.hidden': false,
@@ -340,6 +389,7 @@ export default class PlayerMechSheet extends MechSheet {
 			'system.conditions.invisible': false,
 			'system.conditions.jammed': false,
 			'system.conditions.lock_on': false,
+			'system.conditions.overcharge': 0,
 			'system.conditions.prone': false,
 			'system.conditions.shredded': false,
 			'system.conditions.slowed': false,
