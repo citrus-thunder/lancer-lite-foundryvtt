@@ -1,6 +1,5 @@
 import LancerActor from "./module/sheet/actor/LancerActor";
 import LancerItem from "./module/sheet/item/LancerItem";
-import LancerChatMessage from "./module/chat/LancerChatMessage";
 
 // Actor Sheets
 import PilotSheet from "./module/sheet/actor/pilot/PilotSheet";
@@ -20,6 +19,8 @@ import TraitSheet from "./module/sheet/item/trait/TraitSheet";
 import TriggerSheet from "./module/sheet/item/trigger/TriggerSheet";
 import WeaponSheet from "./module/sheet/item/weapon/WeaponSheet";
 
+import { statusEffects } from "./module/statusEffects";
+
 // Helpers & Utilities
 import helpers from "./module/helper/helpers";
 import preloadTemplates from "./module/preloadTemplates";
@@ -37,24 +38,26 @@ Hooks.once('init', async () => {
 
 	CONFIG.Actor.documentClass = LancerActor;
 	Actors.unregisterSheet("core", ActorSheet);
-	Actors.registerSheet(SYSTEM_NAME, PilotSheet, {label: 'Pilot', types: ['pilot'], makeDefault: true});
-	Actors.registerSheet(SYSTEM_NAME, PlayerMechSheet, {label: 'Mech', types: ['mech'], makeDefault: true});
-	Actors.registerSheet(SYSTEM_NAME, NPCMechSheet, {label: 'NPC Mech', types: ['npc_mech'], makeDefault: true});
+	Actors.registerSheet(SYSTEM_NAME, PilotSheet, { label: 'Pilot', types: ['pilot'], makeDefault: true });
+	Actors.registerSheet(SYSTEM_NAME, PlayerMechSheet, { label: 'Mech', types: ['mech'], makeDefault: true });
+	Actors.registerSheet(SYSTEM_NAME, NPCMechSheet, { label: 'NPC Mech', types: ['npc_mech'], makeDefault: true });
 
 	CONFIG.Item.documentClass = LancerItem;
 	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet(SYSTEM_NAME, ArmorSheet, {label: 'Armor', types: ['armor'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, CoreBonusSheet, {label: 'Core Bonus', types: ['core_bonus'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, GearSheet, {label: 'Gear', types: ['gear'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, LicenseSheet, {label: 'License', types: ['license'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, MountSheet, {label: 'Mount', types: ['mount'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, ReactionSheet, {label: 'Reaction', types: ['reaction'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, SystemSheet, {label: 'System', types: ['system'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, TalentSheet, {label: 'Talent', types: ['talent'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, TraitSheet, {label: 'Trait', types: ['trait'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, TriggerSheet, {label: 'Trigger', types: ['trigger'], makeDefault: true});
-	Items.registerSheet(SYSTEM_NAME, WeaponSheet, {label: 'Weapon', types: ['weapon'], makeDefault: true});
-	
+	Items.registerSheet(SYSTEM_NAME, ArmorSheet, { label: 'Armor', types: ['armor'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, CoreBonusSheet, { label: 'Core Bonus', types: ['core_bonus'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, GearSheet, { label: 'Gear', types: ['gear'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, LicenseSheet, { label: 'License', types: ['license'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, MountSheet, { label: 'Mount', types: ['mount'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, ReactionSheet, { label: 'Reaction', types: ['reaction'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, SystemSheet, { label: 'System', types: ['system'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, TalentSheet, { label: 'Talent', types: ['talent'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, TraitSheet, { label: 'Trait', types: ['trait'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, TriggerSheet, { label: 'Trigger', types: ['trigger'], makeDefault: true });
+	Items.registerSheet(SYSTEM_NAME, WeaponSheet, { label: 'Weapon', types: ['weapon'], makeDefault: true });
+
+	CONFIG.statusEffects = foundry.utils.deepClone(statusEffects);
+
 	helpers.registerAll();
 	await preloadTemplates(SYSTEM_NAME);
 });

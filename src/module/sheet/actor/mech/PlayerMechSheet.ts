@@ -1,3 +1,4 @@
+import type LancerActor from '../LancerActor';
 import MechSheet from '../MechSheet';
 
 export default class PlayerMechSheet extends MechSheet {
@@ -395,6 +396,22 @@ export default class PlayerMechSheet extends MechSheet {
 			'system.conditions.slowed': false,
 			'system.conditions.stunned': false
 		});
+
+		// Clear Active Effects
+		const la = actor as LancerActor;
+
+		await la.toggleActiveEffect({ id: 'bolstered' }, false);
+		await la.toggleActiveEffect({ id: 'exposed' }, false);
+		await la.toggleActiveEffect({ id: 'hidden' }, false);
+		await la.toggleActiveEffect({ id: 'immobilized' }, false);
+		await la.toggleActiveEffect({ id: 'impaired' }, false);
+		await la.toggleActiveEffect({ id: 'invisible' }, false);
+		await la.toggleActiveEffect({ id: 'jammed' }, false);
+		await la.toggleActiveEffect({ id: 'lock_on' }, false);
+		await la.toggleActiveEffect({ id: 'prone' }, false);
+		await la.toggleActiveEffect({ id: 'shredded' }, false);
+		await la.toggleActiveEffect({ id: 'slowed' }, false);
+		await la.toggleActiveEffect({ id: 'stunned' }, false);
 
 		// Update Weapons & Systems; clear Destroyed and restore Limited
 		actor.items.forEach(async (item: any) => {

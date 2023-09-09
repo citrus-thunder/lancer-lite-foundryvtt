@@ -1,5 +1,5 @@
 import LancerActorSheet from "./LancerActorSheet";
-
+import LancerActor from "./LancerActor";
 import EditMechVitalsDialog from '../../dialog/EditMechVitalsDialog';
 import SkillDialog from '../../dialog/SkillDialog';
 
@@ -18,7 +18,7 @@ export default class MechSheet extends LancerActorSheet {
 		super.activateListeners(html);
 
 		html.find('.edit-vitals').on('click', async (ev) => {
-			new EditMechVitalsDialog(this.actor).render(true);
+			new EditMechVitalsDialog(this.actor as LancerActor).render(true);
 		});
 
 		html.find('.roll-structure').on('click', this.rollStructure.bind(this));
@@ -41,6 +41,8 @@ export default class MechSheet extends LancerActorSheet {
 			const stat: number = a.system.stats[statName];
 			new SkillDialog({ bonus: stat, bonusSource: statLabel }).render(true);
 		})
+
+		html.find('input[type=checkbox].condition').on('change', this.toggleStatusEffect.bind(this));
 	}
 
 	private async rollStructure() {
@@ -157,5 +159,16 @@ export default class MechSheet extends LancerActorSheet {
 		};
 
 		CONFIG.ChatMessage.documentClass.create(messageData);
+	}
+
+	protected async toggleStatusEffect(ev: JQuery.ChangeEvent) {
+		const id = ev.target.dataset.id as string;
+		const key = ev.target.dataset.key as string;
+
+		const data = CONFIG.statusEffects.find((e) => e.id === id);
+
+		const la = this.actor as LancerActor;
+		await la.update({ [`system.conditions.${id}`]: false });
+		await la.toggleActiveEffect(data);
 	}
 }
