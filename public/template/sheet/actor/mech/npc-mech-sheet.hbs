@@ -93,7 +93,12 @@
 										</div>
 									</td>
 									<td>
-										<!-- Intentionally left empty -->
+										<div class="resource-field no-grow">
+											<label>BURN</label>
+											<div class="flexrow flex0 resources">
+												<input type="text" class="--small" name="system.conditions.burn" value="{{actor.system.conditions.burn}}">
+											</div>
+										</div>
 									</td>
 								</tr>
 							</table>
@@ -282,10 +287,6 @@
 								<label>
 									<input type="checkbox" name="system.conditions.prone" {{checked actor.system.conditions.prone}}>
 									PRONE
-								</label>
-								<label>
-									<input type="text" name="system.conditions.burn" value="{{actor.system.conditions.burn}}" data-dType="Number">
-									BURN
 								</label>
 							</div>
 						</div>

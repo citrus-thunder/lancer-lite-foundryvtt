@@ -190,17 +190,26 @@
 					<input type="checkbox" name="system.conditions.prone" {{checked actor.system.conditions.prone}}>
 					PRONE
 				</label>
-				<label>
-					<input type="text" name="system.conditions.burn" value="{{actor.system.conditions.burn}}" data-dType="Number">
-					BURN
-				</label>
 			</div>
 		</div>
 		<!-- Quick Buttons -->
 		<div class="flexrow quick-buttons">
-			{{#if owner}}
-			<div class="quick-button full-repair"><i class="button-icon fas fa-wrench"></i>Full Repair</div>
-			{{/if}}
+			<div class="flexcol flex0 quick-button-panel">
+				<div class="flexrow">
+					<div class="flexcol">
+						<label>REPAIR</label>
+						<div class="flexrow flex0 resources">
+							<input type="text" class="--small" name="system.repairs.value" value="{{actor.system.repairs.value}}"
+								data-dtype="Number">
+							&nbsp;/&nbsp;
+							{{actor.system.repairs.max}}
+						</div>
+					</div>
+					<div class="flexcol flex0">
+						<div class="quick-button full-repair --square"><i class="button-icon fas fa-wrench"></i></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

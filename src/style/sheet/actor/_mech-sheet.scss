@@ -26,6 +26,7 @@
 
 	div.npc-stats,
 	div.skills {
+
 		div.stats-col,
 		div.skills-col {
 			label {
@@ -160,6 +161,39 @@
 		div.quick-buttons {
 			justify-content: flex-end;
 			align-items: flex-end;
+
+			.quick-button-panel {
+				flex-grow: 0;
+				max-width: 6.5rem;
+				min-width: 6.5rem;
+
+				border: 1px solid $color-grey2;
+				border-radius: 0.2rem;
+				padding: 0.1rem;
+
+				label {
+					font-size: 0.73rem;
+					font-weight: bold;
+				}
+
+				input {
+					text-align: center;
+				}
+
+				>.flexrow {
+					justify-content: center;
+					align-items: flex-end;
+				}
+
+				.quick-button {
+					margin-top: 0.2rem;
+
+					&.--square {
+						min-height: 2rem;
+						min-width: 2rem;
+					}
+				}
+			}
 
 			.quick-button {
 				cursor: pointer;
