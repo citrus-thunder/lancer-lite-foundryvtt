@@ -58,12 +58,26 @@ export const statusEffects: StatusEffect[] = [
 		id: 'immobilized',
 		name: 'Immobilized',
 		label: 'lancer-lite.immobilized',
+		changes: [
+			{
+			key: 'system.conditions.immobilized',
+			mode: foundry.CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			value: 'true',
+			}
+		]
 	},
 	{
 		icon: 'systems/lancer-lite/assets/icons/broken-arrow.svg',
 		id: 'impaired',
 		name: 'Impaired',
 		label: 'lancer-lite.impaired',
+		changes: [
+			{
+			key: 'system.conditions.impaired',
+			mode: foundry.CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			value: 'true',
+			}
+		]
 	},
 	{
 		icon: 'icons/svg/invisible.svg',
@@ -83,6 +97,13 @@ export const statusEffects: StatusEffect[] = [
 		id: 'jammed',
 		name: 'Jammed',
 		label: 'lancer-lite.jammed',
+		changes: [
+			{
+			key: 'system.conditions.jammed',
+			mode: foundry.CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			value: 'true',
+			}
+		]
 	},
 	{
 		icon: 'systems/lancer-lite/assets/icons/crosshair.svg',
@@ -102,12 +123,26 @@ export const statusEffects: StatusEffect[] = [
 		id: 'prone',
 		name: 'Prone',
 		label: 'lancer-lite.prone',
+		changes: [
+			{
+			key: 'system.conditions.prone',
+			mode: foundry.CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			value: 'true',
+			}
+		]
 	},
 	{
 		icon: 'systems/lancer-lite/assets/icons/shield-disabled.svg',
 		id: 'shredded',
 		name: 'Shredded',
 		label: 'lancer-lite.shredded',
+		changes: [
+			{
+			key: 'system.conditions.shredded',
+			mode: foundry.CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			value: 'true',
+			}
+		]
 	},
 	{
 		icon: 'icons/svg/frozen.svg',
