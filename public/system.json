@@ -2,11 +2,11 @@
 	"id": "lancer-lite",
 	"title": "Lancer Lite",
 	"description": "A minimalistic Lancer system for Foundry",
-	"version": "1.0.0-alpha.12",
+	"version": "1.0.0-alpha.13",
 	"compatibility": {
 		"minimum": "11",
-		"verified": "11",
-		"maximum": "11"
+		"verified": "12",
+		"maximum": "12"
 	},
 	"authors": [
 		{
